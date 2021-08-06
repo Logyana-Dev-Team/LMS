@@ -347,7 +347,7 @@ export default function AboutUsContent() {
                 Research Organizations.
               </p>
               <a
-                href="/Smitha"
+                href="/ourTeam"
                 className="btn section-link btn-fancy btn-large btn-round-edge btn-primary margin-35px-right xs-margin-20px-bottom"
               >
                 Know More

@@ -1,8 +1,11 @@
 import React from "react";
+import Footer from "../../containers/Footer";
+import Header from "../../containers/Header";
 
 function Smitha(props) {
   return (
     <div>
+      <Header />
       <section>
         <div class="container">
           <div class="row align-items-center justify-content-center team">
@@ -72,120 +75,16 @@ function Smitha(props) {
               <figure class="image-back-offset-shadow position-right w-100">
                 <img
                   class="border-radius-6px"
-                  src="../../assets/images/team/1.jpg"
+                  src="../../assets/images/team/4.jpg"
                   alt=""
                 />
               </figure>
             </div>
-            <div class="col-12 col-lg-5 col-md-9 md-margin-7-rem-bottom">
-              <span class="alt-font margin-20px-bottom text-extra-dark-gray d-inline-block text-uppercase font-weight-500 letter-spacing-1px">
-                Ms. Amrutha Babu
-                <br />
-                Academic Mentor
-              </span>
-
-              <p class="w-95 lg-w-95">
-                Ms. Amrutha is an accomplished academic expert in the field of
-                Food and Nutrition. She has a Master’s degree from Mahatma
-                Gandhi University, Kottayam where she graduated with a gold
-                medal.After undergoing training in Christian Medical College,
-                Vellore started her career as a freelance diet counselor in
-                2009. She was also associated with Lybrate - an online platform
-                for diet management and counseling.
-                <br />
-                <br />
-                After a remarkable experience in the field of dietetics, she
-                received a post-graduate diploma in Clinical Research.
-                Currently, she is associated with the Institute as a lecturer.
-                Her core strengths are providing excellent teaching and guidance
-                to her students. Amrutha has more than 4 years of teaching
-                experience in the field of clinical research. She has in-depth
-                knowledge about Drug Discovery Process, Drug Approval process,
-                Trial documents, Trial Design, Regulatory, Query writing, ICSR,
-                and so on.
-              </p>
-            </div>
-          </div>
-          <div class="row align-items-center justify-content-center team">
-            <div class="col-12 col-lg-5 col-md-9 md-margin-7-rem-bottom">
-              <span class="alt-font margin-20px-bottom text-extra-dark-gray d-inline-block text-uppercase font-weight-500 letter-spacing-1px">
-                Ms. Sushma K P<br />
-                Customer Success Manager
-              </span>
-
-              <p class="w-95 lg-w-95">
-                Ms. Sushma is a Bachelor of Computer Applications (B.C.A)
-                graduate from Bangalore University. She has conducted training
-                programs in Communication Skills and mentors students to help
-                them find suitable placements in the Clinical Trials Industry at
-                the Institute.
-                <br />
-                <br />
-                With 3+ years of experience as an HR, her expertise lies in
-                positioning candidates in various MNCs according to their skill
-                sets. She understands and analyzes the job description and
-                conducts mock interviews for students to bring out the best in
-                them. She is skilled in HR Consulting and managing Social Media
-                networking sites that help students find the right jobs in the
-                industry.
-              </p>
-            </div>
-            <div class="col-12 col-lg-7 col-md-9 padding-55px-lr md-padding-5px-left sm-padding-50px-right">
-              <figure class="image-back-offset-shadow position-right w-100">
-                <img
-                  class="border-radius-6px"
-                  src="../../assets/images/team/2.jpg"
-                  alt=""
-                />
-              </figure>
-            </div>
-          </div>
-          <div class="row align-items-center justify-content-center team">
-            <div class="col-12 col-lg-7 col-md-9 padding-55px-lr md-padding-5px-left sm-padding-50px-right">
-              <figure class="image-back-offset-shadow position-right w-100">
-                <img
-                  class="border-radius-6px"
-                  src="../../assets/images/team/3.jpg"
-                  alt=""
-                />
-              </figure>
-            </div>
-            <div class="col-12 col-lg-5 col-md-9 md-margin-7-rem-bottom">
-              <span class="alt-font margin-20px-bottom text-extra-dark-gray d-inline-block text-uppercase font-weight-500 letter-spacing-1px">
-                Dr. Divya Sunil
-                <br />
-                Academic Mentor
-              </span>
-
-              <p class="w-95 lg-w-95">
-                Dr. Divya Sunil is an Academic Mentor at the Institute. She has
-                graduated with a degree in Dentistry from Bangalore University
-                and a PG Diploma in Clinical Research. She is passionately
-                involved in training and motivating students who are new to the
-                world of clinical research.
-                <br />
-                <br />
-                Dr. Divya is proficient in Pre-Clinical Studies, laws governing
-                the production of drugs, designing the database for Clinical
-                studies, medical coding, and guidelines for post-marketing
-                surveillance.
-                <br />
-                <br />
-                Previously, Dr. Divya has worked as an academic mentor at a
-                private dental college in Bangalore where she has taught more
-                than 10,000 students. She has also co-authored an article in the
-                monthly journal,” TRENDS IN PROSTHODONTICS” VOL 4, NO. 1 (2013)
-                on Bone Implant contact and its relationship with the strain on
-                the surrounding bone.
-              </p>
-            </div>
-          </div>
-          <div class="row align-items-center justify-content-center team">
             <div class="col-12 col-lg-5 col-md-9 md-margin-7-rem-bottom">
               <span class="alt-font margin-20px-bottom text-extra-dark-gray d-inline-block text-uppercase font-weight-500 letter-spacing-1px">
                 Dr. Smitha Parthiban
                 <br />
-                Principal Mentor
+                HOD
               </span>
 
               <p class="w-95 lg-w-95">
@@ -224,12 +123,42 @@ function Smitha(props) {
                 programs in the Clinical Research field.
               </p>
             </div>
+          </div>
+          <div class="row align-items-center justify-content-center team">
+            <div class="col-12 col-lg-5 col-md-9 md-margin-7-rem-bottom">
+              <span class="alt-font margin-20px-bottom text-extra-dark-gray d-inline-block text-uppercase font-weight-500 letter-spacing-1px">
+                Dr. Divya Sunil
+                <br />
+                Academic Mentor
+              </span>
 
+              <p class="w-95 lg-w-95">
+                Dr. Divya Sunil is an Academic Mentor at the Institute. She has
+                graduated with a degree in Dentistry from Bangalore University
+                and a PG Diploma in Clinical Research. She is passionately
+                involved in training and motivating students who are new to the
+                world of clinical research.
+                <br />
+                <br />
+                Dr. Divya is proficient in Pre-Clinical Studies, laws governing
+                the production of drugs, designing the database for Clinical
+                studies, medical coding, and guidelines for post-marketing
+                surveillance.
+                <br />
+                <br />
+                Previously, Dr. Divya has worked as an academic mentor at a
+                private dental college in Bangalore where she has taught more
+                than 10,000 students. She has also co-authored an article in the
+                monthly journal,” TRENDS IN PROSTHODONTICS” VOL 4, NO. 1 (2013)
+                on Bone Implant contact and its relationship with the strain on
+                the surrounding bone.
+              </p>
+            </div>
             <div class="col-12 col-lg-7 col-md-9 padding-55px-lr md-padding-5px-left sm-padding-50px-right">
               <figure class="image-back-offset-shadow position-right w-100">
                 <img
                   class="border-radius-6px"
-                  src="../../assets/images/team/4.jpg"
+                  src="../../assets/images/team/3.jpg"
                   alt=""
                 />
               </figure>
@@ -240,11 +169,41 @@ function Smitha(props) {
               <figure class="image-back-offset-shadow position-right w-100">
                 <img
                   class="border-radius-6px"
-                  src="../../assets/images/team/5.jpg"
+                  src="../../assets/images/team/1.jpg"
                   alt=""
                 />
               </figure>
             </div>
+            <div class="col-12 col-lg-5 col-md-9 md-margin-7-rem-bottom">
+              <span class="alt-font margin-20px-bottom text-extra-dark-gray d-inline-block text-uppercase font-weight-500 letter-spacing-1px">
+                Ms. Amrutha Babu
+                <br />
+                Academic Mentor
+              </span>
+
+              <p class="w-95 lg-w-95">
+                Ms. Amrutha is an accomplished academic expert in the field of
+                Food and Nutrition. She has a Master’s degree from Mahatma
+                Gandhi University, Kottayam where she graduated with a gold
+                medal.After undergoing training in Christian Medical College,
+                Vellore started her career as a freelance diet counselor in
+                2009. She was also associated with Lybrate - an online platform
+                for diet management and counseling.
+                <br />
+                <br />
+                After a remarkable experience in the field of dietetics, she
+                received a post-graduate diploma in Clinical Research.
+                Currently, she is associated with the Institute as a lecturer.
+                Her core strengths are providing excellent teaching and guidance
+                to her students. Amrutha has more than 4 years of teaching
+                experience in the field of clinical research. She has in-depth
+                knowledge about Drug Discovery Process, Drug Approval process,
+                Trial documents, Trial Design, Regulatory, Query writing, ICSR,
+                and so on.
+              </p>
+            </div>
+          </div>
+          <div class="row align-items-center justify-content-center team">
             <div class="col-12 col-lg-5 col-md-9 md-margin-7-rem-bottom">
               <span class="alt-font margin-20px-bottom text-extra-dark-gray d-inline-block text-uppercase font-weight-500 letter-spacing-1px">
                 Dr. Smitha Seshagiri
@@ -271,9 +230,53 @@ function Smitha(props) {
                 and critical thinking abilities.
               </p>
             </div>
+            <div class="col-12 col-lg-7 col-md-9 padding-55px-lr md-padding-5px-left sm-padding-50px-right">
+              <figure class="image-back-offset-shadow position-right w-100">
+                <img
+                  class="border-radius-6px"
+                  src="../../assets/images/team/5.jpg"
+                  alt=""
+                />
+              </figure>
+            </div>
+          </div>
+          <div class="row align-items-center justify-content-center team">
+            <div class="col-12 col-lg-7 col-md-9 padding-55px-lr md-padding-5px-left sm-padding-50px-right">
+              <figure class="image-back-offset-shadow position-right w-100">
+                <img
+                  class="border-radius-6px"
+                  src="../../assets/images/team/2.jpg"
+                  alt=""
+                />
+              </figure>
+            </div>
+            <div class="col-12 col-lg-5 col-md-9 md-margin-7-rem-bottom">
+              <span class="alt-font margin-20px-bottom text-extra-dark-gray d-inline-block text-uppercase font-weight-500 letter-spacing-1px">
+                Ms. Sushma K P<br />
+                Customer Success Manager
+              </span>
+
+              <p class="w-95 lg-w-95">
+                Ms. Sushma is a Bachelor of Computer Applications (B.C.A)
+                graduate from Bangalore University. She has conducted training
+                programs in Communication Skills and mentors students to help
+                them find suitable placements in the Clinical Trials Industry at
+                the Institute.
+                <br />
+                <br />
+                With 3+ years of experience as an HR, her expertise lies in
+                positioning candidates in various MNCs according to their skill
+                sets. She understands and analyzes the job description and
+                conducts mock interviews for students to bring out the best in
+                them. She is skilled in HR Consulting and managing Social Media
+                networking sites that help students find the right jobs in the
+                industry.
+              </p>
+            </div>
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 }

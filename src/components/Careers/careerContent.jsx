@@ -11,19 +11,12 @@ export default function CareerContent() {
           </div>
 
           <div class="position-relative carousel-card p-0 mx-auto">
-            <div
-              class="row d-block js-mdk-carousel"
-              id="carousel-feedback"
-              data-interval="3000"
-              style={{ overflow: "hidden" }}
-              data-domfactory-upgraded="mdk-carousel"
-            >
+            <div class="row d-block js-mdk-carousel" id="carousel-feedback">
               <a
                 class="carousel-control-next js-mdk-carousel-control mt-n24pt"
                 href="#carousel-feedback"
                 role="button"
                 data-slide="next"
-                data-domfactory-upgraded="mdk-carousel-control"
               >
                 <span
                   class="carousel-control-icon material-icons"
@@ -33,22 +26,10 @@ export default function CareerContent() {
                 </span>
                 <span class="sr-only">Next</span>
               </a>
-              <div
-                class="mdk-carousel__content"
-                style={{
-                  width: "1674px",
-                  transform: "translate3d(0px, 0px, 0px)",
-                  maxWidth: "inherit",
-                }}
-              >
-                <div class="col-2 mdk-carousel__item">
+              <div class="mdk-carousel__content">
+                <div class="col-3 mdk-carousel__item">
                   <div class="card card-feedback card-body justify-content-center align-items-center">
-                    <img
-                      src="images/Priya Sunny.jpg"
-                      alt=""
-                      srcset=""
-                      width="220px"
-                    />
+                    <img src="images/Priya Sunny.jpg" alt="" srcset="" />
                     <h5 className="text-center mt-2">PRIYA SUNNY</h5>
                     <img
                       src="images/PAREXEL 1.png"
@@ -58,26 +39,16 @@ export default function CareerContent() {
                     />
                   </div>
                 </div>
-                <div class="col-2 mdk-carousel__item">
+                <div class="col-3 mdk-carousel__item">
                   <div class="card card-feedback card-body justify-content-center align-items-center">
-                    <img
-                      src="images/Smitha B R.jpg"
-                      alt=""
-                      srcset=""
-                      width="220px"
-                    />
+                    <img src="images/Smitha B R.jpg" alt="" srcset="" />
                     <h5 className="text-center mt-2">SMITA B. R.</h5>
                     <img src="images/IQVIA.png" alt="" srcset="" width="65px" />
                   </div>
                 </div>
-                <div class="col-2 mdk-carousel__item">
+                <div class="col-3 mdk-carousel__item">
                   <div class="card card-feedback card-body justify-content-center align-items-center">
-                    <img
-                      src="images/Pradeeksha.jpg"
-                      alt=""
-                      srcset=""
-                      width="220px"
-                    />
+                    <img src="images/Pradeeksha.jpg" alt="" srcset="" />
                     <h5 className="text-center mt-2">PRADEEKSHA</h5>
                     <img
                       src="images/COVANCE 1.jpg"
@@ -87,34 +58,12 @@ export default function CareerContent() {
                     />
                   </div>
                 </div>
-                <div class="col-2 mdk-carousel__item">
+                <div class="col-3 mdk-carousel__item">
                   <div class="card card-feedback card-body justify-content-center align-items-center">
-                    <img
-                      src="images/Anupama Kurle.jpg"
-                      alt=""
-                      srcset=""
-                      width="220px"
-                    />
+                    <img src="images/Anupama Kurle.jpg" alt="" srcset="" />
                     <h5 className="text-center mt-2">ANUPAMA KURLE</h5>
                     <img
                       src="images/Forte.jpeg"
-                      alt=""
-                      srcset=""
-                      width="65px"
-                    />
-                  </div>
-                </div>
-                <div class="col-2 mdk-carousel__item">
-                  <div class="card card-feedback card-body justify-content-center align-items-center">
-                    <img
-                      src="images/Chaithrashree G S.jpg"
-                      alt=""
-                      srcset=""
-                      width="220px"
-                    />
-                    <h5 className="text-center mt-2">CHAITHRASHREE G S</h5>
-                    <img
-                      src="images/Nethradhama.jpeg"
                       alt=""
                       srcset=""
                       width="65px"

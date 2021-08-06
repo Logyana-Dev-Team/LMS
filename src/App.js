@@ -1,4 +1,5 @@
 import Home from "./components/Home/home";
+import axios from "axios";
 import { Switch, Route } from "react-router-dom";
 import Courses from "./components/Courses/courses";
 import Admin from "./components/Admin/admin";
@@ -31,6 +32,17 @@ import Amrutha from "./components/AboutUs/Amrutha";
 import Sushma from "./components/AboutUs/Sushama";
 import DivyaSunil from "./components/AboutUs/DivyaSunil";
 import Smitha from "./components/AboutUs/Smitha";
+
+axios.defaults.baseURL = "http://localhost:3000/";
+export const userId = localStorage.getItem("userId");
+export const token = localStorage.getItem("token");
+
+export const authAxios = axios.create({
+  baseURL: "http://localhost:3000/",
+  headers: {
+    Authorization: `Bearer ${token}`,
+  },
+});
 
 const MyComponent = (props) => {
   useScript("vendor/jquery.min.js");
@@ -89,7 +101,7 @@ function App() {
         <Route path="/Amrutha" component={Amrutha} />
         <Route path="/Sushma" component={Sushma} />
         <Route path="/DivyaSunil" component={DivyaSunil} />
-        <Route path="/Smitha" component={Smitha} />
+        <Route path="/ourTeam" component={Smitha} />
         <Route exact path="/" component={Home}></Route>
       </Switch>
       {MyComponent()}

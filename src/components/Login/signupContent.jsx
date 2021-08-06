@@ -1,6 +1,43 @@
 import React from "react";
+import axios from "axios";
+import { useState } from "react";
 
 export default function SignupContent() {
+  const [signUpData, setSignupData] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
+
+  const inputEvent = (e) => {
+    const { name, value } = e.target;
+
+    setSignupData((preValue) => {
+      return {
+        ...preValue,
+        [name]: value,
+      };
+    });
+  };
+
+  const login = (e) => {
+    e.preventDefault();
+    axios
+      .post("/api/auth/register", {
+        name: signUpData.name,
+        email: signUpData.email,
+        password: signUpData.password,
+      })
+      .then((response) => {
+        window.setTimeout(function () {
+          window.location.reload();
+        }, 2000);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   return (
     <div class="mdk-header-layout__content page-content">
       <div class="py-32pt navbar-submenu">
@@ -44,13 +81,15 @@ export default function SignupContent() {
         <div class="col-lg-10 p-0 mx-auto">
           <div class="row">
             <div class="col-md-6 mb-24pt mb-md-0">
-              <form action="signup-payment.html">
+              <form onSubmit={login}>
                 <div class="form-group">
                   <label class="form-label" for="name">
                     Your first and last name:
                   </label>
                   <input
                     id="name"
+                    name="name"
+                    onChange={inputEvent}
                     type="text"
                     class="form-control"
                     placeholder="Your first and last name ..."
@@ -63,6 +102,8 @@ export default function SignupContent() {
                   <input
                     id="email"
                     type="email"
+                    name="email"
+                    onChange={inputEvent}
                     class="form-control"
                     placeholder="Your email address ..."
                   />
@@ -74,6 +115,8 @@ export default function SignupContent() {
                   <input
                     id="password"
                     type="password"
+                    name="password"
+                    onChange={inputEvent}
                     class="form-control"
                     placeholder="Your password ..."
                   />
