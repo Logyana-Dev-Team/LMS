@@ -19,7 +19,6 @@ export default function Courses() {
             <div class="container page__container">
               <Polular />
               <Development />
-              <DesignCourses />
             </div>
           </div>
         </div>

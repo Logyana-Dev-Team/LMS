@@ -32,6 +32,7 @@ import Amrutha from "./components/AboutUs/Amrutha";
 import Sushma from "./components/AboutUs/Sushama";
 import DivyaSunil from "./components/AboutUs/DivyaSunil";
 import Smitha from "./components/AboutUs/Smitha";
+import BlogSingle from "./components/Blog/blogSingle";
 
 axios.defaults.baseURL = "http://localhost:3000/";
 export const userId = localStorage.getItem("userId");
@@ -87,15 +88,16 @@ function App() {
         <Route path="/courseInfo" component={CourseInfo}></Route>
         <Route path="/moduleList" component={ModulesList}></Route>
         <Route path="/addModule" component={AddModule}></Route>
-        <Route path="/editModule" component={EditModule}></Route>
+        <Route path="/editModule/:id" component={EditModule}></Route>
         <Route path="/topicList" component={TopicList}></Route>
         <Route path="/addTopic" component={AddTopic}></Route>
-        <Route path="/editTopic" component={EditTopic}></Route>
+        <Route path="/editTopic/:id" component={EditTopic}></Route>
         <Route path="/addChapter" component={AddChapter}></Route>
         <Route path="/editChapter" component={EditChapter}></Route>
         <Route exact path="/login" component={Login}></Route>
         <Route exact path="/signup" component={Signup}></Route>
         <Route exact path="/blog" component={Blog}></Route>
+        <Route exact path="/blogSingle" component={BlogSingle}></Route>
         <Route exact path="/studentCourse" component={StudentCourse}></Route>
         <Route path="/SmithaP" component={SmithaP} />
         <Route path="/Amrutha" component={Amrutha} />

@@ -90,7 +90,7 @@ export default function CareerContent() {
           >
             <div class="accordion__item open">
               <a
-                href="#"
+                href="#accordian"
                 class="accordion__toggle collapsed"
                 data-toggle="collapse"
                 data-target="#course-toc-1"
@@ -144,7 +144,7 @@ export default function CareerContent() {
             </div>
             <div class="accordion__item">
               <a
-                href="#"
+                href="#accordion"
                 class="accordion__toggle collapsed"
                 data-toggle="collapse"
                 data-target="#course-toc-2"
@@ -175,7 +175,7 @@ export default function CareerContent() {
             </div>
             <div class="accordion__item">
               <a
-                href="#"
+                href="#accordion"
                 class="accordion__toggle collapsed"
                 data-toggle="collapse"
                 data-target="#course-toc-3"
@@ -204,7 +204,7 @@ export default function CareerContent() {
             </div>
             <div class="accordion__item">
               <a
-                href="#"
+                href="#accordion"
                 class="accordion__toggle collapsed"
                 data-toggle="collapse"
                 data-target="#course-toc-4"
@@ -234,7 +234,7 @@ export default function CareerContent() {
             </div>
             <div class="accordion__item">
               <a
-                href="#"
+                href="#accordion"
                 class="accordion__toggle collapsed"
                 data-toggle="collapse"
                 data-target="#course-toc-5"
@@ -266,7 +266,7 @@ export default function CareerContent() {
             </div>
             <div class="accordion__item open">
               <a
-                href="#"
+                href="#accordion"
                 class="accordion__toggle collapsed"
                 data-toggle="collapse"
                 data-target="#course-toc-6"
@@ -301,157 +301,196 @@ export default function CareerContent() {
           <div class="page-headline text-center mt-5">
             <h2>FAQ</h2>
           </div>
-          <div class="row card-group-row">
-            <div class="col-md-6 card-group-row__col">
-              <div class="card card--elevated card-group-row__card">
-                <div class="card-body d-flex">
-                  <span class="icon-holder icon-holder--outline-muted rounded-circle d-inline-flex mr-16pt">
-                    <i class="material-icons">question_answer</i>
-                  </span>
-                  <div class="flex">
-                    <a class="card-title mb-4pt" href="/#">
-                      Who can take OET?
-                    </a>
-                    <p class="text-70 mb-0">
-                      OET has been developed specifically for 12 healthcare
-                      professions: Dentistry, Dietetics, Medicine, Nursing,
-                      Occupational Therapy, Optometry, Pharmacy, Physiotherapy,
-                      Podiatry, Radiography, Speech Pathology and Veterinary
-                      Science. OET is accepted as proof of English proficiency
-                      for visas, study, registration and employment in
-                      healthcare.
-                    </p>
-                  </div>
+
+          <div
+            class="accordion js-accordion accordion--boxed list-group-flush"
+            id="parent"
+            data-domfactory-upgraded="accordion"
+          >
+            <div class="accordion__item open">
+              <a
+                href="#accordian"
+                class="accordion__toggle collapsed"
+                data-toggle="collapse"
+                data-target="#course-toc-7"
+                data-parent="#parent"
+              >
+                <span class="flex" style={{ fontSize: "17px" }}>
+                  Who can take OET?
+                </span>
+                <span class="accordion__toggle-icon material-icons">
+                  keyboard_arrow_down
+                </span>
+              </a>
+              <div class="accordion__menu collapse" id="course-toc-7">
+                <div class="accordion__menu-link">
+                  <p style={{ fontSize: "15px" }}>
+                    OET has been developed specifically for 12 healthcare
+                    professions: Dentistry, Dietetics, Medicine, Nursing,
+                    Occupational Therapy, Optometry, Pharmacy, Physiotherapy,
+                    Podiatry, Radiography, Speech Pathology and Veterinary
+                    Science. OET is accepted as proof of English proficiency for
+                    visas, study, registration and employment in healthcare.
+                  </p>
                 </div>
               </div>
             </div>
-            <div class="col-md-6 card-group-row__col">
-              <div class="card card--elevated card-group-row__card">
-                <div class="card-body d-flex">
-                  <span class="icon-holder icon-holder--outline-muted rounded-circle d-inline-flex mr-16pt">
-                    <i class="material-icons">question_answer</i>
-                  </span>
-                  <div class="flex">
-                    <a class="card-title mb-4pt" href="/#">
-                      How is the test scored?
-                    </a>
-                    <p class="text-70 mb-0">
-                      You will receive a Statement of Results which shows your
-                      score for each of the four sub-tests, on a scale from 0 to
-                      500. Each of the four sub-tests is assessed in a specific
-                      way.
-                    </p>
-                  </div>
+            <div class="accordion__item">
+              <a
+                href="#accordion"
+                class="accordion__toggle collapsed"
+                data-toggle="collapse"
+                data-target="#course-toc-8"
+                data-parent="#parent"
+              >
+                <span class="flex" style={{ fontSize: "17px" }}>
+                  How is the test scored?
+                </span>
+                <span class="accordion__toggle-icon material-icons">
+                  keyboard_arrow_down
+                </span>
+              </a>
+              <div class="accordion__menu collapse" id="course-toc-8">
+                <div class="accordion__menu-link">
+                  <p style={{ fontSize: "15px" }}>
+                    You will receive a Statement of Results which shows your
+                    score for each of the four sub-tests, on a scale from 0 to
+                    500. Each of the four sub-tests is assessed in a specific
+                    way.
+                  </p>
                 </div>
               </div>
             </div>
-            <div class="col-md-6 card-group-row__col">
-              <div class="card card--elevated card-group-row__card">
-                <div class="card-body d-flex">
-                  <span class="icon-holder icon-holder--outline-muted rounded-circle d-inline-flex mr-16pt">
-                    <i class="material-icons">question_answer</i>
-                  </span>
-                  <div class="flex">
-                    <a class="card-title mb-4pt" href="/#">
-                      Listening and Reading
-                    </a>
-                    <p class="text-70 mb-0">
-                      Your answer booklets for Listening Part A and for Reading
-                      Part A are marked by trained OET Assessors. These answer
-                      booklets are assigned to OET Assessors at random to avoid
-                      any conflict of interest. Your answer booklets for Reading
-                      and Listening Parts B and C are computer scanned and
-                      automatically scored. Listening and Reading Assessors use
-                      a detailed marking guide which sets out which answers
-                      receive marks and how the marks are counted. Assessors use
-                      this guide to decide for each question whether you have
-                      provided enough correct information to be given the mark
-                      or marks available. Assessors are monitored for accuracy
-                      and consistency, and your Part A answers are marked by at
-                      least two different assessors.
-                    </p>
-                  </div>
+            <div class="accordion__item">
+              <a
+                href="#accordion"
+                class="accordion__toggle collapsed"
+                data-toggle="collapse"
+                data-target="#course-toc-9"
+                data-parent="#parent"
+              >
+                <span class="flex" style={{ fontSize: "17px" }}>
+                  Listening and Reading
+                </span>
+                <span class="accordion__toggle-icon material-icons">
+                  keyboard_arrow_down
+                </span>
+              </a>
+              <div class="accordion__menu collapse" id="course-toc-9">
+                <div class="accordion__menu-link">
+                  <p style={{ fontSize: "15px" }}>
+                    Your answer booklets for Listening Part A and for Reading
+                    Part A are marked by trained OET Assessors. These answer
+                    booklets are assigned to OET Assessors at random to avoid
+                    any conflict of interest. Your answer booklets for Reading
+                    and Listening Parts B and C are computer scanned and
+                    automatically scored. Listening and Reading Assessors use a
+                    detailed marking guide which sets out which answers receive
+                    marks and how the marks are counted. Assessors use this
+                    guide to decide for each question whether you have provided
+                    enough correct information to be given the mark or marks
+                    available. Assessors are monitored for accuracy and
+                    consistency, and your Part A answers are marked by at least
+                    two different assessors.
+                  </p>
                 </div>
               </div>
             </div>
-            <div class="col-md-6 card-group-row__col">
-              <div class="card card--elevated card-group-row__card">
-                <div class="card-body d-flex">
-                  <span class="icon-holder icon-holder--outline-muted rounded-circle d-inline-flex mr-16pt">
-                    <i class="material-icons">question_answer</i>
-                  </span>
-                  <div class="flex">
-                    <a class="card-title mb-4pt" href="/#">
-                      Writing and Speaking
-                    </a>
-                    <p class="text-70 mb-0">
-                      Your performances on the Writing and Speaking sub-tests
-                      are each rated by at least two trained Assessors. Audio
-                      files and scripts are assigned to Assessors at random to
-                      avoid any conflict of interest. Your test-day Interlocutor
-                      is not involved in the assessment process. Writing and
-                      Speaking Assessors are monitored for accuracy and
-                      consistency, and the scores they award are adjusted to
-                      take into account any leniency or severity. If two
-                      Assessors award different scores to your performance, your
-                      script and/or audio file will be referred to at least one
-                      other senior Assessor not previously involved in your
-                      assessment.
-                    </p>
-                  </div>
+            <div class="accordion__item">
+              <a
+                href="#accordion"
+                class="accordion__toggle collapsed"
+                data-toggle="collapse"
+                data-target="#course-toc-10"
+                data-parent="#parent"
+              >
+                <span class="flex" style={{ fontSize: "17px" }}>
+                  Writing and Speaking
+                </span>
+                <span class="accordion__toggle-icon material-icons">
+                  keyboard_arrow_down
+                </span>
+              </a>
+              <div class="accordion__menu collapse" id="course-toc-10">
+                <div class="accordion__menu-link">
+                  <p style={{ fontSize: "15px" }}>
+                    Your performances on the Writing and Speaking sub-tests are
+                    each rated by at least two trained Assessors. Audio files
+                    and scripts are assigned to Assessors at random to avoid any
+                    conflict of interest. Your test-day Interlocutor is not
+                    involved in the assessment process. Writing and Speaking
+                    Assessors are monitored for accuracy and consistency, and
+                    the scores they award are adjusted to take into account any
+                    leniency or severity. If two Assessors award different
+                    scores to your performance, your script and/or audio file
+                    will be referred to at least one other senior Assessor not
+                    previously involved in your assessment.
+                  </p>
                 </div>
               </div>
             </div>
-            <div class="col-md-6 card-group-row__col">
-              <div class="card card--elevated card-group-row__card">
-                <div class="card-body d-flex">
-                  <span class="icon-holder icon-holder--outline-muted rounded-circle d-inline-flex mr-16pt">
-                    <i class="material-icons">question_answer</i>
-                  </span>
-                  <div class="flex">
-                    <a class="card-title mb-4pt" href="/#">
-                      For the Writing sub-test
-                    </a>
-                    <p class="text-70 mb-0">
-                      Each Assessor scores your performance according to five
-                      criteria: Overall Task Fulfilment, Appropriateness of
-                      Language, Comprehension of Stimulus, Linguistic Features
-                      (Grammar and Cohesion), and Presentation Features
-                      (Spelling, Punctuation, and Layout). The five criteria are
-                      assessed on a scale from 0 to 6 and are equally weighted.
-                      A score of 350 (previously grade B) for Writing requires a
-                      high level of performance on all five criteria.
-                    </p>
-                  </div>
+            <div class="accordion__item">
+              <a
+                href="#accordion"
+                class="accordion__toggle collapsed"
+                data-toggle="collapse"
+                data-target="#course-toc-11"
+                data-parent="#parent"
+              >
+                <span class="flex" style={{ fontSize: "17px" }}>
+                  For the Writing sub-test
+                </span>
+                <span class="accordion__toggle-icon material-icons">
+                  keyboard_arrow_down
+                </span>
+              </a>
+              <div class="accordion__menu collapse" id="course-toc-11">
+                <div class="accordion__menu-link">
+                  <p style={{ fontSize: "15px" }}>
+                    Each Assessor scores your performance according to five
+                    criteria: Overall Task Fulfilment, Appropriateness of
+                    Language, Comprehension of Stimulus, Linguistic Features
+                    (Grammar and Cohesion), and Presentation Features (Spelling,
+                    Punctuation, and Layout). The five criteria are assessed on
+                    a scale from 0 to 6 and are equally weighted. A score of 350
+                    (previously grade B) for Writing requires a high level of
+                    performance on all five criteria.
+                  </p>
                 </div>
               </div>
             </div>
-            <div class="col-md-6 card-group-row__col">
-              <div class="card card--elevated card-group-row__card">
-                <div class="card-body d-flex">
-                  <span class="icon-holder icon-holder--outline-muted rounded-circle d-inline-flex mr-16pt">
-                    <i class="material-icons">question_answer</i>
-                  </span>
-                  <div class="flex">
-                    <a class="card-title mb-4pt" href="/#">
-                      For the Speaking sub-test
-                    </a>
-                    <p class="text-70 mb-0">
-                      Each Assessor scores your performance according to nine
-                      criteria. The four linguistically-oriented criteria are
-                      Intelligibility, Fluency, Appropriateness of Language, and
-                      Resources of Grammar and Expression. They are assessed on
-                      a scale from 0 to 6. Clinical communication criteria
-                      include Indicators of Relationship Building, Indicators of
-                      Understanding & Incorporating the Patient’s Perspective,
-                      Indicators of Providing Structure, Indicators for
-                      Information Gathering and Indicators for Information
-                      Giving. They are assessed on a scale from 0 to 3. A high
-                      level of performance on all nine criteria is required in
-                      order to achieve a score of 350 (previously grade B) on
-                      the speaking test.
-                    </p>
-                  </div>
+            <div class="accordion__item open">
+              <a
+                href="#accordion"
+                class="accordion__toggle collapsed"
+                data-toggle="collapse"
+                data-target="#course-toc-12"
+                data-parent="#parent"
+              >
+                <span class="flex" style={{ fontSize: "17px" }}>
+                  For the Speaking sub-test
+                </span>
+                <span class="accordion__toggle-icon material-icons">
+                  keyboard_arrow_down
+                </span>
+              </a>
+              <div class="accordion__menu collapse" id="course-toc-12">
+                <div class="accordion__menu-link">
+                  <p style={{ fontSize: "15px" }}>
+                    Each Assessor scores your performance according to nine
+                    criteria. The four linguistically-oriented criteria are
+                    Intelligibility, Fluency, Appropriateness of Language, and
+                    Resources of Grammar and Expression. They are assessed on a
+                    scale from 0 to 6. Clinical communication criteria include
+                    Indicators of Relationship Building, Indicators of
+                    Understanding & Incorporating the Patient’s Perspective,
+                    Indicators of Providing Structure, Indicators for
+                    Information Gathering and Indicators for Information Giving.
+                    They are assessed on a scale from 0 to 3. A high level of
+                    performance on all nine criteria is required in order to
+                    achieve a score of 350 (previously grade B) on the speaking
+                    test.
+                  </p>
                 </div>
               </div>
             </div>

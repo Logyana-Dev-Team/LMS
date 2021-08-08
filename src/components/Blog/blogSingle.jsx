@@ -1,13 +1,13 @@
 import React from "react";
 import Footer from "../../containers/Footer";
 import Header from "../../containers/Header";
-import BlogPage from "./blogPage";
+import BlogContent from "./blogContent";
 
-export default function Blog() {
+export default function BlogSingle() {
   return (
     <>
       <Header />
-      <BlogPage />
+      <BlogContent />
       <Footer />
     </>
   );

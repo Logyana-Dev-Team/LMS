@@ -19,7 +19,7 @@ export default function Header() {
       </div>
       <div className="mdk-header__content justify-content-center">
         <div
-          className="navbar navbar-expand navbar-dark-pickled-bluewood bg-transparent will-fade-background"
+          className="navbar navbar-expand navbar-light will-fade-background"
           id="default-navbar"
           data-primary
         >

@@ -1,7 +1,24 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect } from "react";
+import { useState } from "react";
 import Drawer from "./Drawer";
 import Header from "./Header";
 export default function ModulesList() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    getModule();
+  }, []);
+
+  const getModule = () => {
+    axios
+      .get("/api/module")
+      .then((res) => {
+        setData(res.data);
+        console.log(res.data);
+      })
+      .catch((err) => console.log(err));
+  };
   return (
     <>
       <Header />
@@ -97,380 +114,46 @@ export default function ModulesList() {
                   </tr>
                 </thead>
                 <tbody class="list" id="employees">
-                  <tr>
-                    <td>1</td>
-                    <td>Design</td>
-                    <td>Web Design</td>
-                    <td style={{ width: "0" }}>
-                      <div class="avatar avatar-sm mr-8pt">
-                        <span class="avatar-title rounded-circle">BN</span>
-                      </div>
-                    </td>
-                    <td>
-                      <h3 className="m-0 p-0">
-                        <span
-                          class="badge bg-success"
-                          style={{ padding: ".35em .65em" }}
+                  {data.map((module, i) => (
+                    <tr key={i}>
+                      <td>{i + 1}</td>
+                      <td>{module.course.name}</td>
+                      <td>{module.name}</td>
+                      <td style={{ width: "15%" }}>
+                        <div class="mr-8pt">
+                          <img
+                            src={module.imageName}
+                            alt="course"
+                            className="avatar-img rounded"
+                          />
+                        </div>
+                      </td>
+                      <td>
+                        <h6 className="m-0 p-0">
+                          <span
+                            class="badge bg-success"
+                            style={{ padding: ".35em .65em" }}
+                          >
+                            <small>Active</small>{" "}
+                          </span>
+                        </h6>
+                      </td>
+                      <td>
+                        <a
+                          href={`/editModule/${module._id}`}
+                          type="button"
+                          class="btn btn-success"
                         >
-                          <small>Active</small>{" "}
-                        </span>
-                      </h3>
-                    </td>
-                    <td>
-                      <a
-                        href="/editModule"
-                        type="button"
-                        class="btn btn-success"
-                      >
-                        <i class="far fa-edit"></i>
-                      </a>
-                    </td>
-                    <td>
-                      <button type="button" class="btn btn-danger">
-                        <i class="far fa-trash-alt"></i>
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>1</td>
-                    <td>Design</td>
-                    <td>Web Design</td>
-                    <td style={{ width: "0" }}>
-                      <div class="avatar avatar-sm mr-8pt">
-                        <span class="avatar-title rounded-circle">BN</span>
-                      </div>
-                    </td>
-                    <td>
-                      <h3 className="m-0 p-0">
-                        <span
-                          class="badge bg-success"
-                          style={{ padding: ".35em .65em" }}
-                        >
-                          <small>Active</small>{" "}
-                        </span>
-                      </h3>
-                    </td>
-                    <td>
-                      <a
-                        href="/editModule"
-                        type="button"
-                        class="btn btn-success"
-                      >
-                        <i class="far fa-edit"></i>
-                      </a>
-                    </td>
-                    <td>
-                      <button type="button" class="btn btn-danger">
-                        <i class="far fa-trash-alt"></i>
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>1</td>
-                    <td>Design</td>
-                    <td>Web Design</td>
-                    <td style={{ width: "0" }}>
-                      <div class="avatar avatar-sm mr-8pt">
-                        <span class="avatar-title rounded-circle">BN</span>
-                      </div>
-                    </td>
-                    <td>
-                      <h3 className="m-0 p-0">
-                        <span
-                          class="badge bg-success"
-                          style={{ padding: ".35em .65em" }}
-                        >
-                          <small>Active</small>{" "}
-                        </span>
-                      </h3>
-                    </td>
-                    <td>
-                      <a
-                        href="/editModule"
-                        type="button"
-                        class="btn btn-success"
-                      >
-                        <i class="far fa-edit"></i>
-                      </a>
-                    </td>
-                    <td>
-                      <button type="button" class="btn btn-danger">
-                        <i class="far fa-trash-alt"></i>
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>1</td>
-                    <td>Design</td>
-                    <td>Web Design</td>
-                    <td style={{ width: "0" }}>
-                      <div class="avatar avatar-sm mr-8pt">
-                        <span class="avatar-title rounded-circle">BN</span>
-                      </div>
-                    </td>
-                    <td>
-                      <h3 className="m-0 p-0">
-                        <span
-                          class="badge bg-success"
-                          style={{ padding: ".35em .65em" }}
-                        >
-                          <small>Active</small>{" "}
-                        </span>
-                      </h3>
-                    </td>
-                    <td>
-                      <a
-                        href="/editModule"
-                        type="button"
-                        class="btn btn-success"
-                      >
-                        <i class="far fa-edit"></i>
-                      </a>
-                    </td>
-                    <td>
-                      <button type="button" class="btn btn-danger">
-                        <i class="far fa-trash-alt"></i>
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>1</td>
-                    <td>Design</td>
-                    <td>Web Design</td>
-                    <td style={{ width: "0" }}>
-                      <div class="avatar avatar-sm mr-8pt">
-                        <span class="avatar-title rounded-circle">BN</span>
-                      </div>
-                    </td>
-                    <td>
-                      <h3 className="m-0 p-0">
-                        <span
-                          class="badge bg-success"
-                          style={{ padding: ".35em .65em" }}
-                        >
-                          <small>Active</small>{" "}
-                        </span>
-                      </h3>
-                    </td>
-                    <td>
-                      <a
-                        href="/editModule"
-                        type="button"
-                        class="btn btn-success"
-                      >
-                        <i class="far fa-edit"></i>
-                      </a>
-                    </td>
-                    <td>
-                      <button type="button" class="btn btn-danger">
-                        <i class="far fa-trash-alt"></i>
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>1</td>
-                    <td>Design</td>
-                    <td>Web Design</td>
-                    <td style={{ width: "0" }}>
-                      <div class="avatar avatar-sm mr-8pt">
-                        <span class="avatar-title rounded-circle">BN</span>
-                      </div>
-                    </td>
-                    <td>
-                      <h3 className="m-0 p-0">
-                        <span
-                          class="badge bg-success"
-                          style={{ padding: ".35em .65em" }}
-                        >
-                          <small>Active</small>{" "}
-                        </span>
-                      </h3>
-                    </td>
-                    <td>
-                      <a
-                        href="/editModule"
-                        type="button"
-                        class="btn btn-success"
-                      >
-                        <i class="far fa-edit"></i>
-                      </a>
-                    </td>
-                    <td>
-                      <button type="button" class="btn btn-danger">
-                        <i class="far fa-trash-alt"></i>
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>1</td>
-                    <td>Design</td>
-                    <td>Web Design</td>
-                    <td style={{ width: "0" }}>
-                      <div class="avatar avatar-sm mr-8pt">
-                        <span class="avatar-title rounded-circle">BN</span>
-                      </div>
-                    </td>
-                    <td>
-                      <h3 className="m-0 p-0">
-                        <span
-                          class="badge bg-success"
-                          style={{ padding: ".35em .65em" }}
-                        >
-                          <small>Active</small>{" "}
-                        </span>
-                      </h3>
-                    </td>
-                    <td>
-                      <a
-                        href="/editModule"
-                        type="button"
-                        class="btn btn-success"
-                      >
-                        <i class="far fa-edit"></i>
-                      </a>
-                    </td>
-                    <td>
-                      <button type="button" class="btn btn-danger">
-                        <i class="far fa-trash-alt"></i>
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>1</td>
-                    <td>Design</td>
-                    <td>Web Design</td>
-                    <td style={{ width: "0" }}>
-                      <div class="avatar avatar-sm mr-8pt">
-                        <span class="avatar-title rounded-circle">BN</span>
-                      </div>
-                    </td>
-                    <td>
-                      <h3 className="m-0 p-0">
-                        <span
-                          class="badge bg-success"
-                          style={{ padding: ".35em .65em" }}
-                        >
-                          <small>Active</small>{" "}
-                        </span>
-                      </h3>
-                    </td>
-                    <td>
-                      <a
-                        href="/editModule"
-                        type="button"
-                        class="btn btn-success"
-                      >
-                        <i class="far fa-edit"></i>
-                      </a>
-                    </td>
-                    <td>
-                      <button type="button" class="btn btn-danger">
-                        <i class="far fa-trash-alt"></i>
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>1</td>
-                    <td>Design</td>
-                    <td>Web Design</td>
-                    <td style={{ width: "0" }}>
-                      <div class="avatar avatar-sm mr-8pt">
-                        <span class="avatar-title rounded-circle">BN</span>
-                      </div>
-                    </td>
-                    <td>
-                      <h3 className="m-0 p-0">
-                        <span
-                          class="badge bg-success"
-                          style={{ padding: ".35em .65em" }}
-                        >
-                          <small>Active</small>{" "}
-                        </span>
-                      </h3>
-                    </td>
-                    <td>
-                      <a
-                        href="/editModule"
-                        type="button"
-                        class="btn btn-success"
-                      >
-                        <i class="far fa-edit"></i>
-                      </a>
-                    </td>
-                    <td>
-                      <button type="button" class="btn btn-danger">
-                        <i class="far fa-trash-alt"></i>
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>1</td>
-                    <td>Design</td>
-                    <td>Web Design</td>
-                    <td style={{ width: "0" }}>
-                      <div class="avatar avatar-sm mr-8pt">
-                        <span class="avatar-title rounded-circle">BN</span>
-                      </div>
-                    </td>
-                    <td>
-                      <h3 className="m-0 p-0">
-                        <span
-                          class="badge bg-success"
-                          style={{ padding: ".35em .65em" }}
-                        >
-                          <small>Active</small>{" "}
-                        </span>
-                      </h3>
-                    </td>
-                    <td>
-                      <a
-                        href="/editModule"
-                        type="button"
-                        class="btn btn-success"
-                      >
-                        <i class="far fa-edit"></i>
-                      </a>
-                    </td>
-                    <td>
-                      <button type="button" class="btn btn-danger">
-                        <i class="far fa-trash-alt"></i>
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>1</td>
-                    <td>Design</td>
-                    <td>Web Design</td>
-                    <td style={{ width: "0" }}>
-                      <div class="avatar avatar-sm mr-8pt">
-                        <span class="avatar-title rounded-circle">BN</span>
-                      </div>
-                    </td>
-                    <td>
-                      <h3 className="m-0 p-0">
-                        <span
-                          class="badge bg-success"
-                          style={{ padding: ".35em .65em" }}
-                        >
-                          <small>Active</small>{" "}
-                        </span>
-                      </h3>
-                    </td>
-                    <td>
-                      <a
-                        href="/editModule"
-                        type="button"
-                        class="btn btn-success"
-                      >
-                        <i class="far fa-edit"></i>
-                      </a>
-                    </td>
-                    <td>
-                      <button type="button" class="btn btn-danger">
-                        <i class="far fa-trash-alt"></i>
-                      </button>
-                    </td>
-                  </tr>
+                          <i class="far fa-edit"></i>
+                        </a>
+                      </td>
+                      <td>
+                        <button type="button" class="btn btn-danger">
+                          <i class="far fa-trash-alt"></i>
+                        </button>
+                      </td>
+                    </tr>
+                  ))}
                 </tbody>
               </table>
             </div>
@@ -478,7 +161,7 @@ export default function ModulesList() {
             <div class="card-footer p-8pt">
               <ul class="pagination justify-content-start pagination-xsm m-0">
                 <li class="page-item disabled">
-                  <a class="page-link" href="#" aria-label="Previous">
+                  <a class="page-link" href="#prev" aria-label="Previous">
                     <span aria-hidden="true" class="material-icons">
                       chevron_left
                     </span>
@@ -486,17 +169,17 @@ export default function ModulesList() {
                   </a>
                 </li>
                 <li class="page-item">
-                  <a class="page-link" href="#" aria-label="Page 1">
+                  <a class="page-link" href="#no" aria-label="Page 1">
                     <span>1</span>
                   </a>
                 </li>
                 <li class="page-item">
-                  <a class="page-link" href="#" aria-label="Page 2">
+                  <a class="page-link" href="#no" aria-label="Page 2">
                     <span>2</span>
                   </a>
                 </li>
                 <li class="page-item">
-                  <a class="page-link" href="#" aria-label="Next">
+                  <a class="page-link" href="#right" aria-label="Next">
                     <span>Next</span>
                     <span aria-hidden="true" class="material-icons">
                       chevron_right

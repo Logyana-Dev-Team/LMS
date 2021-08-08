@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <div
       className=" border-top-2 mt-auto"
-      style={{ backgroundColor: "#303956" }}
+      style={{ backgroundColor: "#3B7EB9" }}
     >
       <div className="container page__container page-section d-flex flex-column">
         <div
@@ -23,7 +23,7 @@ export default function Footer() {
               className="measure-lead-max mr-8pt"
               style={{
                 width: "95%",
-                color: "#7f8b9c",
+                color: "#FFFFFF",
                 lineHeight: "30px",
                 fontSize: 15,
               }}
@@ -163,27 +163,27 @@ export default function Footer() {
               }}
             >
               <li style={{ marginBottom: "7px" }}>
-                <a href="/about" style={{ color: "#7f8b9c" }}>
+                <a href="/about" style={{ color: "#FFFFFF" }}>
                   About Us
                 </a>
               </li>
               <li style={{ marginBottom: "7px" }}>
-                <a href="/clinical" style={{ color: "#7f8b9c" }}>
+                <a href="/clinical" style={{ color: "#FFFFFF" }}>
                   Clinical Research
                 </a>
               </li>
               <li style={{ marginBottom: "7px" }}>
-                <a href="/career" style={{ color: "#7f8b9c" }}>
+                <a href="/career" style={{ color: "#FFFFFF" }}>
                   Career Development
                 </a>
               </li>
               <li style={{ marginBottom: "7px" }}>
-                <a href="/about#team" style={{ color: "#7f8b9c" }}>
+                <a href="/about#team" style={{ color: "#FFFFFF" }}>
                   Team
                 </a>
               </li>
               <li style={{ marginBottom: "7px" }}>
-                <a href="/contact" style={{ color: "#7f8b9c" }}>
+                <a href="/contact" style={{ color: "#FFFFFF" }}>
                   Contact us
                 </a>
               </li>
@@ -208,22 +208,22 @@ export default function Footer() {
               }}
             >
               <li style={{ marginBottom: "7px" }}>
-                <a href="/pgdcr" style={{ color: "#7f8b9c" }}>
+                <a href="/pgdcr" style={{ color: "#FFFFFF" }}>
                   PG Diploma in Clinical Research
                 </a>
               </li>
               <li style={{ marginBottom: "7px" }}>
-                <a href="/oet" style={{ color: "#7f8b9c" }}>
+                <a href="/oet" style={{ color: "#FFFFFF" }}>
                   OET
                 </a>
               </li>
               <li style={{ marginBottom: "7px" }}>
-                <a href="/IELTS" style={{ color: "#7f8b9c" }}>
+                <a href="/IELTS" style={{ color: "#FFFFFF" }}>
                   IELTS
                 </a>
               </li>
               <li style={{ marginBottom: "7px" }}>
-                <a href="/TOEFL" style={{ color: "#7f8b9c" }}>
+                <a href="/TOEFL" style={{ color: "#FFFFFF" }}>
                   TOEFL
                 </a>
               </li>
@@ -242,7 +242,7 @@ export default function Footer() {
           <div class="row align-items-center">
             <div class="col-12 col-md-6 sm-margin-15px-bottom"></div>
             <div class="col-12 col-md-6 text-center text-md-right last-paragraph-no-margin">
-              <p style={{ fontSize: 15, color: "#8890a4" }}>
+              <p style={{ fontSize: 15, color: "#FFFFFF" }}>
                 © 2021 True Lessons is Proudly Powered by{" "}
                 <a
                   href="https://cognilements.com/"

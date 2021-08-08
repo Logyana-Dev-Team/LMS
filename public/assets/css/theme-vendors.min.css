@@ -15,14 +15,14 @@ License: Copyright 2011-2020 The Bootstrap Authors | Copyright 2011-2020 Twitter
 	--yellow: #ffc107;
 	--green: #28a745;
 	--teal: #20c997;
-	--cyan: #17a2b8;
+	--cyan: #3B7EB9;
 	--white: #fff;
 	--gray: #6c757d;
 	--gray-dark: #343a40;
 	--primary: #007bff;
 	--secondary: #6c757d;
 	--success: #28a745;
-	--info: #17a2b8;
+	--info: #3B7EB9;
 	--warning: #ffc107;
 	--danger: #dc3545;
 	--light: #f8f9fa;
@@ -2805,8 +2805,8 @@ fieldset:disabled a.btn {
 
 .btn-info {
 	color: #fff;
-	background-color: #17a2b8;
-	border-color: #17a2b8
+	background-color: #3B7EB9;
+	border-color: #3B7EB9
 }
 
 .btn-info:hover {
@@ -2826,8 +2826,8 @@ fieldset:disabled a.btn {
 .btn-info.disabled,
 .btn-info:disabled {
 	color: #fff;
-	background-color: #17a2b8;
-	border-color: #17a2b8
+	background-color: #3B7EB9;
+	border-color: #3B7EB9
 }
 
 .btn-info:not(:disabled):not(.disabled).active,
@@ -3117,14 +3117,14 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-info {
-	color: #17a2b8;
-	border-color: #17a2b8
+	color: #3B7EB9;
+	border-color: #3B7EB9
 }
 
 .btn-outline-info:hover {
 	color: #fff;
-	background-color: #17a2b8;
-	border-color: #17a2b8
+	background-color: #3B7EB9;
+	border-color: #3B7EB9
 }
 
 .btn-outline-info.focus,
@@ -3134,7 +3134,7 @@ fieldset:disabled a.btn {
 
 .btn-outline-info.disabled,
 .btn-outline-info:disabled {
-	color: #17a2b8;
+	color: #3B7EB9;
 	background-color: transparent
 }
 
@@ -3142,8 +3142,8 @@ fieldset:disabled a.btn {
 .btn-outline-info:not(:disabled):not(.disabled):active,
 .show>.btn-outline-info.dropdown-toggle {
 	color: #fff;
-	background-color: #17a2b8;
-	border-color: #17a2b8
+	background-color: #3B7EB9;
+	border-color: #3B7EB9
 }
 
 .btn-outline-info:not(:disabled):not(.disabled).active:focus,
@@ -5456,7 +5456,7 @@ a.badge-success:focus {
 
 .badge-info {
 	color: #fff;
-	background-color: #17a2b8
+	background-color: #3B7EB9
 }
 
 a.badge-info:focus,
@@ -7076,7 +7076,7 @@ button.bg-success:hover {
 }
 
 .bg-info {
-	background-color: #17a2b8!important
+	background-color: #3B7EB9!important
 }
 
 a.bg-info:focus,
@@ -7191,7 +7191,7 @@ button.bg-dark:hover {
 }
 
 .border-info {
-	border-color: #17a2b8!important
+	border-color: #3B7EB9!important
 }
 
 .border-warning {
@@ -10442,7 +10442,7 @@ a.text-success:hover {
 }
 
 .text-info {
-	color: #17a2b8!important
+	color: #3B7EB9!important
 }
 
 a.text-info:focus,

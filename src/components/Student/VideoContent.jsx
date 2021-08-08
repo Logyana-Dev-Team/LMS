@@ -16,7 +16,7 @@ export default function VideoContent() {
               </div>
               <div className="row justify-content-between mt-3">
                 <div className="col d-flex align-items-center">
-                  <div class="dropdown">
+                  {/* <div class="dropdown">
                     <button
                       class="btn btn-outline-secondary dropdown-toggle"
                       type="button"
@@ -47,7 +47,7 @@ export default function VideoContent() {
                       </li>
                     </ul>
                   </div>
-                  <span className="ms-3">Choose Your Language</span>
+                  <span className="ms-3">Choose Your Language</span> */}
                 </div>
                 <div className="col">
                   <button type="button" class="btn btn-info float-right ms-2">

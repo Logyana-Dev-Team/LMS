@@ -54,6 +54,39 @@ export default function Header() {
             style={{ borderLeft: "1px solid #bababa", height: "30px" }}
           ></span>
 
+          <ul className="nav navbar-nav d-none d-sm-flex flex justify-content-start ml-8pt">
+            <li className="nav-item">
+              <a href="/" className="nav-link">
+                Home
+              </a>
+            </li>
+            <li className="nav-item dropdown">
+              <a href="/courses" className="nav-link">
+                Courses
+              </a>
+            </li>
+            <li className="nav-item dropdown">
+              <a href="/about" className="nav-link">
+                About Us
+              </a>
+            </li>
+            <li className="nav-item">
+              <a href="/contact" className="nav-link">
+                Contact Us
+              </a>
+            </li>
+            <li className="nav-item dropdown">
+              <a href="/career" className="nav-link">
+                Careers
+              </a>
+            </li>
+            <li className="nav-item dropdown">
+              <a href="/blog" className="nav-link">
+                Blog
+              </a>
+            </li>
+          </ul>
+
           <ul className="nav navbar-nav ml-auto mr-0">
             <li className="nav-item">
               <a href="/student" className="btn btn-outline-primary">

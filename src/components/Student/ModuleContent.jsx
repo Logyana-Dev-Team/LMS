@@ -147,9 +147,9 @@ export default function ModuleContent() {
         <div className="container mb-5 pb-5">
           <div class="card">
             <div class="card-header" style={{ backgroundColor: "#CBE7FF66" }}>
-              <h3 className="text-info">
+              <h2 className="text-info">
                 Chapter 1 - Evolution of clinical research
-              </h3>
+              </h2>
             </div>
             <div class="card-body">
               <div className="row">

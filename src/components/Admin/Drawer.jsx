@@ -19,7 +19,7 @@ export default function Drawer() {
                 <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">
                   access_time
                 </span>
-                Topics
+                Courses
                 <span class="ml-auto sidebar-menu-toggle-icon"></span>
               </a>
               <ul
@@ -28,12 +28,12 @@ export default function Drawer() {
               >
                 <li class="sidebar-menu-item">
                   <a class="sidebar-menu-button" href="/topicList">
-                    <span class="sidebar-menu-text">List Topics</span>
+                    <span class="sidebar-menu-text">List Courses</span>
                   </a>
                 </li>
                 <li class="sidebar-menu-item">
                   <a class="sidebar-menu-button" href="/addTopic">
-                    <span class="sidebar-menu-text">Add Topic</span>
+                    <span class="sidebar-menu-text">Add Course</span>
                   </a>
                 </li>
               </ul>
