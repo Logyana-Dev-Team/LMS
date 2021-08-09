@@ -99,9 +99,9 @@ export default function Content() {
       <section className="half-section border-bottom border-color-medium-gray">
         <div className="container">
           <div className="col-md-12 text-center margin-seven-bottom">
-            <h6 className="alt-font text-extra-dark-gray font-weight-500">
+            <p className="fw-bold fs-3 text-extra-dark-gray">
               Our Accomplishments
-            </h6>
+            </p>
           </div>
           <div className="row row-cols-1 row-cols-lg-3 row-cols-sm-2 justify-content-center">
             <div
@@ -158,9 +158,9 @@ export default function Content() {
         <div className="container-fluid">
           <div className="row justify-content-center">
             <div className="col-md-12 text-center margin-five-bottom">
-              <h6 className="alt-font text-extra-dark-gray font-weight-500">
+              <p className="fw-bold fs-3 text-extra-dark-gray">
                 Featured Courses
-              </h6>
+              </p>
             </div>
           </div>
           <div className="row row-cols-1 row-cols-xl-4 row-cols-sm-2">
