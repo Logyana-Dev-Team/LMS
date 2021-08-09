@@ -14,7 +14,7 @@ export default function Development() {
         console.log(err);
         localStorage.removeItem("userId");
         localStorage.removeItem("token");
-        // window.location = "/";
+        window.location = "/";
       });
   }, []);
 
