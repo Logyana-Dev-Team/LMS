@@ -257,11 +257,6 @@ export default function CareerContent() {
                         href="#swiper"
                         className="alt-font text-extra-dark-gray font-weight-500 text-uppercase"
                       >
-                        <img
-                          src="../assets/images/logos/PAREXEL 1.png"
-                          className="img-height"
-                          alt=""
-                        />
                         Dr. S.R Sadiya Pervaze
                       </a>
 

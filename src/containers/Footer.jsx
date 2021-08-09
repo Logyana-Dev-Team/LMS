@@ -151,12 +151,25 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
+            <p
+              className="measure-lead-max mr-8pt"
+              style={{
+                width: "95%",
+                color: "#FFFFFF",
+                lineHeight: "30px",
+                fontSize: 15,
+              }}
+            >
+              <span className="fw-bold">Contact No: </span>97416 00933
+              <br />
+              <span className="fw-bold">Mail Id: </span>info@truelessons.io
+            </p>
           </div>
           <div className="col-12 col-lg-2 offset-lg-1 col-md-4 col-sm-6 md-margin-40px-bottom xs-margin-25px-bottom">
             <span className="alt-font font-weight-500 d-block text-white margin-20px-bottom xs-margin-10px-bottom"></span>
             <ul
               style={{
-                marginTop: 45,
+                marginTop: 53,
                 fontSize: 15,
                 padding: 0,
                 listStyle: "none",
@@ -207,7 +220,7 @@ export default function Footer() {
                 listStyle: "none",
               }}
             >
-              <li style={{ marginBottom: "7px" }}>
+              <li style={{ marginBottom: "7px", width: "215px" }}>
                 <a href="/pgdcr" style={{ color: "#FFFFFF" }}>
                   PG Diploma in Clinical Research
                 </a>

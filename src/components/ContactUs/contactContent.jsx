@@ -102,7 +102,7 @@ export default function ContactContent() {
                     <h2>How Can We Help You?</h2>
                   </div>
                   <div class="col-lg-10 p-0 mx-auto">
-                    <form action="signup-payment.html">
+                    <form action="">
                       <div class="form-group">
                         <label class="form-label" for="name">
                           Your first and last name:
@@ -112,6 +112,7 @@ export default function ContactContent() {
                           type="text"
                           class="form-control"
                           placeholder="Your first and last name ..."
+                          required
                         />
                       </div>
                       <div class="form-group">
@@ -123,6 +124,7 @@ export default function ContactContent() {
                           type="email"
                           class="form-control"
                           placeholder="Your email address ..."
+                          required
                         />
                       </div>
                       <div class="form-group mb-24pt">
@@ -134,6 +136,7 @@ export default function ContactContent() {
                           type="mobile"
                           class="form-control"
                           placeholder="Your Mobile No..."
+                          required
                         />
                       </div>
                       <div class="form-group mb-24pt">
@@ -145,6 +148,7 @@ export default function ContactContent() {
                           type="message"
                           class="form-control"
                           placeholder="Your Message..."
+                          required
                         />
                       </div>
                       <button class="btn btn-primary">Send Message</button>

@@ -22,13 +22,13 @@ export default function Content() {
     <div>
       <section className="p-0 parallax" data-parallax-background-ratio="0.3">
         <div className="container-fluid position-relative">
-          <div className="row one-fifth-screen">
+          <div className="row one-third-screen">
             <div className="col-12 col-xl-5 offset-lg-1 col-lg-6 col-md-8 col-sm-10 d-flex flex-column justify-content-center md-padding-35px-left xs-padding-15px-left">
               <h3
                 className="alt-font text-extra-dark-gray font-weight-600 letter-spacing-minus-2px w-80 xl-w-100 margin-twelve-bottom sm-margin-30px-bottom"
                 style={{ fontSize: "3.4rem" }}
               >
-                World's Number 1 MedEdTech Platform{" "}
+                Worlds First MedEdTech Platform
               </h3>
               <div className="d-inline-block">
                 <a
@@ -171,10 +171,10 @@ export default function Content() {
               <div className="opacity-medium-2 bg-extra-dark-gray"></div>
               <div className="d-flex flex-column h-100 padding-5-rem-all text-center position-relative z-index-1 xl-padding-3-rem-lr lg-padding-8-rem-lr">
                 <a href="/course">
-                  <h4 className="alt-font font-weight-600 text-white text-uppercase mb-0 mt-auto letter-spacing-minus-1px">
+                  <h1 className="alt-font font-weight-600 text-white text-uppercase mb-0 mt-auto letter-spacing-minus-1px">
                     <span>Clinical</span> <span>Research</span>{" "}
                     <span>Courses</span>
-                  </h4>
+                  </h1>
                 </a>
                 <a
                   href="/courses"
@@ -215,15 +215,15 @@ export default function Content() {
             >
               <div className="opacity-medium-2 bg-extra-dark-gray"></div>
               <div className="d-flex word-break flex-column h-100 padding-5-rem-all text-center position-relative z-index-1 xl-padding-3-rem-lr lg-padding-8-rem-lr">
-                <a href="/courses">
-                  <h4 className="alt-font font-weight-600 text-white text-uppercase mb-0 mt-auto letter-spacing-minus-1px">
+                <a href="/career">
+                  <h1 className="alt-font font-weight-600 text-white text-uppercase mb-0 mt-auto letter-spacing-minus-1px">
                     <span>Career</span>
                     <span>Development</span>
                     <span>Courses</span>
-                  </h4>
+                  </h1>
                 </a>
                 <a
-                  href="/courses"
+                  href="/career"
                   class="btn btn-fancy btn-small btn-round-edge btn-primary align-self-center margin-10px-top"
                 >
                   {/* <i class="fas fa-arrow-right icon-very-small text-white"></i> */}
@@ -343,7 +343,7 @@ export default function Content() {
               <h3 className="alt-font text-white font-weight-600 margin-5-rem-bottom md-margin-25px-bottom">
                 <span className="text-decoration-line-bottom-medium">
                   Reach Out To Us
-                </span>{" "}
+                </span>
               </h3>
               <form method="post" class="alt-font text-extra-dark-gray">
                 <input
@@ -384,6 +384,7 @@ export default function Content() {
                   name="comment"
                   value={enquirymsg}
                   onChange={(e) => setEnquirymsg(e.target.value)}
+                  required="required"
                 ></textarea>
 
                 {/* <input type="hidden" name="redirect" value="" /> */}
@@ -446,12 +447,13 @@ export default function Content() {
                                 Clinical Research after learning about the scope
                                 it entails. But the question persisted; Where
                                 from? I finally breathed a sigh of relief after
-                                landing in "True Lessons"! The amazing staff at
-                                the institute is the reason I got to interview
-                                with leading companies and I’m happy to be
-                                placed in a top pharmaceutical company as a Drug
-                                Safety Associate. Grateful to the wonderful
-                                people at "True Lessons"!
+                                landing in "ACRI (now True Lessons)"! The
+                                amazing staff at the institute is the reason I
+                                got to interview with leading companies and I’m
+                                happy to be placed in a top pharmaceutical
+                                company as a Drug Safety Associate. Grateful to
+                                the wonderful people at "ACRI (now True
+                                Lessons)"!
                               </p>
                               <div className="text-extra-dark-gray alt-font text-uppercase font-weight-600 line-height-20px">
                                 Dr. Shruti B.R.
@@ -472,14 +474,15 @@ export default function Content() {
                             </div>
                             <div className="feature-box-content">
                               <p>
-                                I joined "True Lessons" after completing my
-                                Bachelor’s in Biotechnology. I felt a pressing
-                                need to gather the right technical knowledge
-                                prior to joining the industry. Hence, I joined
-                                the PG Diploma course in Clinical Research. I
-                                have to say, it was truly one of my best
-                                decisions as I got placed in Accenture with the
-                                wonderful placement support of the institute.
+                                I joined "ACRI (now True Lessons)" after
+                                completing my Bachelor’s in Biotechnology. I
+                                felt a pressing need to gather the right
+                                technical knowledge prior to joining the
+                                industry. Hence, I joined the PG Diploma course
+                                in Clinical Research. I have to say, it was
+                                truly one of my best decisions as I got placed
+                                in Accenture with the wonderful placement
+                                support of the institute.
                               </p>
                               <div className="text-extra-dark-gray alt-font text-uppercase font-weight-600 line-height-20px">
                                 Sreelakshmi Sathyakumar
@@ -500,18 +503,19 @@ export default function Content() {
                             </div>
                             <div className="feature-box-content">
                               <p>
-                                Having joined "True Lessons" in 2018, I have
-                                been subject to a myriad of learning
+                                Having joined "ACRI (now True Lessons)" in 2018,
+                                I have been subject to a myriad of learning
                                 opportunities at the institute. The staff at
-                                "True Lessons" were always supportive throughout
-                                my journey at the institute. All the technical
-                                sessions coupled with the PD ones really opened
-                                the right gates for me. It is because of the
-                                institute’s endeavour to provide excellent
-                                clinical research education that I got placed at
-                                IQVIA. I would recommend "True Lessons" 10/10
-                                for anyone that wants to carve a niche for
-                                themselves in the clinical research space.
+                                "ACRI (now True Lessons)" were always supportive
+                                throughout my journey at the institute. All the
+                                technical sessions coupled with the PD ones
+                                really opened the right gates for me. It is
+                                because of the institute’s endeavour to provide
+                                excellent clinical research education that I got
+                                placed at IQVIA. I would recommend "ACRI (now
+                                True Lessons)" 10/10 for anyone that wants to
+                                carve a niche for themselves in the clinical
+                                research space.
                               </p>
                               <div className="text-extra-dark-gray alt-font text-uppercase font-weight-600 line-height-20px">
                                 Purnima H.D.
@@ -532,18 +536,19 @@ export default function Content() {
                             </div>
                             <div className="feature-box-content">
                               <p>
-                                "True Lessons" is the perfect institute for
-                                aspirants of Life Sciences, Healthcare and
-                                Clinical Research looking to further their
-                                careers in the field. The courses offered at
-                                "True Lessons" are comprehensive and affordable.
-                                The staff, study material and overall conduct of
-                                the institution is what makes "True Lessons" an
-                                ideal learning centre. Before joining "True
-                                Lessons", I had been to a couple of Clinical
-                                Research institutes only to see minimal
-                                infrastructure and training staff at the time of
-                                my visit. I highly recommend "True Lessons" as I
+                                "ACRI (now True Lessons)" is the perfect
+                                institute for aspirants of Life Sciences,
+                                Healthcare and Clinical Research looking to
+                                further their careers in the field. The courses
+                                offered at "ACRI (now True Lessons)" are
+                                comprehensive and affordable. The staff, study
+                                material and overall conduct of the institution
+                                is what makes "ACRI (now True Lessons)" an ideal
+                                learning centre. Before joining "True Lessons",
+                                I had been to a couple of Clinical Research
+                                institutes only to see minimal infrastructure
+                                and training staff at the time of my visit. I
+                                highly recommend "ACRI (now True Lessons)" as I
                                 have gotten placed in one of the best companies
                                 with a handsome package.
                               </p>
@@ -566,9 +571,9 @@ export default function Content() {
                             </div>
                             <div className="feature-box-content">
                               <p>
-                                "True Lessons" is without a doubt the ideal
-                                institute to enhance one’s path in the clinical
-                                research field. Having opted for the
+                                "ACRI (now True Lessons)" is without a doubt the
+                                ideal institute to enhance one’s path in the
+                                clinical research field. Having opted for the
                                 three-months course, I got to learn a great deal
                                 and the four modules were perfectly segmented.
                                 Personality development sessions gave my
@@ -579,7 +584,7 @@ export default function Content() {
                                 Lessons" has given me the best learning
                                 experience and I would suggest any aspirant
                                 planning to take up careers in Clinical Research
-                                to give "True Lessons" a shot.
+                                to give "ACRI (now True Lessons)" a shot.
                               </p>
                               <div className="text-extra-dark-gray alt-font text-uppercase font-weight-600 line-height-20px">
                                 Vyshnavi M.

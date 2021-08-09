@@ -10,6 +10,10 @@ function Smitha(props) {
         <div class="container">
           <div class="page-headline text-center mt-5">
             <h1>Our Team</h1>
+            <h4>
+              Coming together is a beginning, staying together is progress and
+              working together is success.
+            </h4>
           </div>
           <div class="row align-items-center justify-content-center team">
             <div class="col-12 col-lg-5 col-md-9 md-margin-7-rem-bottom">
