@@ -6,11 +6,14 @@ function Smitha(props) {
   return (
     <div>
       <Header />
-      <section>
+      <section className="p-0">
         <div class="container">
+          <div class="page-headline text-center mt-5">
+            <h1>Our Team</h1>
+          </div>
           <div class="row align-items-center justify-content-center team">
             <div class="col-12 col-lg-5 col-md-9 md-margin-7-rem-bottom">
-              <span class="alt-font margin-20px-bottom text-extra-dark-gray d-inline-block text-uppercase font-weight-500 letter-spacing-1px">
+              <span class="fs-4 fw-bold">
                 Anuradha Ramachandran
                 <br />
                 CEO
@@ -23,22 +26,18 @@ function Smitha(props) {
                 always been to upskill young people in order to join the
                 country’s workforce.
                 <br />
-                <br />
                 In aspirational India of the 21st Century, the role of any
                 educational mentor or Institution should be to guide the youth
                 towards being monetarily productive… both towards self and the
                 country’s economy.
-                <br />
                 <br />
                 ACRI, set up in the year 2010 under the aegis of Avigna Learning
                 Academy, aims to train students from the Health Care and Life
                 Sciences sector and place them in the recession-free Clinical
                 Research Industry.
                 <br />
-                <br />
                 Over the years, as a teacher and trainer Anuradha’s aim has been
                 to sensitize her students towards goal-oriented education.
-                <br />
                 <br />
                 From the year 2000 onwards, the focus in India shifted to
                 professional courses and colleges set their curriculum to suit
@@ -53,7 +52,6 @@ function Smitha(props) {
                 and interview skills training at ALA included grooming tips and
                 presentation skills.
                 <br />
-                <br />
                 As a corporate trainer, Anuradha has trained more than 300
                 middle-level and senior-level executives: the main goal here
                 also was to enable executives to grow in their chosen career
@@ -63,8 +61,8 @@ function Smitha(props) {
             <div class="col-12 col-lg-7 col-md-9 padding-55px-lr md-padding-5px-left sm-padding-50px-right">
               <figure class="image-back-offset-shadow position-right w-100">
                 <img
-                  class="border-radius-6px"
-                  src="../../assets/images/team/6.jpg"
+                  class="border-radius-6px float-end"
+                  src="images/CEO- Anuradha Ramachandran.jpg"
                   alt=""
                 />
               </figure>
@@ -75,13 +73,13 @@ function Smitha(props) {
               <figure class="image-back-offset-shadow position-right w-100">
                 <img
                   class="border-radius-6px"
-                  src="../../assets/images/team/4.jpg"
+                  src="images/Principal Mentor- Smitha Parthiban.jpg"
                   alt=""
                 />
               </figure>
             </div>
             <div class="col-12 col-lg-5 col-md-9 md-margin-7-rem-bottom">
-              <span class="alt-font margin-20px-bottom text-extra-dark-gray d-inline-block text-uppercase font-weight-500 letter-spacing-1px">
+              <span class="fs-4 fw-bold">
                 Dr. Smitha Parthiban
                 <br />
                 HOD
@@ -93,7 +91,6 @@ function Smitha(props) {
                 degree in Dental Surgery from Rajiv Gandhi University of Health
                 Sciences and has had over three years of clinical experience.
                 <br />
-                <br />
                 Dr. Smitha also has a Post Graduate Diploma in Clinical Research
                 to her credit. She embarked on a Clinical Trials academic career
                 after a short stint in the Clinical Research industry as a Drug
@@ -102,11 +99,9 @@ function Smitha(props) {
                 for a couple of years before heading the Academics and Business
                 Development.
                 <br />
-                <br />
                 Dr. Smitha’s expertise lies in Pharmacology, Toxicology studies,
                 Regulatory Affairs, Medical Writing, Data Management, and
                 Pharmacovigilance.
-                <br />
                 <br />
                 Realizing the central role of communications and, because of her
                 personal and particular interest in them, Dr. Smitha built
@@ -126,7 +121,7 @@ function Smitha(props) {
           </div>
           <div class="row align-items-center justify-content-center team">
             <div class="col-12 col-lg-5 col-md-9 md-margin-7-rem-bottom">
-              <span class="alt-font margin-20px-bottom text-extra-dark-gray d-inline-block text-uppercase font-weight-500 letter-spacing-1px">
+              <span class="fs-4 fw-bold">
                 Dr. Divya Sunil
                 <br />
                 Academic Mentor
@@ -157,8 +152,8 @@ function Smitha(props) {
             <div class="col-12 col-lg-7 col-md-9 padding-55px-lr md-padding-5px-left sm-padding-50px-right">
               <figure class="image-back-offset-shadow position-right w-100">
                 <img
-                  class="border-radius-6px"
-                  src="../../assets/images/team/3.jpg"
+                  class="border-radius-6px float-end"
+                  src="images/Academic Mentor-Dr. Divya Sunil.jpg"
                   alt=""
                 />
               </figure>
@@ -169,13 +164,13 @@ function Smitha(props) {
               <figure class="image-back-offset-shadow position-right w-100">
                 <img
                   class="border-radius-6px"
-                  src="../../assets/images/team/1.jpg"
+                  src="images/Academic Mentor- Amrutha Babu.jpg"
                   alt=""
                 />
               </figure>
             </div>
             <div class="col-12 col-lg-5 col-md-9 md-margin-7-rem-bottom">
-              <span class="alt-font margin-20px-bottom text-extra-dark-gray d-inline-block text-uppercase font-weight-500 letter-spacing-1px">
+              <span class="fs-4 fw-bold">
                 Ms. Amrutha Babu
                 <br />
                 Academic Mentor
@@ -205,7 +200,7 @@ function Smitha(props) {
           </div>
           <div class="row align-items-center justify-content-center team">
             <div class="col-12 col-lg-5 col-md-9 md-margin-7-rem-bottom">
-              <span class="alt-font margin-20px-bottom text-extra-dark-gray d-inline-block text-uppercase font-weight-500 letter-spacing-1px">
+              <span class="fs-4 fw-bold">
                 Dr. Smitha Seshagiri
                 <br />
                 Academic Mentor
@@ -233,8 +228,8 @@ function Smitha(props) {
             <div class="col-12 col-lg-7 col-md-9 padding-55px-lr md-padding-5px-left sm-padding-50px-right">
               <figure class="image-back-offset-shadow position-right w-100">
                 <img
-                  class="border-radius-6px"
-                  src="../../assets/images/team/5.jpg"
+                  class="border-radius-6px float-end"
+                  src="images/Academic Mentor Dr. Smitha Seshagiri.jpg"
                   alt=""
                 />
               </figure>
@@ -245,13 +240,13 @@ function Smitha(props) {
               <figure class="image-back-offset-shadow position-right w-100">
                 <img
                   class="border-radius-6px"
-                  src="../../assets/images/team/2.jpg"
+                  src="images/Customer Success Manager- Sushma K P.jpg"
                   alt=""
                 />
               </figure>
             </div>
             <div class="col-12 col-lg-5 col-md-9 md-margin-7-rem-bottom">
-              <span class="alt-font margin-20px-bottom text-extra-dark-gray d-inline-block text-uppercase font-weight-500 letter-spacing-1px">
+              <span class="fs-4 fw-bold">
                 Ms. Sushma K P<br />
                 Customer Success Manager
               </span>

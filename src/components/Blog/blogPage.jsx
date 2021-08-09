@@ -27,10 +27,23 @@ export default function BlogPage() {
               <div class="posts-card-popular__content">
                 <div class="card-body d-flex align-items-center"></div>
                 <div class="posts-card-popular__title card-body">
-                  <small class="text-muted text-uppercase">Blog</small>
-                  <a class="card-title" href="/blogSingle">
-                    The Importance of EdTech in a Post-pandemic World
-                  </a>
+                  <div className="row">
+                    <div className="col-8">
+                      <small class="text-muted text-uppercase">Blog</small>
+                      <a class="card-title" href="/blogSingle">
+                        The Importance of EdTech in a Post-pandemic World
+                      </a>
+                    </div>
+                    <div className="col-4">
+                      <a
+                        href="/blogSingle"
+                        style={{ width: "101%", marginTop: "35px" }}
+                        className="btn btn-sm btn-info"
+                      >
+                        Know More
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -54,10 +67,23 @@ export default function BlogPage() {
               <div class="posts-card-popular__content">
                 <div class="card-body d-flex align-items-center"></div>
                 <div class="posts-card-popular__title card-body">
-                  <small class="text-muted text-uppercase">Blog</small>
-                  <a class="card-title" href="/blogSingle">
-                    Covishield VS Covaxin
-                  </a>
+                  <div className="row">
+                    <div className="col-8">
+                      <small class="text-muted text-uppercase">Blog</small>
+                      <a class="card-title" href="/blogSingle">
+                        Covishield VS Covaxin
+                      </a>
+                    </div>
+                    <div className="col-4">
+                      <a
+                        href="/blogSingle"
+                        style={{ width: "101%", marginTop: "35px" }}
+                        className="btn btn-sm btn-info"
+                      >
+                        Know More
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -80,11 +106,25 @@ export default function BlogPage() {
               <div class="fullbleed bg-primary" style={{ opacity: 0.5 }}></div>
               <div class="posts-card-popular__content">
                 <div class="card-body d-flex align-items-center"></div>
+
                 <div class="posts-card-popular__title card-body">
-                  <small class="text-muted text-uppercase">Blog</small>
-                  <a class="card-title" href="/blogSingle">
-                    Who’s WHO in Research?
-                  </a>
+                  <div className="row">
+                    <div className="col-8">
+                      <small class="text-muted text-uppercase">Blog</small>
+                      <a class="card-title" href="/blogSingle">
+                        Who’s WHO in Research?
+                      </a>
+                    </div>
+                    <div className="col-4">
+                      <a
+                        href="/blogSingle"
+                        style={{ width: "101%", marginTop: "35px" }}
+                        className="btn btn-sm btn-info"
+                      >
+                        Know More
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

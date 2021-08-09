@@ -28,8 +28,6 @@ export default function Content() {
                 className="alt-font text-extra-dark-gray font-weight-600 letter-spacing-minus-2px w-80 xl-w-100 margin-twelve-bottom sm-margin-30px-bottom"
                 style={{ fontSize: "3.4rem" }}
               >
-                True Lessons
-                <br />
                 World's Number 1 MedEdTech Platform{" "}
               </h3>
               <div className="d-inline-block">
@@ -172,7 +170,7 @@ export default function Content() {
             >
               <div className="opacity-medium-2 bg-extra-dark-gray"></div>
               <div className="d-flex flex-column h-100 padding-5-rem-all text-center position-relative z-index-1 xl-padding-3-rem-lr lg-padding-8-rem-lr">
-                <a href="/clinical">
+                <a href="/course">
                   <h4 className="alt-font font-weight-600 text-white text-uppercase mb-0 mt-auto letter-spacing-minus-1px">
                     <span>Clinical</span> <span>Research</span>{" "}
                     <span>Courses</span>
@@ -198,10 +196,10 @@ export default function Content() {
               data-wow-delay="0.2s"
             >
               <div className="d-flex flex-column h-100 justify-content-start padding-6-rem-all text-center position-relative z-index-1 xl-padding-2-half-rem-lr lg-padding-8-rem-lr md-padding-5-rem-lr">
-                <h6 className="text-white">
+                <h4 className="text-white">
                   Spearheading supreme Clinical Research in India from 2010 with
                   a towering track record and apex faculty.
-                </h6>
+                </h4>
                 <a
                   href="/contact"
                   className="btn btn-fancy btn-small btn-round-edge btn-primary align-self-center margin-10px-top"
@@ -217,7 +215,7 @@ export default function Content() {
             >
               <div className="opacity-medium-2 bg-extra-dark-gray"></div>
               <div className="d-flex word-break flex-column h-100 padding-5-rem-all text-center position-relative z-index-1 xl-padding-3-rem-lr lg-padding-8-rem-lr">
-                <a href="/career">
+                <a href="/courses">
                   <h4 className="alt-font font-weight-600 text-white text-uppercase mb-0 mt-auto letter-spacing-minus-1px">
                     <span>Career</span>
                     <span>Development</span>
@@ -225,7 +223,7 @@ export default function Content() {
                   </h4>
                 </a>
                 <a
-                  href="/career"
+                  href="/courses"
                   class="btn btn-fancy btn-small btn-round-edge btn-primary align-self-center margin-10px-top"
                 >
                   {/* <i class="fas fa-arrow-right icon-very-small text-white"></i> */}
@@ -243,11 +241,11 @@ export default function Content() {
               data-wow-delay="0.4s"
             >
               <div className="d-flex flex-column h-100 justify-content-start padding-5-rem-tb padding-6-rem-lr text-center position-relative z-index-1 xl-padding-3-rem-lr lg-padding-8-rem-lr">
-                <h6 className="text-white">
+                <h4 className="text-white">
                   Paving the way for proficient communicators since 2006.
                   <br />
                   <br />
-                </h6>
+                </h4>
                 <a
                   href="/contact"
                   className="btn btn-fancy btn-small btn-round-edge btn-primary align-self-center margin-10px-top"
@@ -406,9 +404,9 @@ export default function Content() {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-md-12 text-center margin-seven-bottom">
-              <h6 className="alt-font text-extra-dark-gray font-weight-500">
+              <p className="fw-bold fs-3 text-extra-dark-gray">
                 Students Testimonial
-              </h6>
+              </p>
               <div className="text-gray alt-font  font-weight-400 line-height-20px">
                 Talking about placements, here's what our dear students have to
                 say about their own experiences with True Lessons.
@@ -603,9 +601,9 @@ export default function Content() {
         <div className="container">
           <div className="row">
             <div className="col-md-12 text-center margin-seven-bottom">
-              <h6 className="alt-font text-extra-dark-gray font-weight-500">
+              <p className="fw-bold fs-3 text-extra-dark-gray">
                 Placement Partners
-              </h6>
+              </p>
             </div>
             <div className="col-12">
               <div

@@ -1,4 +1,13 @@
 import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/swiper.min.css";
+import "swiper/components/pagination/pagination.min.css";
+import "swiper/components/navigation/navigation.min.css";
+import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper/core";
+
+const isMobile = window.orientation > -1;
+SwiperCore.use([Autoplay, Pagination, Navigation]);
 
 export default function CareerContent() {
   return (
@@ -10,67 +19,480 @@ export default function CareerContent() {
             <h4>Placed Students</h4>
           </div>
 
-          <div class="position-relative carousel-card p-0 mx-auto">
-            <div class="row d-block js-mdk-carousel" id="carousel-feedback">
-              <a
-                class="carousel-control-next js-mdk-carousel-control mt-n24pt"
-                href="#carousel-feedback"
-                role="button"
-                data-slide="next"
-              >
-                <span
-                  class="carousel-control-icon material-icons"
-                  aria-hidden="true"
-                >
-                  keyboard_arrow_right
-                </span>
-                <span class="sr-only">Next</span>
-              </a>
-              <div class="mdk-carousel__content">
-                <div class="col-3 mdk-carousel__item">
-                  <div class="card card-feedback card-body justify-content-center align-items-center">
-                    <img src="images/Priya Sunny.jpg" alt="" srcset="" />
-                    <h5 className="text-center mt-2">PRIYA SUNNY</h5>
-                    <img
-                      src="images/PAREXEL 1.png"
-                      alt=""
-                      srcset=""
-                      width="65px"
-                    />
+          <div className="swiper-wrapper margintop-swiper">
+            <Swiper
+              slidesPerView={isMobile ? 1 : 5}
+              navigation={true}
+              loopFillGroupWithBlank={true}
+              autoplay={{
+                delay: 4000,
+                disableOnInteraction: false,
+              }}
+              className="mySwiper"
+            >
+              <SwiperSlide style={{ margin: "0 15px" }}>
+                <div className="swiper-slide overflow-hidden mx-2">
+                  <div className="portfolio-box text-center">
+                    <div className="">
+                      <a href="#swiper">
+                        <img
+                          src="../../assets/images/students/Priya Sunny.jpg"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                    <div className="portfolio-caption padding-30px-tb">
+                      <a
+                        href="#swiper"
+                        className="alt-font text-extra-dark-gray font-weight-500 text-uppercase"
+                      >
+                        Priya Sunny
+                      </a>
+                      {/* <span className="d-block text-medium-gray text-small line-height-18px text-uppercase">B.Tech Biotechnology</span>*/}
+                      <span className="d-block text-medium-gray text-small line-height-18px text-uppercase">
+                        <img
+                          src="../assets/images/logos/PAREXEL 1.png"
+                          className="img-height"
+                          alt=""
+                        />
+                      </span>
+                    </div>
                   </div>
                 </div>
-                <div class="col-3 mdk-carousel__item">
-                  <div class="card card-feedback card-body justify-content-center align-items-center">
-                    <img src="images/Smitha B R.jpg" alt="" srcset="" />
-                    <h5 className="text-center mt-2">SMITA B. R.</h5>
-                    <img src="images/IQVIA.png" alt="" srcset="" width="65px" />
+              </SwiperSlide>
+
+              <SwiperSlide style={{ margin: "0 15px" }}>
+                <div className="swiper-slide overflow-hidden mx-2">
+                  <div className="portfolio-box text-center">
+                    <div className="">
+                      <a href="#swiper">
+                        <img
+                          src="../../assets/images/students/Anupama Kurle.jpg"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                    <div className="portfolio-caption padding-30px-tb">
+                      <a
+                        href="#swiper"
+                        className="alt-font text-extra-dark-gray font-weight-500 text-uppercase"
+                      >
+                        Anupama Kurle
+                      </a>
+
+                      <span className="d-block text-medium-gray text-small line-height-18px text-uppercase">
+                        <img
+                          src="../assets/images/logos/Forte.jpeg"
+                          className="img-height"
+                          alt=""
+                        />
+                      </span>
+                    </div>
                   </div>
                 </div>
-                <div class="col-3 mdk-carousel__item">
-                  <div class="card card-feedback card-body justify-content-center align-items-center">
-                    <img src="images/Pradeeksha.jpg" alt="" srcset="" />
-                    <h5 className="text-center mt-2">PRADEEKSHA</h5>
-                    <img
-                      src="images/COVANCE 1.jpg"
-                      alt=""
-                      srcset=""
-                      width="65px"
-                    />
+              </SwiperSlide>
+              <SwiperSlide style={{ margin: "0 15px" }}>
+                <div className="swiper-slide overflow-hidden mx-2">
+                  <div className="portfolio-box text-center">
+                    <div className="">
+                      <a href="#swiper">
+                        <img
+                          src="../../assets/images/students/Swathi N.jpg"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                    <div className="portfolio-caption padding-30px-tb">
+                      <a
+                        href="#swiper"
+                        className="alt-font text-extra-dark-gray font-weight-500 text-uppercase"
+                      >
+                        Swathi N
+                      </a>
+
+                      <span className="d-block text-medium-gray text-small line-height-18px text-uppercase">
+                        <img
+                          src="../assets/images/logos/Forte.jpeg"
+                          className="img-height"
+                          alt=""
+                        />
+                      </span>
+                    </div>
                   </div>
                 </div>
-                <div class="col-3 mdk-carousel__item">
-                  <div class="card card-feedback card-body justify-content-center align-items-center">
-                    <img src="images/Anupama Kurle.jpg" alt="" srcset="" />
-                    <h5 className="text-center mt-2">ANUPAMA KURLE</h5>
-                    <img
-                      src="images/Forte.jpeg"
-                      alt=""
-                      srcset=""
-                      width="65px"
-                    />
+              </SwiperSlide>
+              <SwiperSlide style={{ margin: "0 15px" }}>
+                <div className="swiper-slide overflow-hidden mx-2">
+                  <div className="portfolio-box text-center">
+                    <div className="">
+                      <a href="#swiper">
+                        <img
+                          src="../../assets/images/students/Pradeeksha.jpg"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                    <div className="portfolio-caption padding-30px-tb">
+                      <a
+                        href="#swiper"
+                        className="alt-font text-extra-dark-gray font-weight-500 text-uppercase"
+                      >
+                        Pradeeksha
+                      </a>
+
+                      <span className="d-block text-medium-gray text-small line-height-18px text-uppercase">
+                        <img
+                          src="../assets/images/logos/COVANCE 1.jpg"
+                          className="img-height"
+                          alt=""
+                        />
+                      </span>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </SwiperSlide>
+              <SwiperSlide style={{ margin: "0 15px" }}>
+                <div className="swiper-slide overflow-hidden mx-2">
+                  <div className="portfolio-box text-center">
+                    <div className="">
+                      <a href="#swiper">
+                        <img
+                          src="../../assets/images/students/Elavarasi M.jpg"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                    <div className="portfolio-caption padding-30px-tb">
+                      <a
+                        href="#swiper"
+                        className="alt-font text-extra-dark-gray font-weight-500 text-uppercase"
+                      >
+                        Elavarasi M
+                      </a>
+
+                      <span className="d-block text-medium-gray text-small line-height-18px text-uppercase">
+                        <img
+                          src="../assets/images/logos/Forte.jpeg"
+                          className="img-height"
+                          alt=""
+                        />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide style={{ margin: "0 15px" }}>
+                <div className="swiper-slide overflow-hidden mx-2">
+                  <div className="portfolio-box text-center">
+                    <div className="">
+                      <a href="#swiper">
+                        <img
+                          src="../../assets/images/students/Neelima Pinapati.jpg"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                    <div className="portfolio-caption padding-30px-tb">
+                      <a
+                        href="#swiper"
+                        className="alt-font text-extra-dark-gray font-weight-500 text-uppercase"
+                      >
+                        Neelima Pinapati
+                      </a>
+
+                      <span className="d-block text-medium-gray text-small line-height-18px text-uppercase">
+                        <img
+                          src="../assets/images/logos/IQVIA.png"
+                          className="img-height"
+                          alt=""
+                        />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide style={{ margin: "0 15px" }}>
+                <div className="swiper-slide overflow-hidden mx-2">
+                  <div className="portfolio-box text-center">
+                    <div className="">
+                      <a href="#swiper">
+                        <img
+                          src="../../assets/images/students/Maanya K.jpg"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                    <div className="portfolio-caption padding-30px-tb">
+                      <a
+                        href="#swiper"
+                        className="alt-font text-extra-dark-gray font-weight-500 text-uppercase"
+                      >
+                        Maanya K
+                      </a>
+
+                      <span className="d-block text-medium-gray text-small line-height-18px text-uppercase">
+                        <img
+                          src="../assets/images/logos/PAREXEL 1.png"
+                          className="img-height"
+                          alt=""
+                        />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide style={{ margin: "0 15px" }}>
+                <div className="swiper-slide overflow-hidden mx-2">
+                  <div className="portfolio-box text-center">
+                    <div className="">
+                      <a href="#swiper">
+                        <img
+                          src="../../assets/images/students/Dr. S.R Sadiya Pervaze.jpg"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                    <div className="portfolio-caption padding-30px-tb">
+                      <a
+                        href="#swiper"
+                        className="alt-font text-extra-dark-gray font-weight-500 text-uppercase"
+                      >
+                        <img
+                          src="../assets/images/logos/PAREXEL 1.png"
+                          className="img-height"
+                          alt=""
+                        />
+                        Dr. S.R Sadiya Pervaze
+                      </a>
+
+                      <span className="d-block text-medium-gray text-small line-height-18px text-uppercase">
+                        <img
+                          src="../assets/images/logos/IQVIA.png"
+                          className="img-height"
+                          alt=""
+                        />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide style={{ margin: "0 15px" }}>
+                <div className="swiper-slide overflow-hidden mx-2">
+                  <div className="portfolio-box text-center">
+                    <div className="">
+                      <a href="#swiper">
+                        <img
+                          src="../../assets/images/students/Smitha B R.jpg"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                    <div className="portfolio-caption padding-30px-tb">
+                      <a
+                        href="#swiper"
+                        className="alt-font text-extra-dark-gray font-weight-500 text-uppercase"
+                      >
+                        Smitha B R
+                      </a>
+
+                      <span className="d-block text-medium-gray text-small line-height-18px text-uppercase">
+                        <img
+                          src="../assets/images/logos/IQVIA.png"
+                          className="img-height"
+                          alt=""
+                        />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide style={{ margin: "0 15px" }}>
+                <div className="swiper-slide overflow-hidden mx-2">
+                  <div className="portfolio-box text-center">
+                    <div className="">
+                      <a href="#swiper">
+                        <img
+                          src="../../assets/images/students/Nimna.RS.jpg"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                    <div className="portfolio-caption padding-30px-tb">
+                      <a
+                        href="#swiper"
+                        className="alt-font text-extra-dark-gray font-weight-500 text-uppercase"
+                      >
+                        Nimna R S
+                      </a>
+
+                      <span className="d-block text-medium-gray text-small line-height-18px text-uppercase">
+                        <img
+                          src="../assets/images/logos/IQVIA.png"
+                          className="img-height"
+                          alt=""
+                        />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide style={{ margin: "0 15px" }}>
+                <div className="swiper-slide overflow-hidden mx-2">
+                  <div className="portfolio-box text-center">
+                    <div className="">
+                      <a href="#swiper">
+                        <img
+                          src="../../assets/images/students/Dr. Anagha Pradeep Data.jpg"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                    <div className="portfolio-caption padding-30px-tb">
+                      <a
+                        href="#swiper"
+                        className="alt-font text-extra-dark-gray font-weight-500 text-uppercase"
+                      >
+                        Dr. Anagha Pradeep Datar
+                      </a>
+
+                      <span className="d-block text-medium-gray text-small line-height-18px text-uppercase">
+                        <img
+                          src="../assets/images/logos/"
+                          className="img-height"
+                          alt=""
+                        />
+                        CogScentia
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide style={{ margin: "0 15px" }}>
+                <div className="swiper-slide overflow-hidden mx-2">
+                  <div className="portfolio-box text-center">
+                    <div className="">
+                      <a href="#swiper">
+                        <img
+                          src="../../assets/images/students/Devnandan Shaw.jpg"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                    <div className="portfolio-caption padding-30px-tb">
+                      <a
+                        href="#swiper"
+                        className="alt-font text-extra-dark-gray font-weight-500 text-uppercase"
+                      >
+                        Devnandan Shaw
+                      </a>
+
+                      <span className="d-block text-medium-gray text-small line-height-18px text-uppercase">
+                        <img
+                          src="../assets/images/logos/Nethradhama.jpeg"
+                          className="img-height"
+                          alt=""
+                        />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide style={{ margin: "0 15px" }}>
+                <div className="swiper-slide overflow-hidden mx-2">
+                  <div className="portfolio-box text-center">
+                    <div className="">
+                      <a href="#swiper">
+                        <img
+                          src="../../assets/images/students/Talluri Pratyusha.jpg"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                    <div className="portfolio-caption padding-30px-tb">
+                      <a
+                        href="#swiper"
+                        className="alt-font text-extra-dark-gray font-weight-500 text-uppercase"
+                      >
+                        Talluri Pratyusha
+                      </a>
+
+                      <span className="d-block text-medium-gray text-small line-height-18px text-uppercase">
+                        <img
+                          src="../assets/images/logos/PAREXEL 1.png"
+                          className="img-height"
+                          alt=""
+                        />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide style={{ margin: "0 15px" }}>
+                <div className="swiper-slide overflow-hidden mx-2">
+                  <div className="portfolio-box text-center">
+                    <div className="">
+                      <a href="#swiper">
+                        <img
+                          src="../../assets/images/students/Chaithrashree G S.jpg"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                    <div className="portfolio-caption padding-30px-tb">
+                      <a
+                        href="#swiper"
+                        className="alt-font text-extra-dark-gray font-weight-500 text-uppercase"
+                      >
+                        Chaithrashree G S
+                      </a>
+
+                      <span className="d-block text-medium-gray text-small line-height-18px text-uppercase">
+                        <img
+                          src="../assets/images/logos/Nethradhama.jpeg"
+                          className="img-height"
+                          alt=""
+                        />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide style={{ margin: "0 15px" }}>
+                <div className="swiper-slide overflow-hidden mx-2">
+                  <div className="portfolio-box text-center">
+                    <div className="">
+                      <a href="#swiper">
+                        <img
+                          src="../../assets/images/students/Gaddam Chandra kiran.jpg"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                    <div className="portfolio-caption padding-30px-tb">
+                      <a
+                        href="#swiper"
+                        className="alt-font text-extra-dark-gray font-weight-500 text-uppercase"
+                      >
+                        Gaddam Chandra kiran
+                      </a>
+
+                      <span className="d-block text-medium-gray text-small line-height-18px text-uppercase">
+                        <img
+                          src="../assets/images/logos/eye-hospital.jpeg"
+                          className="img-height"
+                          alt=""
+                        />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+            </Swiper>
+            <div className="swiper-button-next-nav swiper-button-next rounded-circle light slider-navigation-style-07 box-shadow-double-large">
+              <i className="feather icon-feather-arrow-right"></i>
+            </div>
+            <div className="swiper-button-previous-nav swiper-button-prev rounded-circle light slider-navigation-style-07 box-shadow-double-large">
+              <i className="feather icon-feather-arrow-left"></i>
             </div>
           </div>
 
@@ -83,12 +505,8 @@ export default function CareerContent() {
             </h4>
           </div>
 
-          <div
-            class="accordion js-accordion accordion--boxed list-group-flush"
-            id="parent"
-            data-domfactory-upgraded="accordion"
-          >
-            <div class="accordion__item open">
+          <div class="accordion js-accordion accordion--boxed" id="parent">
+            <div class="accordion__item">
               <a
                 href="#accordian"
                 class="accordion__toggle collapsed"
