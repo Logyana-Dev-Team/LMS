@@ -1,6 +1,35 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { authAxios, userId } from "../../App";
 
 export default function StudentCourseContent() {
+  const { id } = useParams();
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    GetCourseById();
+  }, []);
+
+  const GetCourseById = () => {
+    axios
+      .get(`/api/module/${id}`)
+      .then((res) => {
+        setData(res.data);
+      })
+      .catch((err) => console.log(err));
+  };
+
+  const enrollModule = () => {
+    authAxios
+      .post("/api/users/enroll", {
+        userId: userId,
+        module: id,
+      })
+      .then((res) => {})
+      .catch((err) => console.log(err));
+  };
+
   return (
     <div class="mdk-header-layout__content page-content">
       <div
@@ -29,15 +58,12 @@ export default function StudentCourseContent() {
         <div class="mdk-box__content">
           <div class="hero py-64pt text-center text-sm-left">
             <div class="container page__container">
-              <h1 class="text-white">
-                Learn the fundamentals of clinical research and phases of
-                clinical trials.
-              </h1>
-              <p class="lead text-white-50 measure-hero-lead">
+              <h1 class="text-white">{data.name}</h1>
+              {/* <p class="lead text-white-50 measure-hero-lead">
                 Clear the basics of Clinical Trials. Understand the phases of a
                 Clinical Trial. Have insight into Toxicokinetic Studies. Be
                 informed about the Evolution of Clinical Research
-              </p>
+              </p> */}
               <div class="d-flex flex-column flex-sm-row align-items-center justify-content-start">
                 <a
                   href="student-lesson.html"
@@ -47,7 +73,7 @@ export default function StudentCourseContent() {
                   <i class="material-icons icon--right">play_circle_outline</i>
                 </a>
                 <a href="pricing.html" class="btn btn-white">
-                  Start your free trial
+                  Enroll Now
                 </a>
               </div>
             </div>
@@ -204,12 +230,26 @@ export default function StudentCourseContent() {
                   <p class="card-subtitle text-70 mb-24pt">
                     Get access to all videos in the library
                   </p>
-                  <a href="pricing.html" class="btn btn-accent mb-8pt">
-                    Sign Up - Only $19.00/mo
-                  </a>
-                  <p class="mb-0">
-                    Have an account? <a href="login.html">Login</a>
-                  </p>
+                  {userId ? (
+                    <>
+                      <a
+                        href="#enroll"
+                        onClick={enrollModule}
+                        class="btn btn-accent mb-8pt"
+                      >
+                        Enroll - Only ₹{data.price}
+                      </a>
+                    </>
+                  ) : (
+                    <>
+                      <a href="pricing.html" class="btn btn-accent mb-8pt">
+                        Enroll - Only ₹{data.price}
+                      </a>
+                      <p class="mb-0">
+                        Have an account? <a href="login.html">Login</a>
+                      </p>
+                    </>
+                  )}
                 </div>
               </div>
             </div>

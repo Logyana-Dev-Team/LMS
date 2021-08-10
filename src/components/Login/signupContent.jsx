@@ -40,7 +40,7 @@ export default function SignupContent() {
 
   return (
     <div class="mdk-header-layout__content page-content">
-      <div class="py-32pt navbar-submenu">
+      {/* <div class="py-32pt navbar-submenu">
         <div class="container page__container">
           <div class="progression-bar progression-bar--active-accent">
             <a
@@ -75,13 +75,13 @@ export default function SignupContent() {
             </a>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div class="page-section container page__container">
         <div class="col-lg-10 p-0 mx-auto">
           <div class="row">
             <div class="col-md-6 mb-24pt mb-md-0">
-              <form onSubmit={login}>
+              <form onSubmit={login} noValidate>
                 <div class="form-group">
                   <label class="form-label" for="name">
                     Your first and last name:
@@ -153,7 +153,7 @@ export default function SignupContent() {
                     <div class="flex">
                       <strong class="text-70">Price</strong>
                     </div>
-                    <strong>US $9 per month</strong>
+                    <strong>₹200 per month</strong>
                   </div>
                   <div class="custom-control custom-checkbox">
                     <input

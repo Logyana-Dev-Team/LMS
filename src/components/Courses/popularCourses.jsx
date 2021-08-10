@@ -1,20 +1,17 @@
+import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { authAxios } from "../../App";
 
 export default function Polular() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    authAxios
+    axios
       .get("/api/course")
       .then((res) => {
         setData(res.data);
       })
       .catch((err) => {
         console.log(err);
-        localStorage.removeItem("userId");
-        localStorage.removeItem("token");
-        window.location = "/";
       });
   }, []);
 
@@ -57,8 +54,11 @@ export default function Polular() {
 
       <div className="row card-group-row">
         {data
-          ? data.map((courses) => (
-              <div className="col-md-6 col-lg-4 col-xl-3 card-group-row__col">
+          ? data.map((courses, i) => (
+              <div
+                className="col-md-6 col-lg-4 col-xl-3 card-group-row__col"
+                key={i}
+              >
                 <div
                   className="
                     card card-sm card--elevated

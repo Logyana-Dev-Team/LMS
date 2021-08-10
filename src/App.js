@@ -34,12 +34,12 @@ import DivyaSunil from "./components/AboutUs/DivyaSunil";
 import Smitha from "./components/AboutUs/Smitha";
 import BlogSingle from "./components/Blog/blogSingle";
 
-axios.defaults.baseURL = "https://api-truelessons.herokuapp.com/";
+axios.defaults.baseURL = "http://localhost:3000/";
 export const userId = localStorage.getItem("userId");
 export const token = localStorage.getItem("token");
 
 export const authAxios = axios.create({
-  baseURL: "https://api-truelessons.herokuapp.com/",
+  baseURL: "http://localhost:3000/",
   headers: {
     Authorization: `Bearer ${token}`,
   },
@@ -98,7 +98,7 @@ function App() {
         <Route exact path="/signup" component={Signup}></Route>
         <Route exact path="/blog" component={Blog}></Route>
         <Route exact path="/blogSingle" component={BlogSingle}></Route>
-        <Route exact path="/studentCourse" component={StudentCourse}></Route>
+        <Route exact path="/course/:id" component={StudentCourse}></Route>
         <Route path="/SmithaP" component={SmithaP} />
         <Route path="/Amrutha" component={Amrutha} />
         <Route path="/Sushma" component={Sushma} />

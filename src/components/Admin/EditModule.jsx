@@ -14,6 +14,7 @@ export default function EditModule() {
   const [signUpData, setSignupData] = useState({
     course: "",
     moduleName: "",
+    modulePrice: "",
   });
 
   useEffect(() => {
@@ -73,10 +74,12 @@ export default function EditModule() {
   const editModule = (e) => {
     e.preventDefault();
     axios
-      .post("/api/module", {
+      .patch("/api/module", {
+        _id: id,
         name: signUpData.moduleName,
         course: signUpData.course,
         imageName: courseImage,
+        price: signUpData.modulePrice,
       })
       .then((response) => {
         window.setTimeout(function () {
@@ -94,16 +97,16 @@ export default function EditModule() {
       <div className="mdk-header-layout__content page-content ">
         <div className="container page__container page-section">
           <div className="page-separator">
-            <div className="page-separator__text">Add Module</div>
+            <div className="page-separator__text">Edit Module</div>
           </div>
           <div class="card mb-32pt">
             <div class="card-header d-flex align-items-center">
-              <strong class="card-title">Add Module</strong>
+              <strong class="card-title">Edit Module</strong>
             </div>
             <div className="card-body mb-32pt">
               <form onSubmit={editModule}>
                 <div class="form-group">
-                  <label class="form-label">Courses</label>
+                  <label class="form-label">Course</label>
                   <select
                     name="course"
                     onChange={inputEvent}
@@ -120,13 +123,24 @@ export default function EditModule() {
                   <small class="form-text text-muted">Select a Course.</small>
                 </div>
                 <div class="form-group">
-                  <label class="form-label">Modules</label>
+                  <label class="form-label">Module Name</label>
                   <input
                     type="text"
                     name="moduleName"
                     onChange={inputEvent}
                     class="form-control"
                     value={data.name}
+                  ></input>
+                  <small class="form-text text-muted">Enter Module Name.</small>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Module Price</label>
+                  <input
+                    type="text"
+                    name="modulePrice"
+                    onChange={inputEvent}
+                    class="form-control"
+                    value={data.price}
                   ></input>
                   <small class="form-text text-muted">Enter Module Name.</small>
                 </div>
@@ -192,7 +206,7 @@ export default function EditModule() {
                     type="submit"
                     className="btn btn-success my-4 d-block mx-auto"
                   >
-                    Add Module
+                    Edit Module
                   </button>
                 )}
               </form>

@@ -377,19 +377,19 @@ export default function Content() {
                   required="required"
                 />
 
-                <textarea
-                  class="input-border-bottom border-color-dark-white-transparent bg-transparent placeholder-light large-input text-white px-0 margin-45px-bottom border-radius-0px"
-                  rows="1"
+                <input
+                  class="input-border-bottom border-color-dark-white-transparent bg-transparent placeholder-light large-input text-white px-0 margin-45px-bottom border-radius-0px required"
+                  type="text"
                   placeholder="How can we help you?"
                   name="comment"
                   value={enquirymsg}
                   onChange={(e) => setEnquirymsg(e.target.value)}
                   required="required"
-                ></textarea>
+                ></input>
 
                 {/* <input type="hidden" name="redirect" value="" /> */}
                 <button
-                  class="btn btn-fancy btn-round-edge btn-large btn-white mb-0 submit"
+                  class="btn btn-fancy btn-round-edge btn-large btn-white mb-0 submit mt-3"
                   type="submit"
                 >
                   Submit
@@ -618,6 +618,10 @@ export default function Content() {
                 <div className="swiper-wrapper">
                   <Swiper
                     slidesPerView={4}
+                    navigation={{
+                      nextEl: `#prev`,
+                      prevEl: `#next`,
+                    }}
                     autoplay={{
                       delay: 2500,
                       disableOnInteraction: false,
@@ -702,12 +706,17 @@ export default function Content() {
                   </Swiper>
                 </div>
               </div>
-
-              <div className="swiper-button-next-nav swiper-button-next rounded-circle light slider-navigation-style-07 box-shadow-double-large">
-                <i className="feather icon-feather-arrow-right"></i>
+              <div
+                id="prev"
+                className="swiper-button-next-nav swiper-button-next rounded-circle light slider-navigation-style-07 box-shadow-double-large"
+              >
+                <i class="fas fa-arrow-right"></i>
               </div>
-              <div className="swiper-button-previous-nav swiper-button-prev rounded-circle light slider-navigation-style-07 box-shadow-double-large">
-                <i className="feather icon-feather-arrow-left"></i>
+              <div
+                id="next"
+                className="swiper-button-previous-nav swiper-button-prev rounded-circle light slider-navigation-style-07 box-shadow-double-large"
+              >
+                <i class="fas fa-arrow-left"></i>
               </div>
             </div>
           </div>

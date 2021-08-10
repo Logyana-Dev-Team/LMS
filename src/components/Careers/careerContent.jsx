@@ -22,8 +22,11 @@ export default function CareerContent() {
           <div className="swiper-wrapper margintop-swiper">
             <Swiper
               slidesPerView={isMobile ? 1 : 5}
-              navigation={true}
               loopFillGroupWithBlank={true}
+              navigation={{
+                nextEl: `#prev`,
+                prevEl: `#next`,
+              }}
               autoplay={{
                 delay: 4000,
                 disableOnInteraction: false,
@@ -483,11 +486,17 @@ export default function CareerContent() {
                 </div>
               </SwiperSlide>
             </Swiper>
-            <div className="swiper-button-next-nav swiper-button-next rounded-circle light slider-navigation-style-07 box-shadow-double-large">
-              <i className="feather icon-feather-arrow-right"></i>
+            <div
+              id="prev"
+              className="swiper-button-next-nav swiper-button-next rounded-circle light slider-navigation-style-07 box-shadow-double-large"
+            >
+              <i class="fas fa-arrow-right"></i>
             </div>
-            <div className="swiper-button-previous-nav swiper-button-prev rounded-circle light slider-navigation-style-07 box-shadow-double-large">
-              <i className="feather icon-feather-arrow-left"></i>
+            <div
+              id="next"
+              className="swiper-button-previous-nav swiper-button-prev rounded-circle light slider-navigation-style-07 box-shadow-double-large"
+            >
+              <i class="fas fa-arrow-left"></i>
             </div>
           </div>
 
@@ -903,6 +912,444 @@ export default function CareerContent() {
                     performance on all nine criteria is required in order to
                     achieve a score of 350 (previously grade B) on the speaking
                     test.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="page-headline text-center mt-5">
+            <h2>FAQ for all Courses</h2>
+          </div>
+          <h4>PG Diploma in Clinical Research</h4>
+          <div
+            class="accordion js-accordion accordion--boxed list-group-flush"
+            id="parent"
+            data-domfactory-upgraded="accordion"
+          >
+            <div class="accordion__item open">
+              <a
+                href="#accordian"
+                class="accordion__toggle collapsed"
+                data-toggle="collapse"
+                data-target="#course-toc-7"
+                data-parent="#parent"
+              >
+                <span class="flex" style={{ fontSize: "17px" }}>
+                  What will I learn if I take up this course?
+                </span>
+                <span class="accordion__toggle-icon material-icons">
+                  keyboard_arrow_down
+                </span>
+              </a>
+              <div class="accordion__menu collapse" id="course-toc-7">
+                <div class="accordion__menu-link">
+                  <p style={{ fontSize: "15px" }}>
+                    The PG Diploma Clinical Research in Bangalore programme will
+                    help the life science and health science graduates to learn
+                    about the life cycle of a drug and provide an understanding
+                    on the process involved in the movement of a drug from the
+                    bench side to the bedside.
+                    <br />
+                    <br />
+                    It will also give an insight into clinical trial approval
+                    processes, marketing approval processes and about the
+                    different regulatory authorities pertaining to product
+                    registration across the globe.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion__item">
+              <a
+                href="#accordion"
+                class="accordion__toggle collapsed"
+                data-toggle="collapse"
+                data-target="#course-toc-8"
+                data-parent="#parent"
+              >
+                <span class="flex" style={{ fontSize: "17px" }}>
+                  Is this program right for me?
+                </span>
+                <span class="accordion__toggle-icon material-icons">
+                  keyboard_arrow_down
+                </span>
+              </a>
+              <div class="accordion__menu collapse" id="course-toc-8">
+                <div class="accordion__menu-link">
+                  <p style={{ fontSize: "15px" }}>
+                    If you are passionate about working with clinical data and
+                    looking forward to work in Site Management Organisations
+                    (SMOs), Contract Research Organisations (CROs),
+                    Pharmaceutical Companies and MNCs, ACRI’s PG Diploma
+                    Clinical Research in Bangalore course is the right choice.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion__item">
+              <a
+                href="#accordion"
+                class="accordion__toggle collapsed"
+                data-toggle="collapse"
+                data-target="#course-toc-9"
+                data-parent="#parent"
+              >
+                <span class="flex" style={{ fontSize: "17px" }}>
+                  Who can apply?
+                </span>
+                <span class="accordion__toggle-icon material-icons">
+                  keyboard_arrow_down
+                </span>
+              </a>
+              <div class="accordion__menu collapse" id="course-toc-9">
+                <div class="accordion__menu-link">
+                  <p style={{ fontSize: "15px" }}>
+                    <ul style={{ listStyle: "inside" }}>
+                      <li>
+                        MBBS/BHMS/BAMS/BPT/MPT/BDS/BMLT/Bachelor in Naturopathy
+                        & Veterinary Science /MD/MS.
+                      </li>
+                      <li>
+                        Graduate/Postgraduate degree in Pharmacy/ Pharmaceutical
+                        Sciences.
+                      </li>
+                      <li>
+                        Graduate/Postgraduate degree in Life Sciences (Botany,
+                        Zoology, Biochemistry, Microbiology, Genetics,
+                        Biotechnology).
+                      </li>
+                      <li>
+                        Graduate/Postgraduate degree in Chemistry/Biostatistics/
+                        Bioinformatics.
+                      </li>
+                      <li>
+                        Graduate or equivalent degree in Nursing/Allied Health.
+                      </li>
+                      <li>
+                        Students in their final year of graduation for the above
+                        courses may also apply.
+                      </li>
+                    </ul>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion__item">
+              <a
+                href="#accordion"
+                class="accordion__toggle collapsed"
+                data-toggle="collapse"
+                data-target="#course-toc-10"
+                data-parent="#parent"
+              >
+                <span class="flex" style={{ fontSize: "17px" }}>
+                  What are the job opportunities for clinical research?
+                </span>
+                <span class="accordion__toggle-icon material-icons">
+                  keyboard_arrow_down
+                </span>
+              </a>
+              <div class="accordion__menu collapse" id="course-toc-10">
+                <div class="accordion__menu-link">
+                  <p style={{ fontSize: "15px" }}>
+                    <ul style={{ listStyle: "inside" }}>
+                      <li>
+                        The PG Diploma Clinical Research in Bangalore programme
+                        will give an opportunity to work in Multinational
+                        Companies.
+                      </li>
+                      <li>
+                        Students can get engaged in different profiles like
+                      </li>
+                      <li>Clinical Trial Analyst</li>
+                      <li>Clinical Trial Assistant</li>
+                      <li>Clinical Research Co-Ordinator</li>
+                      <li>Clinical Research Associate</li>
+                      <li>Quality Control</li>
+                      <li>Quality Analyst</li>
+                      <li>Principal Investigator</li>
+                      <li>Sub-Investigator</li>
+                    </ul>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <h4>PG Diploma In Clinical Data Management</h4>
+            <div class="accordion__item">
+              <a
+                href="#accordion"
+                class="accordion__toggle collapsed"
+                data-toggle="collapse"
+                data-target="#course-toc-11"
+                data-parent="#parent"
+              >
+                <span class="flex" style={{ fontSize: "17px" }}>
+                  What will I learn if I take up this course?
+                </span>
+                <span class="accordion__toggle-icon material-icons">
+                  keyboard_arrow_down
+                </span>
+              </a>
+              <div class="accordion__menu collapse" id="course-toc-11">
+                <div class="accordion__menu-link">
+                  <p style={{ fontSize: "15px" }}>
+                    This PG Diploma in Clinical Research Bangalore programme
+                    will help the life science graduates to learn about how the
+                    massive amount of clinical data are managed and validated.
+                    <br />
+                    <br />
+                    It will give an insight on various processes involved in
+                    Clinical Data Management.
+                    <br />
+                    <br />
+                    Give students an experience on how to manage the data
+                    utilizing different softwares like Rave, Oracle, Inform etc.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion__item open">
+              <a
+                href="#accordion"
+                class="accordion__toggle collapsed"
+                data-toggle="collapse"
+                data-target="#course-toc-12"
+                data-parent="#parent"
+              >
+                <span class="flex" style={{ fontSize: "17px" }}>
+                  Is this program right for me?
+                </span>
+                <span class="accordion__toggle-icon material-icons">
+                  keyboard_arrow_down
+                </span>
+              </a>
+              <div class="accordion__menu collapse" id="course-toc-12">
+                <div class="accordion__menu-link">
+                  <p style={{ fontSize: "15px" }}>
+                    If you are a science graduate and looking forward to work in
+                    an MNC sticking to your core side, widening your
+                    opportunities to be placed, then ACRI’s course of PG Diploma
+                    Clinical Research in Bangalore is the right choice.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion__item open">
+              <a
+                href="#accordion"
+                class="accordion__toggle collapsed"
+                data-toggle="collapse"
+                data-target="#course-toc-13"
+                data-parent="#parent"
+              >
+                <span class="flex" style={{ fontSize: "17px" }}>
+                  Who can apply?
+                </span>
+                <span class="accordion__toggle-icon material-icons">
+                  keyboard_arrow_down
+                </span>
+              </a>
+              <div class="accordion__menu collapse" id="course-toc-13">
+                <div class="accordion__menu-link">
+                  <p style={{ fontSize: "15px" }}>
+                    Applicants are recommended to have one of the following
+                    Graduate/Postgraduate degree in Life Sciences (Botany,
+                    Zoology, Biochemistry, Microbiology, Genetics, and
+                    Biotechnology).
+                    <br />
+                    <br />
+                    Graduate/Postgraduate degree in Chemistry/Biostatistics/
+                    Bioinformatics.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion__item open">
+              <a
+                href="#accordion"
+                class="accordion__toggle collapsed"
+                data-toggle="collapse"
+                data-target="#course-toc-14"
+                data-parent="#parent"
+              >
+                <span class="flex" style={{ fontSize: "17px" }}>
+                  What are the job opportunities for Clinical Data Management?
+                </span>
+                <span class="accordion__toggle-icon material-icons">
+                  keyboard_arrow_down
+                </span>
+              </a>
+              <div class="accordion__menu collapse" id="course-toc-14">
+                <div class="accordion__menu-link">
+                  <p style={{ fontSize: "15px" }}>
+                    <ul style={{ listStyle: "inside" }}>
+                      <li>Data Entry Operator</li>
+                      <li>Associate Clinical Data Co-Ordinator</li>
+                      <li>Data Validator</li>
+                      <li>Medical Coder</li>
+                      <li>Data Manager</li>
+                      <li>Clinical Data Analyst</li>
+                      <li>Clinical Data Programmer</li>
+                      <li>Clinical Data Manager I</li>
+                      <li>Clinical Data Manager II</li>
+                      <li>Principal Clinical Data Manager</li>
+                      <li>Manager, Clinical Data Management</li>
+                      <li>Group Manager, Clinical Data Management</li>
+                      <li>Associate Director, Clinical Data Management</li>
+                    </ul>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <h4>Advanced PG Diploma in Clinical Research</h4>
+            <h5 className="text-muted">
+              Pharmacovigilance – an evergreen industry.
+            </h5>
+            <div class="accordion__item">
+              <a
+                href="#accordion"
+                class="accordion__toggle collapsed"
+                data-toggle="collapse"
+                data-target="#course-toc-15"
+                data-parent="#parent"
+              >
+                <span class="flex" style={{ fontSize: "17px" }}>
+                  What will I learn if I take up this course?
+                </span>
+                <span class="accordion__toggle-icon material-icons">
+                  keyboard_arrow_down
+                </span>
+              </a>
+              <div class="accordion__menu collapse" id="course-toc-15">
+                <div class="accordion__menu-link">
+                  <p style={{ fontSize: "15px" }}>
+                    The Pharmacovigilance (Advanced PG Diploma in Clinical
+                    Research) will provide a foundation in pharmacovigilance
+                    principles and operations. Having a curriculum that's fully
+                    reviewed by industry professionals, this course will prepare
+                    aspirants of the pharmacovigilance sector both within and
+                    outside the pharmaceutical industry.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion__item">
+              <a
+                href="#accordion"
+                class="accordion__toggle collapsed"
+                data-toggle="collapse"
+                data-target="#course-toc-16"
+                data-parent="#parent"
+              >
+                <span class="flex" style={{ fontSize: "17px" }}>
+                  Is this program right for me?
+                </span>
+                <span class="accordion__toggle-icon material-icons">
+                  keyboard_arrow_down
+                </span>
+              </a>
+              <div class="accordion__menu collapse" id="course-toc-16">
+                <div class="accordion__menu-link">
+                  <p style={{ fontSize: "15px" }}>
+                    If you are a Health science graduate and looking forward to
+                    work in an MNC, and eager to get knowledge in various real
+                    life cases and hands – on software training, then
+                    ACRI’s&nbsp;
+                    <span className="fw-bold">
+                      Post Graduate Diploma in Clinical Research
+                    </span>
+                    &nbsp;is absolutely for you!
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion__item">
+              <a
+                href="#accordion"
+                class="accordion__toggle collapsed"
+                data-toggle="collapse"
+                data-target="#course-toc-17"
+                data-parent="#parent"
+              >
+                <span class="flex" style={{ fontSize: "17px" }}>
+                  Who Can Apply?
+                </span>
+                <span class="accordion__toggle-icon material-icons">
+                  keyboard_arrow_down
+                </span>
+              </a>
+              <div class="accordion__menu collapse" id="course-toc-17">
+                <div class="accordion__menu-link">
+                  <p style={{ fontSize: "15px" }}>
+                    The basic minimum qualifications for fitting to a
+                    pharmacovigilance career include undergraduate and/or
+                    graduate degrees in human (MBBS, BDS) and veterinary (BVSC)
+                    medicine, BAMS, BUMS, pharmacy (B.Pharm), nursing (BS) or
+                    allied health sciences (BSc); after which a course in&nbsp;
+                    <span className="fw-bold">
+                      Post Graduate Diploma in Clinical Research
+                    </span>
+                    &nbsp;can be applied for.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion__item">
+              <a
+                href="#accordion"
+                class="accordion__toggle collapsed"
+                data-toggle="collapse"
+                data-target="#course-toc-18"
+                data-parent="#parent"
+              >
+                <span class="flex" style={{ fontSize: "17px" }}>
+                  What are the Job Opportunities after doing the
+                  Pharmacovigilance course?
+                </span>
+                <span class="accordion__toggle-icon material-icons">
+                  keyboard_arrow_down
+                </span>
+              </a>
+              <div class="accordion__menu collapse" id="course-toc-18">
+                <div class="accordion__menu-link">
+                  <p style={{ fontSize: "15px" }}>
+                    The jobs in the pharmacovigilance domain are being offered
+                    by pharmaceutical companies, CROs, IT firms (BPOs/KPOs) and
+                    consulting firms. The national or regional pharmacovigilance
+                    centers and hospitals will also be offering jobs in the long
+                    run as the pharmacovigilance network develops further.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion__item">
+              <a
+                href="#accordion"
+                class="accordion__toggle collapsed"
+                data-toggle="collapse"
+                data-target="#course-toc-19"
+                data-parent="#parent"
+              >
+                <span class="flex" style={{ fontSize: "17px" }}>
+                  What are the Job Opportunities after doing the
+                  Pharmacovigilance course?
+                </span>
+                <span class="accordion__toggle-icon material-icons">
+                  keyboard_arrow_down
+                </span>
+              </a>
+              <div class="accordion__menu collapse" id="course-toc-19">
+                <div class="accordion__menu-link">
+                  <p style={{ fontSize: "15px" }}>
+                    <ul style={{ listStyle: "inside" }}>
+                      <li>Drug Safety Associate</li>
+                      <li>Drug Safety Physician</li>
+                      <li>Medical Reviewer</li>
+                      <li>Medical Coder</li>
+                      <li>Quality Analyst</li>
+                      <li>Narrative Writer</li>
+                    </ul>
                   </p>
                 </div>
               </div>

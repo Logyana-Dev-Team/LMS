@@ -1,20 +1,17 @@
+import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { authAxios } from "../../App";
 
 export default function Development() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    authAxios
+    axios
       .get("/api/module")
       .then((res) => {
         setData(res.data);
       })
       .catch((err) => {
         console.log(err);
-        localStorage.removeItem("userId");
-        localStorage.removeItem("token");
-        window.location = "/";
       });
   }, []);
 
@@ -26,8 +23,11 @@ export default function Development() {
 
       <div className="row card-group-row">
         {data
-          ? data.map((modules) => (
-              <div className="col-md-6 col-lg-4 col-xl-3 card-group-row__col">
+          ? data.map((modules, i) => (
+              <div
+                className="col-md-6 col-lg-4 col-xl-3 card-group-row__col"
+                key={i}
+              >
                 <div
                   className="
                     card card-sm card--elevated
@@ -35,16 +35,21 @@ export default function Development() {
                     o-hidden
                     overlay overlay--primary-dodger-blue
                     js-overlay
+                    mdk-reveal
+                    js-mdk-reveal
                     card-group-row__card
                   "
+                  data-overlay-onload-show
+                  data-popover-onload-show
+                  data-force-reveal
+                  data-partial-height="44"
                   data-toggle="popover"
                   data-trigger="click"
                 >
                   <a
-                    href="/studentCourse"
+                    href={`/course/${modules._id}`}
                     className="card-img-top js-image"
                     data-position=""
-                    data-height="140"
                   >
                     <img src={modules.imageName} alt="course" />
                     <span className="overlay__content">
@@ -60,12 +65,15 @@ export default function Development() {
                   <div className="card-body flex">
                     <div className="d-flex">
                       <div className="flex">
-                        <a className="card-title" href="/studentCourse">
+                        <a
+                          className="card-title"
+                          href={`/course/${modules._id}`}
+                        >
                           {modules.name}
                         </a>
                       </div>
                       <a
-                        href="/studentCourse"
+                        href={`/course/${modules._id}`}
                         data-toggle="tooltip"
                         data-title="Add Favorite"
                         data-placement="top"
@@ -208,7 +216,10 @@ export default function Development() {
                       </div>
                     </div>
                     <div className="col text-right">
-                      <a href="/studentCourse" className="btn btn-primary">
+                      <a
+                        href={`/course/${modules._id}`}
+                        className="btn btn-primary"
+                      >
                         Watch trailer
                       </a>
                     </div>

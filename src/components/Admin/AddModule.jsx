@@ -12,6 +12,7 @@ export default function AddModule() {
   const [signUpData, setSignupData] = useState({
     course: "",
     moduleName: "",
+    modulePrice: "",
   });
 
   useEffect(() => {
@@ -64,6 +65,7 @@ export default function AddModule() {
         name: signUpData.moduleName,
         course: signUpData.course,
         imageName: courseImage,
+        price: signUpData.modulePrice,
       })
       .then((response) => {
         window.setTimeout(function () {
@@ -109,6 +111,16 @@ export default function AddModule() {
                   <input
                     type="text"
                     name="moduleName"
+                    onChange={inputEvent}
+                    class="form-control"
+                  ></input>
+                  <small class="form-text text-muted">Enter Module Name.</small>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Module Price</label>
+                  <input
+                    type="text"
+                    name="modulePrice"
                     onChange={inputEvent}
                     class="form-control"
                   ></input>

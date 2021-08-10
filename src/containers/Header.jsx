@@ -99,14 +99,14 @@ export default function Header() {
                   <div class="dropdown">
                     <a
                       href="#dropdown"
-                      class="nav-link align-items-center link-dark dropdown-toggle m-0 p-0"
+                      class="nav-link align-items-center link-info dropdown-toggle m-0 p-0"
                       type="button"
                       id="dropdownMenuButton1"
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
                       style={{ height: 15 }}
                     >
-                      <strong>{user.name}</strong>
+                      <strong style={{ height: 15 }}>{user.name}</strong>
                     </a>
                     <small>Student</small>
                     <ul
@@ -165,8 +165,8 @@ export default function Header() {
                 <li className="nav-item">
                   <a
                     href="/signup"
-                    className="btn btn-outline-dark"
-                    style={{ color: "#000" }}
+                    className="btn btn-outline-info"
+                    style={{ color: "" }}
                   >
                     Get Started
                   </a>
