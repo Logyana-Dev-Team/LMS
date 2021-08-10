@@ -511,20 +511,16 @@ export default function CareerContent() {
 
           <div class="accordion js-accordion accordion--boxed" id="parent">
             <div class="accordion__item">
-              <a
-                href="#accordian"
-                class="accordion__toggle collapsed"
-                data-toggle="collapse"
-                data-target="#course-toc-1"
+              <button
+                class="accordion__toggle accordion-button collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#course-toc-1"
                 data-parent="#parent"
               >
                 <span class="flex" style={{ fontSize: "17px" }}>
                   Careers In Clinical Research
                 </span>
-                <span class="accordion__toggle-icon material-icons">
-                  keyboard_arrow_down
-                </span>
-              </a>
+              </button>
               <div class="accordion__menu collapse" id="course-toc-1">
                 <div class="accordion__menu-link">
                   <p style={{ fontSize: "15px" }}>
@@ -565,20 +561,16 @@ export default function CareerContent() {
               </div>
             </div>
             <div class="accordion__item">
-              <a
-                href="#accordion"
-                class="accordion__toggle collapsed"
-                data-toggle="collapse"
-                data-target="#course-toc-2"
+              <button
+                class="accordion__toggle accordion-button collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#course-toc-2"
                 data-parent="#parent"
               >
                 <span class="flex" style={{ fontSize: "17px" }}>
                   Clinical Research Associate (CRA)
                 </span>
-                <span class="accordion__toggle-icon material-icons">
-                  keyboard_arrow_down
-                </span>
-              </a>
+              </button>
               <div class="accordion__menu collapse" id="course-toc-2">
                 <div class="accordion__menu-link">
                   <p style={{ fontSize: "15px" }}>
@@ -596,20 +588,16 @@ export default function CareerContent() {
               </div>
             </div>
             <div class="accordion__item">
-              <a
-                href="#accordion"
-                class="accordion__toggle collapsed"
-                data-toggle="collapse"
-                data-target="#course-toc-3"
+              <button
+                class="accordion__toggle accordion-button collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#course-toc-3"
                 data-parent="#parent"
               >
                 <span class="flex" style={{ fontSize: "17px" }}>
                   Clinical Data Management (CDM)
                 </span>
-                <span class="accordion__toggle-icon material-icons">
-                  keyboard_arrow_down
-                </span>
-              </a>
+              </button>
               <div class="accordion__menu collapse" id="course-toc-3">
                 <div class="accordion__menu-link">
                   <p style={{ fontSize: "15px" }}>
@@ -625,20 +613,16 @@ export default function CareerContent() {
               </div>
             </div>
             <div class="accordion__item">
-              <a
-                href="#accordion"
-                class="accordion__toggle collapsed"
-                data-toggle="collapse"
-                data-target="#course-toc-4"
+              <button
+                class="accordion__toggle accordion-button collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#course-toc-4"
                 data-parent="#parent"
               >
                 <span class="flex" style={{ fontSize: "17px" }}>
                   Clinical Research Organisation (CRO)
                 </span>
-                <span class="accordion__toggle-icon material-icons">
-                  keyboard_arrow_down
-                </span>
-              </a>
+              </button>
               <div class="accordion__menu collapse" id="course-toc-4">
                 <div class="accordion__menu-link">
                   <p style={{ fontSize: "15px" }}>
@@ -655,20 +639,16 @@ export default function CareerContent() {
               </div>
             </div>
             <div class="accordion__item">
-              <a
-                href="#accordion"
-                class="accordion__toggle collapsed"
-                data-toggle="collapse"
-                data-target="#course-toc-5"
+              <button
+                class="accordion__toggle accordion-button collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#course-toc-5"
                 data-parent="#parent"
               >
                 <span class="flex" style={{ fontSize: "17px" }}>
                   Key Cities in India for Clinical Research
                 </span>
-                <span class="accordion__toggle-icon material-icons">
-                  keyboard_arrow_down
-                </span>
-              </a>
+              </button>
               <div class="accordion__menu collapse" id="course-toc-5">
                 <div class="accordion__menu-link">
                   <p style={{ fontSize: "15px" }}>
@@ -687,20 +667,16 @@ export default function CareerContent() {
               </div>
             </div>
             <div class="accordion__item open">
-              <a
-                href="#accordion"
-                class="accordion__toggle collapsed"
-                data-toggle="collapse"
-                data-target="#course-toc-6"
+              <button
+                class="accordion__toggle accordion-button collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#course-toc-6"
                 data-parent="#parent"
               >
                 <span class="flex" style={{ fontSize: "17px" }}>
                   Advantages Of Taking up Clinical Research As a Career
                 </span>
-                <span class="accordion__toggle-icon material-icons">
-                  keyboard_arrow_down
-                </span>
-              </a>
+              </button>
               <div class="accordion__menu collapse" id="course-toc-6">
                 <div class="accordion__menu-link">
                   <p style={{ fontSize: "15px" }}>
@@ -730,20 +706,16 @@ export default function CareerContent() {
             data-domfactory-upgraded="accordion"
           >
             <div class="accordion__item open">
-              <a
-                href="#accordian"
-                class="accordion__toggle collapsed"
-                data-toggle="collapse"
-                data-target="#course-toc-7"
+              <button
+                class="accordion__toggle accordion-button collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#course-toc-7"
                 data-parent="#parent"
               >
                 <span class="flex" style={{ fontSize: "17px" }}>
                   Who can take OET?
                 </span>
-                <span class="accordion__toggle-icon material-icons">
-                  keyboard_arrow_down
-                </span>
-              </a>
+              </button>
               <div class="accordion__menu collapse" id="course-toc-7">
                 <div class="accordion__menu-link">
                   <p style={{ fontSize: "15px" }}>
@@ -758,20 +730,16 @@ export default function CareerContent() {
               </div>
             </div>
             <div class="accordion__item">
-              <a
-                href="#accordion"
-                class="accordion__toggle collapsed"
-                data-toggle="collapse"
-                data-target="#course-toc-8"
+              <button
+                class="accordion__toggle accordion-button collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#course-toc-8"
                 data-parent="#parent"
               >
                 <span class="flex" style={{ fontSize: "17px" }}>
                   How is the test scored?
                 </span>
-                <span class="accordion__toggle-icon material-icons">
-                  keyboard_arrow_down
-                </span>
-              </a>
+              </button>
               <div class="accordion__menu collapse" id="course-toc-8">
                 <div class="accordion__menu-link">
                   <p style={{ fontSize: "15px" }}>
@@ -784,20 +752,16 @@ export default function CareerContent() {
               </div>
             </div>
             <div class="accordion__item">
-              <a
-                href="#accordion"
-                class="accordion__toggle collapsed"
-                data-toggle="collapse"
-                data-target="#course-toc-9"
+              <button
+                class="accordion__toggle accordion-button collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#course-toc-9"
                 data-parent="#parent"
               >
                 <span class="flex" style={{ fontSize: "17px" }}>
                   Listening and Reading
                 </span>
-                <span class="accordion__toggle-icon material-icons">
-                  keyboard_arrow_down
-                </span>
-              </a>
+              </button>
               <div class="accordion__menu collapse" id="course-toc-9">
                 <div class="accordion__menu-link">
                   <p style={{ fontSize: "15px" }}>
@@ -819,20 +783,16 @@ export default function CareerContent() {
               </div>
             </div>
             <div class="accordion__item">
-              <a
-                href="#accordion"
-                class="accordion__toggle collapsed"
-                data-toggle="collapse"
-                data-target="#course-toc-10"
+              <button
+                class="accordion__toggle accordion-button collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#course-toc-10"
                 data-parent="#parent"
               >
                 <span class="flex" style={{ fontSize: "17px" }}>
                   Writing and Speaking
                 </span>
-                <span class="accordion__toggle-icon material-icons">
-                  keyboard_arrow_down
-                </span>
-              </a>
+              </button>
               <div class="accordion__menu collapse" id="course-toc-10">
                 <div class="accordion__menu-link">
                   <p style={{ fontSize: "15px" }}>
@@ -852,20 +812,16 @@ export default function CareerContent() {
               </div>
             </div>
             <div class="accordion__item">
-              <a
-                href="#accordion"
-                class="accordion__toggle collapsed"
-                data-toggle="collapse"
-                data-target="#course-toc-11"
+              <button
+                class="accordion__toggle accordion-button collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#course-toc-11"
                 data-parent="#parent"
               >
                 <span class="flex" style={{ fontSize: "17px" }}>
                   For the Writing sub-test
                 </span>
-                <span class="accordion__toggle-icon material-icons">
-                  keyboard_arrow_down
-                </span>
-              </a>
+              </button>
               <div class="accordion__menu collapse" id="course-toc-11">
                 <div class="accordion__menu-link">
                   <p style={{ fontSize: "15px" }}>
@@ -882,20 +838,16 @@ export default function CareerContent() {
               </div>
             </div>
             <div class="accordion__item open">
-              <a
-                href="#accordion"
-                class="accordion__toggle collapsed"
-                data-toggle="collapse"
-                data-target="#course-toc-12"
+              <button
+                class="accordion__toggle accordion-button collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#course-toc-12"
                 data-parent="#parent"
               >
                 <span class="flex" style={{ fontSize: "17px" }}>
                   For the Speaking sub-test
                 </span>
-                <span class="accordion__toggle-icon material-icons">
-                  keyboard_arrow_down
-                </span>
-              </a>
+              </button>
               <div class="accordion__menu collapse" id="course-toc-12">
                 <div class="accordion__menu-link">
                   <p style={{ fontSize: "15px" }}>
@@ -928,20 +880,16 @@ export default function CareerContent() {
             data-domfactory-upgraded="accordion"
           >
             <div class="accordion__item open">
-              <a
-                href="#accordian"
-                class="accordion__toggle collapsed"
-                data-toggle="collapse"
-                data-target="#course-toc-7"
+              <button
+                class="accordion__toggle accordion-button collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#course-toc-7"
                 data-parent="#parent"
               >
                 <span class="flex" style={{ fontSize: "17px" }}>
                   What will I learn if I take up this course?
                 </span>
-                <span class="accordion__toggle-icon material-icons">
-                  keyboard_arrow_down
-                </span>
-              </a>
+              </button>
               <div class="accordion__menu collapse" id="course-toc-7">
                 <div class="accordion__menu-link">
                   <p style={{ fontSize: "15px" }}>
@@ -961,20 +909,16 @@ export default function CareerContent() {
               </div>
             </div>
             <div class="accordion__item">
-              <a
-                href="#accordion"
-                class="accordion__toggle collapsed"
-                data-toggle="collapse"
-                data-target="#course-toc-8"
+              <button
+                class="accordion__toggle accordion-button collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#course-toc-8"
                 data-parent="#parent"
               >
                 <span class="flex" style={{ fontSize: "17px" }}>
                   Is this program right for me?
                 </span>
-                <span class="accordion__toggle-icon material-icons">
-                  keyboard_arrow_down
-                </span>
-              </a>
+              </button>
               <div class="accordion__menu collapse" id="course-toc-8">
                 <div class="accordion__menu-link">
                   <p style={{ fontSize: "15px" }}>
@@ -988,20 +932,16 @@ export default function CareerContent() {
               </div>
             </div>
             <div class="accordion__item">
-              <a
-                href="#accordion"
-                class="accordion__toggle collapsed"
-                data-toggle="collapse"
-                data-target="#course-toc-9"
+              <button
+                class="accordion__toggle accordion-button collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#course-toc-9"
                 data-parent="#parent"
               >
                 <span class="flex" style={{ fontSize: "17px" }}>
                   Who can apply?
                 </span>
-                <span class="accordion__toggle-icon material-icons">
-                  keyboard_arrow_down
-                </span>
-              </a>
+              </button>
               <div class="accordion__menu collapse" id="course-toc-9">
                 <div class="accordion__menu-link">
                   <p style={{ fontSize: "15px" }}>
@@ -1036,20 +976,16 @@ export default function CareerContent() {
               </div>
             </div>
             <div class="accordion__item">
-              <a
-                href="#accordion"
-                class="accordion__toggle collapsed"
-                data-toggle="collapse"
-                data-target="#course-toc-10"
+              <button
+                class="accordion__toggle accordion-button collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#course-toc-10"
                 data-parent="#parent"
               >
                 <span class="flex" style={{ fontSize: "17px" }}>
                   What are the job opportunities for clinical research?
                 </span>
-                <span class="accordion__toggle-icon material-icons">
-                  keyboard_arrow_down
-                </span>
-              </a>
+              </button>
               <div class="accordion__menu collapse" id="course-toc-10">
                 <div class="accordion__menu-link">
                   <p style={{ fontSize: "15px" }}>
@@ -1077,20 +1013,16 @@ export default function CareerContent() {
             </div>
             <h4>PG Diploma In Clinical Data Management</h4>
             <div class="accordion__item">
-              <a
-                href="#accordion"
-                class="accordion__toggle collapsed"
-                data-toggle="collapse"
-                data-target="#course-toc-11"
+              <button
+                class="accordion__toggle accordion-button collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#course-toc-11"
                 data-parent="#parent"
               >
                 <span class="flex" style={{ fontSize: "17px" }}>
                   What will I learn if I take up this course?
                 </span>
-                <span class="accordion__toggle-icon material-icons">
-                  keyboard_arrow_down
-                </span>
-              </a>
+              </button>
               <div class="accordion__menu collapse" id="course-toc-11">
                 <div class="accordion__menu-link">
                   <p style={{ fontSize: "15px" }}>
@@ -1110,20 +1042,16 @@ export default function CareerContent() {
               </div>
             </div>
             <div class="accordion__item open">
-              <a
-                href="#accordion"
-                class="accordion__toggle collapsed"
-                data-toggle="collapse"
-                data-target="#course-toc-12"
+              <button
+                class="accordion__toggle accordion-button collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#course-toc-12"
                 data-parent="#parent"
               >
                 <span class="flex" style={{ fontSize: "17px" }}>
                   Is this program right for me?
                 </span>
-                <span class="accordion__toggle-icon material-icons">
-                  keyboard_arrow_down
-                </span>
-              </a>
+              </button>
               <div class="accordion__menu collapse" id="course-toc-12">
                 <div class="accordion__menu-link">
                   <p style={{ fontSize: "15px" }}>
@@ -1136,20 +1064,16 @@ export default function CareerContent() {
               </div>
             </div>
             <div class="accordion__item open">
-              <a
-                href="#accordion"
-                class="accordion__toggle collapsed"
-                data-toggle="collapse"
-                data-target="#course-toc-13"
+              <button
+                class="accordion__toggle accordion-button collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#course-toc-13"
                 data-parent="#parent"
               >
                 <span class="flex" style={{ fontSize: "17px" }}>
                   Who can apply?
                 </span>
-                <span class="accordion__toggle-icon material-icons">
-                  keyboard_arrow_down
-                </span>
-              </a>
+              </button>
               <div class="accordion__menu collapse" id="course-toc-13">
                 <div class="accordion__menu-link">
                   <p style={{ fontSize: "15px" }}>
@@ -1166,20 +1090,16 @@ export default function CareerContent() {
               </div>
             </div>
             <div class="accordion__item open">
-              <a
-                href="#accordion"
-                class="accordion__toggle collapsed"
-                data-toggle="collapse"
-                data-target="#course-toc-14"
+              <button
+                class="accordion__toggle accordion-button collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#course-toc-14"
                 data-parent="#parent"
               >
                 <span class="flex" style={{ fontSize: "17px" }}>
                   What are the job opportunities for Clinical Data Management?
                 </span>
-                <span class="accordion__toggle-icon material-icons">
-                  keyboard_arrow_down
-                </span>
-              </a>
+              </button>
               <div class="accordion__menu collapse" id="course-toc-14">
                 <div class="accordion__menu-link">
                   <p style={{ fontSize: "15px" }}>
@@ -1207,20 +1127,16 @@ export default function CareerContent() {
               Pharmacovigilance – an evergreen industry.
             </h5>
             <div class="accordion__item">
-              <a
-                href="#accordion"
-                class="accordion__toggle collapsed"
-                data-toggle="collapse"
-                data-target="#course-toc-15"
+              <button
+                class="accordion__toggle accordion-button collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#course-toc-15"
                 data-parent="#parent"
               >
                 <span class="flex" style={{ fontSize: "17px" }}>
                   What will I learn if I take up this course?
                 </span>
-                <span class="accordion__toggle-icon material-icons">
-                  keyboard_arrow_down
-                </span>
-              </a>
+              </button>
               <div class="accordion__menu collapse" id="course-toc-15">
                 <div class="accordion__menu-link">
                   <p style={{ fontSize: "15px" }}>
@@ -1235,20 +1151,16 @@ export default function CareerContent() {
               </div>
             </div>
             <div class="accordion__item">
-              <a
-                href="#accordion"
-                class="accordion__toggle collapsed"
-                data-toggle="collapse"
-                data-target="#course-toc-16"
+              <button
+                class="accordion__toggle accordion-button collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#course-toc-16"
                 data-parent="#parent"
               >
                 <span class="flex" style={{ fontSize: "17px" }}>
                   Is this program right for me?
                 </span>
-                <span class="accordion__toggle-icon material-icons">
-                  keyboard_arrow_down
-                </span>
-              </a>
+              </button>
               <div class="accordion__menu collapse" id="course-toc-16">
                 <div class="accordion__menu-link">
                   <p style={{ fontSize: "15px" }}>
@@ -1265,20 +1177,16 @@ export default function CareerContent() {
               </div>
             </div>
             <div class="accordion__item">
-              <a
-                href="#accordion"
-                class="accordion__toggle collapsed"
-                data-toggle="collapse"
-                data-target="#course-toc-17"
+              <button
+                class="accordion__toggle accordion-button collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#course-toc-17"
                 data-parent="#parent"
               >
                 <span class="flex" style={{ fontSize: "17px" }}>
                   Who Can Apply?
                 </span>
-                <span class="accordion__toggle-icon material-icons">
-                  keyboard_arrow_down
-                </span>
-              </a>
+              </button>
               <div class="accordion__menu collapse" id="course-toc-17">
                 <div class="accordion__menu-link">
                   <p style={{ fontSize: "15px" }}>
@@ -1296,21 +1204,17 @@ export default function CareerContent() {
               </div>
             </div>
             <div class="accordion__item">
-              <a
-                href="#accordion"
-                class="accordion__toggle collapsed"
-                data-toggle="collapse"
-                data-target="#course-toc-18"
+              <button
+                class="accordion__toggle accordion-button collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#course-toc-18"
                 data-parent="#parent"
               >
                 <span class="flex" style={{ fontSize: "17px" }}>
                   What are the Job Opportunities after doing the
                   Pharmacovigilance course?
                 </span>
-                <span class="accordion__toggle-icon material-icons">
-                  keyboard_arrow_down
-                </span>
-              </a>
+              </button>
               <div class="accordion__menu collapse" id="course-toc-18">
                 <div class="accordion__menu-link">
                   <p style={{ fontSize: "15px" }}>
@@ -1324,21 +1228,17 @@ export default function CareerContent() {
               </div>
             </div>
             <div class="accordion__item">
-              <a
-                href="#accordion"
-                class="accordion__toggle collapsed"
-                data-toggle="collapse"
-                data-target="#course-toc-19"
+              <button
+                class="accordion__toggle accordion-button collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#course-toc-19"
                 data-parent="#parent"
               >
                 <span class="flex" style={{ fontSize: "17px" }}>
                   What are the Job Opportunities after doing the
                   Pharmacovigilance course?
                 </span>
-                <span class="accordion__toggle-icon material-icons">
-                  keyboard_arrow_down
-                </span>
-              </a>
+              </button>
               <div class="accordion__menu collapse" id="course-toc-19">
                 <div class="accordion__menu-link">
                   <p style={{ fontSize: "15px" }}>

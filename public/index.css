@@ -381,3 +381,14 @@ html:not(.js) .cd-h-timeline__dates,
 html:not(.js) .cd-h-timeline__navigation {
   display: block;
 }
+.accordion-button:focus {
+  z-index: 0 !important;
+  border-color: white;
+  outline: 0;
+  box-shadow: 0 0 0;
+}
+.accordion-button:not(.collapsed) {
+  color: #0c63e4;
+  background-color: #e7f1ff;
+  box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
+}
