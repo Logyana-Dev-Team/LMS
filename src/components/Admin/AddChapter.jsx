@@ -10,21 +10,50 @@ export default function AddChapter() {
   const [chapterVideo, setChapterVideo] = useState("");
   const [loading, setLoading] = useState(false);
   const [progress, setProgress] = useState();
+  const [fields, setFields] = useState([]);
 
   const [chapterData, setChapterData] = useState({
     chapterTitle: "",
     description: "",
     videoName: "",
+  });
+
+  const [quizData, setQuizData] = useState({
     question: "",
     option1: "",
     option2: "",
     option3: "",
     option4: "",
+    correctOption: "",
   });
 
   useEffect(() => {
     getCourse();
   }, []);
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    setFields((preValue) => [
+      ...preValue,
+      {
+        question: quizData.question,
+        option1: quizData.option1,
+        option2: quizData.option2,
+        option3: quizData.option3,
+        option4: quizData.option4,
+        correctOption: quizData.correctOption,
+      },
+    ]);
+    console.log(fields);
+    setQuizData({
+      question: "",
+      option1: "",
+      option2: "",
+      option3: "",
+      option4: "",
+      correctOption: "",
+    });
+  };
 
   const getCourse = () => {
     axios
@@ -39,6 +68,17 @@ export default function AddChapter() {
     const { name, value } = e.target;
 
     setChapterData((preValue) => {
+      return {
+        ...preValue,
+        [name]: value,
+      };
+    });
+  };
+
+  const quizEvent = (e) => {
+    const { name, value } = e.target;
+
+    setQuizData((preValue) => {
       return {
         ...preValue,
         [name]: value,
@@ -99,11 +139,7 @@ export default function AddChapter() {
         chapterName: chapterData.chapterTitle,
         description: chapterData.description,
         videoName: chapterVideo,
-        question: chapterData.question,
-        option1: chapterData.option1,
-        option2: chapterData.option2,
-        option3: chapterData.option3,
-        option4: chapterData.option4,
+        quiz: fields,
       })
       .then((response) => {
         window.setTimeout(function () {
@@ -213,27 +249,25 @@ export default function AddChapter() {
                     id="parent"
                   >
                     <div class="accordion__item">
-                      <a
-                        href="#collapse"
-                        class="accordion__toggle collapsed"
-                        data-toggle="collapse"
-                        data-target="#course-toc-1"
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#course-toc-1"
                         data-parent="#parent"
                       >
                         <span class="flex">Write Questions</span>
-                        <span class="accordion__toggle-icon material-icons">
-                          keyboard_arrow_down
-                        </span>
-                      </a>
+                      </button>
                       <div class="accordion__menu collapse" id="course-toc-1">
                         <div class="accordion__menu-link d-block">
                           <div class="form-group mb-24pt">
                             <input
                               type="text"
                               name="question"
-                              onChange={inputEvent}
+                              onChange={quizEvent}
                               class="form-control"
                               placeholder="Question"
+                              value={quizData.question}
                             />
                           </div>
                           <div className="row">
@@ -242,9 +276,10 @@ export default function AddChapter() {
                                 <input
                                   type="text"
                                   name="option1"
-                                  onChange={inputEvent}
+                                  onChange={quizEvent}
                                   class="form-control"
                                   placeholder="Option 1"
+                                  value={quizData.option1}
                                 />
                               </div>
                             </div>
@@ -253,9 +288,10 @@ export default function AddChapter() {
                                 <input
                                   type="text"
                                   name="option2"
-                                  onChange={inputEvent}
+                                  onChange={quizEvent}
                                   class="form-control"
                                   placeholder="Option 2"
+                                  value={quizData.option2}
                                 />
                               </div>
                             </div>
@@ -266,9 +302,10 @@ export default function AddChapter() {
                                 <input
                                   type="text"
                                   name="option3"
-                                  onChange={inputEvent}
+                                  onChange={quizEvent}
                                   class="form-control"
                                   placeholder="Option 3"
+                                  value={quizData.option3}
                                 />
                               </div>
                             </div>
@@ -277,23 +314,39 @@ export default function AddChapter() {
                                 <input
                                   type="text"
                                   name="option4"
-                                  onChange={inputEvent}
+                                  onChange={quizEvent}
                                   class="form-control"
                                   placeholder="Option 4"
+                                  value={quizData.option4}
                                 />
                               </div>
                             </div>
+                          </div>
+                          <div class="form-group mb-24pt">
+                            <select
+                              name="correctOption"
+                              class="form-control form-control-lg custom-select"
+                              onChange={quizEvent}
+                            >
+                              <option value={quizData.correctOption} selected>
+                                Select Correct Answer
+                              </option>
+                              <option value="Option 1">Option 1</option>
+                              <option value="Option 2">Option 2</option>
+                              <option value="Option 3">Option 3</option>
+                              <option value="Option 4">Option 4</option>
+                            </select>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <a
-                    href="#option"
+                  <button
+                    onClick={(e) => handleClick(e)}
                     class="btn btn-outline-secondary mb-24pt mb-sm-0"
                   >
                     <i class="fas fa-plus"></i> &nbsp; Add Option
-                  </a>
+                  </button>
                 </div>
                 <div class="col-md-4">
                   <div class="page-separator">
@@ -363,6 +416,62 @@ export default function AddChapter() {
                       Add Chapter
                     </button>
                   )}
+                  {fields ? (
+                    <div>
+                      {fields.map((fields, i) => (
+                        <div className="row" key={i}>
+                          <div className="row m-0">
+                            <h4>
+                              {i + 1}. &nbsp;
+                              {fields.question}
+                            </h4>
+                          </div>
+                          <div className="row m-0">
+                            <div className="col-6 m-0">
+                              <h5>
+                                <span className="fw-bold">
+                                  Option 1 :&nbsp;
+                                </span>
+                                {fields.option1}
+                              </h5>
+                            </div>
+                            <div className="col-6 m-0">
+                              <h5>
+                                <span className="fw-bold">
+                                  Option 2 :&nbsp;
+                                </span>
+                                {fields.option2}
+                              </h5>
+                            </div>
+                          </div>
+                          <div className="row m-0">
+                            <div className="col-6 m-0">
+                              <h5>
+                                <span className="fw-bold">
+                                  Option 3 :&nbsp;
+                                </span>
+                                {fields.option3}
+                              </h5>
+                            </div>
+                            <div className="col-6 m-0">
+                              <h5>
+                                <span className="fw-bold">
+                                  Option 4 :&nbsp;
+                                </span>
+                                {fields.option4}
+                              </h5>
+                            </div>
+                            <h5>
+                              <span className="fw-bold">
+                                Correct Answer :&nbsp;
+                              </span>
+                              {fields.correctOption}
+                            </h5>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  ) : null}
                 </div>
               </form>
             </div>

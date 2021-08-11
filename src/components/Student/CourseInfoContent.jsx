@@ -1,26 +1,42 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 export default function CourseInfoContent() {
+  const { id } = useParams();
+  const [data, setData] = useState([]);
+  const [course, setCourseData] = useState([]);
+
+  useEffect(() => {
+    GetCourseById();
+  }, []);
+
+  const GetCourseById = () => {
+    axios
+      .get(`/api/module/${id}`)
+      .then((res) => {
+        setData(res.data);
+        setCourseData(res.data.course);
+        console.log(res.data);
+      })
+      .catch((err) => console.log(err));
+  };
+
   return (
     <>
       <div className="container">
         <div className="d-flex container-fluid mt-5 mb-5 pb-5">
           <div>
-            <h2 className="text-info m-0">Clinical Research</h2>
-            <p className="text-muted fs-6">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit
-              nam asperiores officia, amet eligendi possimus nihil quidem,
-              libero iste aspernatur commodi ipsam dolores sapiente? Quibusdam
-              possimus deserunt distinctio autem eum!
-            </p>
+            <h2 className="text-info m-0">{course.name}</h2>
+            <p className="text-muted fs-6">{data.description}</p>
           </div>
-          <div>
-            <h2 className="text-info">₹4990.00</h2>
+          <div style={{ width: "15%" }}>
+            <h4 className="text-info">₹4990.00</h4>
           </div>
         </div>
         <div class="card">
           <div class="card-header" style={{ backgroundColor: "#CBE7FF66" }}>
-            <h3 className="text-info">Faculties</h3>
+            <h2 className="text-info">Faculties</h2>
           </div>
           <div class="card-body">
             <div className="row">
@@ -67,27 +83,8 @@ export default function CourseInfoContent() {
             </div>
           </div>
         </div>
-        <div className="mt-5">
-          <div class="card">
-            <div class="card-body">
-              <div className="row container-fluid">
-                <div className="col-10">
-                  <h3 className="text-info">Available in Multiple Languages</h3>
-                  <div className="fs-6">
-                    English, Hindi, Marathi, Gujrati & many more..
-                  </div>
-                </div>
-                <div className="col-2 d-flex align-items-center">
-                  <button type="button" class="btn btn-link text-info fw-bold">
-                    Set Launguage
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
         <div className="container-fluid">
-          <h3 className="text-info">How to Pass?</h3>
+          <h2 className="text-info">How to Pass?</h2>
           <div className="fs-6">
             Complete the following steps below and receive your certifcate
           </div>

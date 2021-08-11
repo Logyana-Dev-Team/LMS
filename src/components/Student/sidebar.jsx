@@ -1,6 +1,20 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 export default function Sidebar() {
+  const { id } = useParams();
+  const [chapter, setChapter] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(`/api/chapter/getChapterByModule/${id}`)
+      .then((res) => {
+        setChapter(res.data);
+      })
+      .catch((err) => console.log(err));
+  }, []);
+
   return (
     <>
       <div class="sidebar-sticky p-3" style={{ width: "280px" }}>
@@ -15,74 +29,30 @@ export default function Sidebar() {
               <i class="fas fa-list me-2"></i> Overview
             </a>
           </li>
-          <li>
+          <li class="nav-item">
             <div class="dropdown">
               <a
-                href="#"
-                class="nav-link align-items-center link-dark dropdown-toggle"
-                type="button"
-                id="dropdownMenuButton1"
-                data-bs-toggle="dropdown"
+                class="nav-link align-items-center"
+                data-bs-toggle="collapse"
+                href="#collapseExample"
+                role="button"
                 aria-expanded="false"
+                aria-controls="collapseExample"
               >
                 <i class="fas fa-pen-alt me-2"></i> Chapters
               </a>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li>
-                  <a class="dropdown-item" href="#">
-                    Chapter 1
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">
-                    Chapter 2
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">
-                    Chapter 3
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">
-                    Chapter 4
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">
-                    Chapter 5
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">
-                    Chapter 6
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">
-                    Chapter 7
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">
-                    Chapter
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">
-                    Chapter 9
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">
-                    Chapter 10
-                  </a>
-                </li>
-              </ul>
+              <div class="collapse" id="collapseExample">
+                <ul>
+                  {chapter.map((chapters, i) => (
+                    <li key={i}>
+                      <a class="dropdown-item" href="#">
+                        {chapters.chapterName}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
-            {/* <a href="#" class="nav-link align-items-center link-dark">
-              <i class="fas fa-pen-alt me-2"></i> Chapters
-            </a> */}
           </li>
           <li>
             <a href="/grades" class="nav-link align-items-center link-dark">
@@ -90,7 +60,10 @@ export default function Sidebar() {
             </a>
           </li>
           <li>
-            <a href="/courseInfo" class="nav-link align-items-center link-dark">
+            <a
+              href={"/courseInfo/" + id}
+              class="nav-link align-items-center link-dark"
+            >
               <i class="fas fa-info-circle me-2"></i> Course Info
             </a>
           </li>

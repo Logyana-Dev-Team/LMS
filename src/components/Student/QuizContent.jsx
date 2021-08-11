@@ -1,284 +1,90 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 export default function QuizContent() {
+  const { id } = useParams();
+  const [data, setData] = useState([]);
+  const [quizData, setQuizData] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(`/api/chapter/${id}`)
+      .then((res) => {
+        setData(res.data);
+        setQuizData(res.data.quiz);
+      })
+      .catch((err) => console.log(err));
+  }, []);
   return (
     <>
       <div className="container-fluid">
-        <div className="container mx-5 my-5 pb-5">
-          <h2 className="mb-0 text-info">
-            Quiz 2 - Evolution of Clinical Research
-          </h2>
-          <p className="text-muted" style={{ fontSize: 15 }}>
-            Select your options and after completion hit the submit button
-          </p>
-          <div className="container-fluid">
-            <div>
-              <h5 style={{ textTransform: "none" }}>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus
-                ad sunt qui.
-              </h5>
-              <div className="container-fluid">
-                <div class="form-check  mb-2">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="flexRadioDefault"
-                    id="flexRadioDefault1"
-                    checked
-                  />
-                  <p className="text-muted mx-3 " style={{ fontSize: 15 }}>
-                    Lorem ipsum dolor sit amet
-                  </p>
+        {data ? (
+          <div className="container mx-5 my-5 pb-5">
+            <h2 className="mb-0 text-info">{data.chapterName}</h2>
+            <p className="text-muted" style={{ fontSize: 15 }}>
+              Select your options and after completion hit the submit button
+            </p>
+            <div className="container-fluid">
+              {quizData.map((quiz, i) => (
+                <div key={i}>
+                  <h5 style={{ textTransform: "none" }}>
+                    {i + 1}.&nbsp;{quiz.question}
+                  </h5>
+                  <div className="container-fluid">
+                    <div class="form-check  mb-2">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        key={quiz._id}
+                        style={{ padding: "initial", width: "1em" }}
+                      />
+                      <p className="text-muted mx-3 " style={{ fontSize: 15 }}>
+                        {quiz.option1}
+                      </p>
+                    </div>
+                    <div class="form-check  mb-2">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="option2"
+                        id="flexRadioDefault2"
+                        style={{ padding: "initial", width: "1em" }}
+                      />
+                      <p className="text-muted mx-3 " style={{ fontSize: 15 }}>
+                        {quiz.option2}
+                      </p>
+                    </div>
+                    <div class="form-check  mb-2">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="option3"
+                        id="flexRadioDefault3"
+                        style={{ padding: "initial", width: "1em" }}
+                      />
+                      <p className="text-muted mx-3 " style={{ fontSize: 15 }}>
+                        {quiz.option3}
+                      </p>
+                    </div>
+                    <div class="form-check  mb-2">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="option4"
+                        id="flexRadioDefault4"
+                        style={{ padding: "initial", width: "1em" }}
+                      />
+                      <p className="text-muted mx-3 " style={{ fontSize: 15 }}>
+                        {quiz.option4}
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <div class="form-check  mb-2">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="flexRadioDefault"
-                    id="flexRadioDefault1"
-                  />
-                  <p className="text-muted mx-3 " style={{ fontSize: 15 }}>
-                    Lorem ipsum dolor sit amet
-                  </p>
-                </div>
-                <div class="form-check  mb-2">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="flexRadioDefault"
-                    id="flexRadioDefault1"
-                  />
-                  <p className="text-muted mx-3 " style={{ fontSize: 15 }}>
-                    Lorem ipsum dolor sit amet
-                  </p>
-                </div>
-                <div class="form-check  mb-2">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="flexRadioDefault"
-                    id="flexRadioDefault1"
-                  />
-                  <p className="text-muted mx-3 " style={{ fontSize: 15 }}>
-                    Lorem ipsum dolor sit amet
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div>
-              <h5 style={{ textTransform: "none" }}>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus
-                ad sunt qui.
-              </h5>
-              <div className="container-fluid">
-                <div class="form-check  mb-2">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="flexRadioDefault"
-                    id="flexRadioDefault1"
-                    checked
-                  />
-                  <p className="text-muted mx-3 " style={{ fontSize: 15 }}>
-                    Lorem ipsum dolor sit amet
-                  </p>
-                </div>
-                <div class="form-check  mb-2">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="flexRadioDefault"
-                    id="flexRadioDefault1"
-                  />
-                  <p className="text-muted mx-3 " style={{ fontSize: 15 }}>
-                    Lorem ipsum dolor sit amet
-                  </p>
-                </div>
-                <div class="form-check  mb-2">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="flexRadioDefault"
-                    id="flexRadioDefault1"
-                  />
-                  <p className="text-muted mx-3 " style={{ fontSize: 15 }}>
-                    Lorem ipsum dolor sit amet
-                  </p>
-                </div>
-                <div class="form-check  mb-2">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="flexRadioDefault"
-                    id="flexRadioDefault1"
-                  />
-                  <p className="text-muted mx-3 " style={{ fontSize: 15 }}>
-                    Lorem ipsum dolor sit amet
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div>
-              <h5 style={{ textTransform: "none" }}>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus
-                ad sunt qui.
-              </h5>
-              <div className="container-fluid">
-                <div class="form-check  mb-2">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="flexRadioDefault"
-                    id="flexRadioDefault1"
-                    checked
-                  />
-                  <p className="text-muted mx-3 " style={{ fontSize: 15 }}>
-                    Lorem ipsum dolor sit amet
-                  </p>
-                </div>
-                <div class="form-check  mb-2">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="flexRadioDefault"
-                    id="flexRadioDefault1"
-                  />
-                  <p className="text-muted mx-3 " style={{ fontSize: 15 }}>
-                    Lorem ipsum dolor sit amet
-                  </p>
-                </div>
-                <div class="form-check  mb-2">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="flexRadioDefault"
-                    id="flexRadioDefault1"
-                  />
-                  <p className="text-muted mx-3 " style={{ fontSize: 15 }}>
-                    Lorem ipsum dolor sit amet
-                  </p>
-                </div>
-                <div class="form-check  mb-2">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="flexRadioDefault"
-                    id="flexRadioDefault1"
-                  />
-                  <p className="text-muted mx-3 " style={{ fontSize: 15 }}>
-                    Lorem ipsum dolor sit amet
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div>
-              <h5 style={{ textTransform: "none" }}>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus
-                ad sunt qui.
-              </h5>
-              <div className="container-fluid">
-                <div class="form-check  mb-2">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="flexRadioDefault"
-                    id="flexRadioDefault1"
-                    checked
-                  />
-                  <p className="text-muted mx-3 " style={{ fontSize: 15 }}>
-                    Lorem ipsum dolor sit amet
-                  </p>
-                </div>
-                <div class="form-check  mb-2">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="flexRadioDefault"
-                    id="flexRadioDefault1"
-                  />
-                  <p className="text-muted mx-3 " style={{ fontSize: 15 }}>
-                    Lorem ipsum dolor sit amet
-                  </p>
-                </div>
-                <div class="form-check  mb-2">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="flexRadioDefault"
-                    id="flexRadioDefault1"
-                  />
-                  <p className="text-muted mx-3 " style={{ fontSize: 15 }}>
-                    Lorem ipsum dolor sit amet
-                  </p>
-                </div>
-                <div class="form-check  mb-2">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="flexRadioDefault"
-                    id="flexRadioDefault1"
-                  />
-                  <p className="text-muted mx-3 " style={{ fontSize: 15 }}>
-                    Lorem ipsum dolor sit amet
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div>
-              <h5 style={{ textTransform: "none" }}>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus
-                ad sunt qui.
-              </h5>
-              <div className="container-fluid">
-                <div class="form-check  mb-2">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="flexRadioDefault"
-                    id="flexRadioDefault1"
-                    checked
-                  />
-                  <p className="text-muted mx-3 " style={{ fontSize: 15 }}>
-                    Lorem ipsum dolor sit amet
-                  </p>
-                </div>
-                <div class="form-check  mb-2">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="flexRadioDefault"
-                    id="flexRadioDefault1"
-                  />
-                  <p className="text-muted mx-3 " style={{ fontSize: 15 }}>
-                    Lorem ipsum dolor sit amet
-                  </p>
-                </div>
-                <div class="form-check  mb-2">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="flexRadioDefault"
-                    id="flexRadioDefault1"
-                  />
-                  <p className="text-muted mx-3 " style={{ fontSize: 15 }}>
-                    Lorem ipsum dolor sit amet
-                  </p>
-                </div>
-                <div class="form-check  mb-2">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="flexRadioDefault"
-                    id="flexRadioDefault1"
-                  />
-                  <p className="text-muted mx-3 " style={{ fontSize: 15 }}>
-                    Lorem ipsum dolor sit amet
-                  </p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
-        </div>
+        ) : null}
         <nav
           class="navbar fixed-bottom navbar-light bg-light"
           style={{ boxShadow: "0 0px 10px #888" }}
@@ -293,7 +99,12 @@ export default function QuizContent() {
               </p>
             </div>
             <div className="d-flex flex-row-reverse align-items-center">
-              <button className="btn btn-sm btn-info ms-4">Submit</button>
+              <a
+                href="/module/611186c9f501363f40cbf885"
+                className="btn btn-sm btn-info ms-4"
+              >
+                Submit
+              </a>
               <p className="text-muted m-0" style={{ fontSize: 15 }}>
                 00Hr. : 14Min : 42Sec
               </p>

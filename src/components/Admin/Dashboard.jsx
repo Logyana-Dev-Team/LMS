@@ -1,6 +1,21 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 
 export default function Dashboard() {
+  const [user, setUser] = useState("");
+
+  useEffect(() => {
+    axios
+      .get("/api/users")
+      .then((res) => {
+        setUser(res.data);
+        console.log(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
   return (
     <div className="mdk-header-layout__content page-content ">
       <div className="pt-32pt">
@@ -176,6 +191,125 @@ export default function Dashboard() {
           </div>
         </div>
 
+        <div className="page-separator">
+          <div className="page-separator__text">Users</div>
+        </div>
+        <div class="card mb-32pt">
+          <div
+            class="table-responsive"
+            data-toggle="lists"
+            data-lists-sort-by="js-lists-values-date"
+            data-lists-sort-desc="true"
+            data-lists-values='["js-lists-values-name", "js-lists-values-department", "js-lists-values-status", "js-lists-values-type", "js-lists-values-phone", "js-lists-values-date"]'
+          >
+            <table class="table mb-0 thead-border-top-0 table-nowrap">
+              <thead>
+                <tr>
+                  <th>
+                    <a
+                      href="javascript:void(0)"
+                      class="sort"
+                      data-sort="js-lists-values-name"
+                    >
+                      Photo
+                    </a>
+                  </th>
+
+                  <th style={{ width: "150px" }}>
+                    <a
+                      href="javascript:void(0)"
+                      class="sort"
+                      data-sort="js-lists-values-department"
+                    >
+                      Name
+                    </a>
+                  </th>
+
+                  <th style={{ width: "48px" }}>
+                    <a
+                      href="javascript:void(0)"
+                      class="sort"
+                      data-sort="js-lists-values-status"
+                    >
+                      Email
+                    </a>
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="list" id="employees">
+                {user
+                  ? user.map((users) => (
+                      <tr>
+                        <td style={{ width: "0" }}>
+                          <div class="avatar avatar-sm mr-8pt">
+                            <span class="avatar-title rounded-circle">BN</span>
+                          </div>
+                        </td>
+
+                        <td>
+                          <div class="media-body">
+                            <div class="d-flex align-items-center">
+                              <div class="flex d-flex flex-column">
+                                <p class="mb-0">
+                                  <strong class="js-lists-values-name">
+                                    {users.name}
+                                  </strong>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="media-body">
+                            <div class="d-flex align-items-center">
+                              <div class="flex d-flex flex-column">
+                                <p class="mb-0">
+                                  <strong class="js-lists-values-name">
+                                    {users.email}
+                                  </strong>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    ))
+                  : null}
+              </tbody>
+            </table>
+          </div>
+
+          <div class="card-footer p-8pt">
+            <ul class="pagination justify-content-start pagination-xsm m-0">
+              <li class="page-item disabled">
+                <a class="page-link" href="#" aria-label="Previous">
+                  <span aria-hidden="true" class="material-icons">
+                    chevron_left
+                  </span>
+                  <span>Prev</span>
+                </a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Page 1">
+                  <span>1</span>
+                </a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Page 2">
+                  <span>2</span>
+                </a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                  <span>Next</span>
+                  <span aria-hidden="true" class="material-icons">
+                    chevron_right
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
         <div className="row mb-8pt">
           <div className="col-lg-12">
             <div className="page-separator">
@@ -417,257 +551,6 @@ export default function Dashboard() {
                 </table>
               </div>
             </div>
-          </div>
-        </div>
-        <div className="page-separator">
-          <div className="page-separator__text">Users</div>
-        </div>
-        <div class="card mb-32pt">
-          <div
-            class="table-responsive"
-            data-toggle="lists"
-            data-lists-sort-by="js-lists-values-date"
-            data-lists-sort-desc="true"
-            data-lists-values='["js-lists-values-name", "js-lists-values-department", "js-lists-values-status", "js-lists-values-type", "js-lists-values-phone", "js-lists-values-date"]'
-          >
-            <table class="table mb-0 thead-border-top-0 table-nowrap">
-              <thead>
-                <tr>
-                  <th>
-                    <a
-                      href="javascript:void(0)"
-                      class="sort"
-                      data-sort="js-lists-values-name"
-                    >
-                      Photo
-                    </a>
-                  </th>
-
-                  <th style={{ width: "150px" }}>
-                    <a
-                      href="javascript:void(0)"
-                      class="sort"
-                      data-sort="js-lists-values-department"
-                    >
-                      Name
-                    </a>
-                  </th>
-
-                  <th style={{ width: "48px" }}>
-                    <a
-                      href="javascript:void(0)"
-                      class="sort"
-                      data-sort="js-lists-values-status"
-                    >
-                      Email
-                    </a>
-                  </th>
-                </tr>
-              </thead>
-              <tbody class="list" id="employees">
-                <tr>
-                  <td style={{ width: "0" }}>
-                    <div class="avatar avatar-sm mr-8pt">
-                      <span class="avatar-title rounded-circle">BN</span>
-                    </div>
-                  </td>
-
-                  <td>
-                    <div class="media-body">
-                      <div class="d-flex align-items-center">
-                        <div class="flex d-flex flex-column">
-                          <p class="mb-0">
-                            <strong class="js-lists-values-name">
-                              Billy Nunez
-                            </strong>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="media-body">
-                      <div class="d-flex align-items-center">
-                        <div class="flex d-flex flex-column">
-                          <p class="mb-0">
-                            <strong class="js-lists-values-name">
-                              annabell.kris@yahoo.com
-                            </strong>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td style={{ width: "0" }}>
-                    <div class="avatar avatar-sm mr-8pt">
-                      <span class="avatar-title rounded-circle">BN</span>
-                    </div>
-                  </td>
-
-                  <td>
-                    <div class="media-body">
-                      <div class="d-flex align-items-center">
-                        <div class="flex d-flex flex-column">
-                          <p class="mb-0">
-                            <strong class="js-lists-values-name">
-                              Billy Nunez
-                            </strong>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="media-body">
-                      <div class="d-flex align-items-center">
-                        <div class="flex d-flex flex-column">
-                          <p class="mb-0">
-                            <strong class="js-lists-values-name">
-                              annabell.kris@yahoo.com
-                            </strong>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td style={{ width: "0" }}>
-                    <div class="avatar avatar-sm mr-8pt">
-                      <span class="avatar-title rounded-circle">BN</span>
-                    </div>
-                  </td>
-
-                  <td>
-                    <div class="media-body">
-                      <div class="d-flex align-items-center">
-                        <div class="flex d-flex flex-column">
-                          <p class="mb-0">
-                            <strong class="js-lists-values-name">
-                              Billy Nunez
-                            </strong>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="media-body">
-                      <div class="d-flex align-items-center">
-                        <div class="flex d-flex flex-column">
-                          <p class="mb-0">
-                            <strong class="js-lists-values-name">
-                              annabell.kris@yahoo.com
-                            </strong>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td style={{ width: "0" }}>
-                    <div class="avatar avatar-sm mr-8pt">
-                      <span class="avatar-title rounded-circle">BN</span>
-                    </div>
-                  </td>
-
-                  <td>
-                    <div class="media-body">
-                      <div class="d-flex align-items-center">
-                        <div class="flex d-flex flex-column">
-                          <p class="mb-0">
-                            <strong class="js-lists-values-name">
-                              Billy Nunez
-                            </strong>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="media-body">
-                      <div class="d-flex align-items-center">
-                        <div class="flex d-flex flex-column">
-                          <p class="mb-0">
-                            <strong class="js-lists-values-name">
-                              annabell.kris@yahoo.com
-                            </strong>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td style={{ width: "0" }}>
-                    <div class="avatar avatar-sm mr-8pt">
-                      <span class="avatar-title rounded-circle">BN</span>
-                    </div>
-                  </td>
-
-                  <td>
-                    <div class="media-body">
-                      <div class="d-flex align-items-center">
-                        <div class="flex d-flex flex-column">
-                          <p class="mb-0">
-                            <strong class="js-lists-values-name">
-                              Billy Nunez
-                            </strong>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="media-body">
-                      <div class="d-flex align-items-center">
-                        <div class="flex d-flex flex-column">
-                          <p class="mb-0">
-                            <strong class="js-lists-values-name">
-                              annabell.kris@yahoo.com
-                            </strong>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div class="card-footer p-8pt">
-            <ul class="pagination justify-content-start pagination-xsm m-0">
-              <li class="page-item disabled">
-                <a class="page-link" href="#" aria-label="Previous">
-                  <span aria-hidden="true" class="material-icons">
-                    chevron_left
-                  </span>
-                  <span>Prev</span>
-                </a>
-              </li>
-              <li class="page-item">
-                <a class="page-link" href="#" aria-label="Page 1">
-                  <span>1</span>
-                </a>
-              </li>
-              <li class="page-item">
-                <a class="page-link" href="#" aria-label="Page 2">
-                  <span>2</span>
-                </a>
-              </li>
-              <li class="page-item">
-                <a class="page-link" href="#" aria-label="Next">
-                  <span>Next</span>
-                  <span aria-hidden="true" class="material-icons">
-                    chevron_right
-                  </span>
-                </a>
-              </li>
-            </ul>
           </div>
         </div>
       </div>

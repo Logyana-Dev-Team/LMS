@@ -46,7 +46,7 @@ export default function Header() {
               src="images/logo-black@2x.png"
               alt="logo"
               className="img-fluid"
-              style={{ width: 200 }}
+              style={{ width: 250 }}
             />
           </a>
 
@@ -54,7 +54,10 @@ export default function Header() {
             style={{ borderLeft: "1px solid #bababa", height: "30px" }}
           ></span>
 
-          <ul className="nav navbar-nav d-none d-sm-flex flex justify-content-start ml-8pt">
+          <ul
+            className="nav navbar-nav d-none d-sm-flex flex justify-content-start ml-8pt"
+            style={{ fontSize: "16px" }}
+          >
             <li className="nav-item">
               <a href="/" className="nav-link">
                 Home

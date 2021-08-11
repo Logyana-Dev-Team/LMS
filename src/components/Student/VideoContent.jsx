@@ -1,19 +1,39 @@
+import axios from "axios";
 import React from "react";
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import "video-react/dist/video-react.css"; // import css
+import { Player } from "video-react";
 
 export default function VideoContent() {
+  const { id } = useParams();
+  const [data, setData] = useState([]);
+  const [disable, setDisable] = useState(true);
+
+  const src = data.videoName;
+
+  useEffect(() => {
+    axios
+      .get(`/api/chapter/${id}`)
+      .then((res) => {
+        setData(res.data);
+      })
+      .catch((err) => console.log(err));
+  }, []);
+
+  const myCallback = () => setDisable(false);
+
   return (
     <>
       <div className="container-fluid">
         <div className="container mt-5">
           <div className="row">
             <div className="col-8">
-              <div class="embed-responsive embed-responsive-16by9">
-                <iframe
-                  class="embed-responsive-item"
-                  src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
-                  allowfullscreen
-                ></iframe>
-              </div>
+              {src ? (
+                <Player autoPlay={false} onEnded={() => myCallback()}>
+                  <source src={data.videoName} />
+                </Player>
+              ) : null}
               <div className="row justify-content-between mt-3">
                 <div className="col d-flex align-items-center">
                   {/* <div class="dropdown">
@@ -50,7 +70,14 @@ export default function VideoContent() {
                   <span className="ms-3">Choose Your Language</span> */}
                 </div>
                 <div className="col">
-                  <button type="button" class="btn btn-info float-right ms-2">
+                  <button
+                    onClick={(event) =>
+                      (window.location.href = "/quiz/" + data._id)
+                    }
+                    type="button"
+                    class="btn btn-info float-right ms-2"
+                    disabled={disable}
+                  >
                     Quiz
                   </button>
                   <button
@@ -62,7 +89,10 @@ export default function VideoContent() {
                 </div>
               </div>
             </div>
-            <div className="col-4 ps-4">
+            <div
+              className="col-4 ps-4 overflow-auto"
+              style={{ height: "55vh" }}
+            >
               <h5>Script</h5>
               <dl class="row">
                 <dt class="col-sm-3">00:10</dt>
@@ -110,18 +140,8 @@ export default function VideoContent() {
           </div>
           <div className="row">
             <div className="col-8">
-              <div className="h5 text-info mt-3">
-                Chapter 1 - Evolution of Clinical Research Part - 1
-              </div>
-              <p className="text-muted">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo,
-                odit praesentium? Culpa impedit aperiam ipsum velit corporis hic
-                perspiciatis deleniti quidem est libero vero, commodi porro
-                excepturi. Facilis, fugit quia? Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Nesciunt similique porro deleniti
-                necessitatibus odit unde molestias quos ad magnam reprehenderit
-                ipsa aliquam, delectus et, at itaque, cum earum maxime ratione!
-              </p>
+              <div className="h4 text-info mt-3">{data.chapterName}</div>
+              <p className="text-muted">{data.description}</p>
             </div>
           </div>
         </div>

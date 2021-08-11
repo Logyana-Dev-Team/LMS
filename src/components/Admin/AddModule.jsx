@@ -9,10 +9,13 @@ export default function AddModule() {
   const [courseImage, setCourseImage] = useState("");
   const [loading, setLoading] = useState(false);
   const [course, setCourse] = useState([]);
+  const [chapterVideo, setChapterVideo] = useState("");
+  const [progress, setProgress] = useState();
   const [signUpData, setSignupData] = useState({
     course: "",
     moduleName: "",
     modulePrice: "",
+    moduleDescription: "",
   });
 
   useEffect(() => {
@@ -58,14 +61,49 @@ export default function AddModule() {
     setLoading(false);
   };
 
+  const uploadVideo = async (e) => {
+    const files = e.target.files;
+    const url = "https://api.cloudinary.com/v1_1/logyana/video/upload";
+    const config = {
+      headers: {
+        "X-Requested-With": "XMLHttpRequest",
+        "Content-Type": "multipart/form-data",
+      },
+      onUploadProgress: (data) => {
+        setProgress(Math.round((100 * data.loaded) / data.total));
+      },
+    };
+
+    console.log(files[0]);
+    const formData = new FormData();
+    formData.append("file", files[0]);
+    formData.append("upload_preset", "truelessons");
+    formData.append("api_key", "266722153473982");
+    formData.append("timestamp", (Date.now() / 1000) | 0);
+    setLoading(true);
+
+    return axios
+      .post(url, formData, config)
+      .then((response) => {
+        const data = response.data;
+        const fileURL = data.secure_url;
+        setChapterVideo(fileURL);
+        setLoading(false);
+        console.log(data);
+      })
+      .catch((err) => console.log(err.response));
+  };
+
   const addModule = (e) => {
     e.preventDefault();
     axios
       .post("/api/module", {
         name: signUpData.moduleName,
         course: signUpData.course,
+        videoName: chapterVideo,
         imageName: courseImage,
         price: signUpData.modulePrice,
+        description: signUpData.moduleDescription,
       })
       .then((response) => {
         window.setTimeout(function () {
@@ -160,6 +198,67 @@ export default function AddModule() {
                         <label class="custom-control-label" for="active">
                           Active
                         </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Module Description</label>
+                  <textarea
+                    type="text"
+                    name="moduleDescription"
+                    rows="2"
+                    onChange={inputEvent}
+                    class="form-control"
+                  ></textarea>
+                  <small class="form-text text-muted">Enter Module Name.</small>
+                </div>
+                <div className="row">
+                  <div className="col">
+                    <div class="card">
+                      <div class="card-body">
+                        <label class="form-label">Add Trailer Video</label>
+                        {chapterVideo ? (
+                          <div class="mt-3 mb-3">
+                            <video width="400" controls>
+                              <source src={chapterVideo} type="video/mp4" />
+                              Your browser does not support HTML video.
+                            </video>
+                          </div>
+                        ) : null}
+
+                        <div class="custom-file">
+                          <input
+                            type="file"
+                            onChange={uploadVideo}
+                            class="custom-file-input"
+                            id="inputGroupFile01"
+                          />
+                          <label
+                            class="custom-file-label"
+                            for="inputGroupFile01"
+                          >
+                            Choose file
+                          </label>
+                        </div>
+                        {progress && (
+                          <div className="progress">
+                            <div
+                              className="progress-bar progress-bar-info progress-bar-striped"
+                              role="progressbar"
+                              aria-valuenow={progress}
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                              style={{ width: progress + "%" }}
+                            >
+                              {progress}%
+                            </div>
+                          </div>
+                        )}
+
+                        <small class="form-text text-muted">
+                          Enter a valid video.
+                        </small>
                       </div>
                     </div>
                   </div>

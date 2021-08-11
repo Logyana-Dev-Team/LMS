@@ -27,48 +27,9 @@ export default function Header() {
               src="images/logo-white.png"
               alt="logo"
               className="img-fluid"
-              style={{ width: 200 }}
+              style={{ width: 250 }}
             />
           </a>
-
-          <span className="d-none d-md-flex align-items-center mr-16pt">
-            <span className="avatar avatar-sm mr-12pt">
-              <span className="avatar-title rounded navbar-avatar">
-                <i className="material-icons">trending_up</i>
-              </span>
-            </span>
-
-            <small className="flex d-flex flex-column">
-              <strong className="navbar-text-100">Earnings</strong>
-              <span className="navbar-text-50">₹12.3k</span>
-            </small>
-          </span>
-          <span className="d-none d-md-flex align-items-center mr-16pt">
-            <span className="avatar avatar-sm mr-12pt">
-              <span className="avatar-title rounded navbar-avatar">
-                <i className="material-icons">receipt</i>
-              </span>
-            </span>
-
-            <small className="flex d-flex flex-column">
-              <strong className="navbar-text-100">Sales</strong>
-              <span className="navbar-text-50">264</span>
-            </small>
-          </span>
-
-          <form
-            className="search-form navbar-search d-none d-md-flex mr-16pt"
-            action="https://luma.humatheme.com/Demos/Fixed_Layout/index.html"
-          >
-            <button className="btn" type="submit">
-              <i className="material-icons">search</i>
-            </button>
-            <input
-              type="text"
-              className="form-control"
-              placeholder="Search ..."
-            />
-          </form>
 
           <div className="flex"></div>
 

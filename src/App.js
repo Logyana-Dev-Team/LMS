@@ -34,39 +34,39 @@ import DivyaSunil from "./components/AboutUs/DivyaSunil";
 import Smitha from "./components/AboutUs/Smitha";
 import BlogSingle from "./components/Blog/blogSingle";
 
-axios.defaults.baseURL = "http://localhost:3000/";
+axios.defaults.baseURL = "https://api-truelessons.herokuapp.com/";
 export const userId = localStorage.getItem("userId");
 export const token = localStorage.getItem("token");
 
 export const authAxios = axios.create({
-  baseURL: "http://localhost:3000/",
+  baseURL: "https://api-truelessons.herokuapp.com/",
   headers: {
     Authorization: `Bearer ${token}`,
   },
 });
 
 const MyComponent = (props) => {
-  useScript("vendor/jquery.min.js");
-  useScript("vendor/popper.min.js");
-  useScript("vendor/bootstrap.min.js");
-  useScript("vendor/perfect-scrollbar.min.js");
-  useScript("vendor/dom-factory.js");
-  useScript("vendor/material-design-kit.js");
-  useScript("js/app.js");
-  useScript("js/quill.js");
-  useScript("js/preloader.js");
-  useScript("js/settings.js");
-  useScript("vendor/moment.min.js");
-  useScript("vendor/moment-range.js");
-  useScript("vendor/Chart.min.js");
-  useScript("js/chartjs-rounded-bar.js");
-  useScript("js/chartjs.js");
-  useScript("js/page.instructor-dashboard.js");
-  useScript("vendor/list.min.js");
-  useScript("js/list.js");
-  useScript("assets/js/util.js");
-  useScript("assets/js/swipe-content.js");
-  useScript("assets/js/main.js");
+  useScript("./vendor/jquery.min.js");
+  useScript("./vendor/popper.min.js");
+  useScript("./vendor/bootstrap.min.js");
+  useScript("./vendor/perfect-scrollbar.min.js");
+  useScript("./vendor/dom-factory.js");
+  useScript("./vendor/material-design-kit.js");
+  useScript("./js/app.js");
+  useScript("./js/quill.js");
+  useScript("./js/preloader.js");
+  useScript("./js/settings.js");
+  useScript("./vendor/moment.min.js");
+  useScript("./vendor/moment-range.js");
+  useScript("./vendor/Chart.min.js");
+  useScript("./js/chartjs-rounded-bar.js");
+  useScript("./js/chartjs.js");
+  useScript("./js/page.instructor-dashboard.js");
+  useScript("./vendor/list.min.js");
+  useScript("./js/list.js");
+  useScript("./assets/js/util.js");
+  useScript("./assets/js/swipe-content.js");
+  useScript("./assets/js/main.js");
 };
 
 function App() {
@@ -79,13 +79,13 @@ function App() {
         <Route path="/contact" component={Contact}></Route>
         <Route path="/career" component={Career}></Route>
         <Route path="/student" component={Student}></Route>
-        <Route path="/module" component={Module}></Route>
+        <Route path="/module/:id" component={Module}></Route>
         <Route path="/grades" component={Grades}></Route>
-        <Route path="/video" component={Video}></Route>
-        <Route path="/quiz" component={Quiz}></Route>
+        <Route path="/video/:id" component={Video}></Route>
+        <Route path="/quiz/:id" component={Quiz}></Route>
         <Route path="/profile" component={Profile}></Route>
         <Route path="/help" component={Help}></Route>
-        <Route path="/courseInfo" component={CourseInfo}></Route>
+        <Route path="/courseInfo/:id" component={CourseInfo}></Route>
         <Route path="/moduleList" component={ModulesList}></Route>
         <Route path="/addModule" component={AddModule}></Route>
         <Route path="/editModule/:id" component={EditModule}></Route>

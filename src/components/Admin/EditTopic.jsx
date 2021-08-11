@@ -9,14 +9,17 @@ export default function EditTopic() {
   const { id } = useParams();
   const [data, setData] = useState([]);
   const [courseImage, setCourseImage] = useState("");
+  const [facultyImage, setFacultyImage] = useState("");
   const [loading, setLoading] = useState(false);
+  const [fields, setFields] = useState([]);
   const [signUpData, setSignupData] = useState({
     courseName: "",
+    courseDescription: "",
   });
 
   useEffect(() => {
     GetCourseById();
-  });
+  }, []);
 
   const GetCourseById = () => {
     axios
@@ -35,6 +38,16 @@ export default function EditTopic() {
         [name]: value,
       };
     });
+  };
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    setFields((preValue) => [
+      ...preValue,
+      {
+        facultyImage: facultyImage,
+      },
+    ]);
   };
 
   const uploadImage = async (e) => {
@@ -57,12 +70,35 @@ export default function EditTopic() {
     setLoading(false);
   };
 
+  const facultyImageUpload = async (e) => {
+    const files = e.target.files;
+
+    const data = new FormData();
+    data.append("file", files[0]);
+    data.append("upload_preset", "veggisale");
+    setLoading(true);
+    const res = await fetch(
+      "https://api.cloudinary.com/v1_1/logyana/image/upload",
+      {
+        method: "POST",
+        body: data,
+      }
+    );
+    const file = await res.json();
+    // console.log(file);
+    setFacultyImage(file.secure_url);
+    setLoading(false);
+  };
+
   const editChapter = (e) => {
     e.preventDefault();
     axios
-      .patch(`/api/course/${id}`, {
+      .patch("/api/course", {
+        _id: id,
         name: signUpData.courseName,
         imageName: courseImage,
+        description: signUpData.courseDescription,
+        facultyImage: fields,
       })
       .then((response) => {
         window.setTimeout(function () {
@@ -94,9 +130,19 @@ export default function EditTopic() {
                     type="text"
                     class="form-control"
                     name="courseName"
-                    value={data.name}
                     onChange={inputEvent}
                   ></input>
+                  <small class="form-text text-muted">Enter Course Name.</small>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Course Description</label>
+                  <textarea
+                    type="text"
+                    class="form-control"
+                    row="3"
+                    name="courseDescription"
+                    onChange={inputEvent}
+                  ></textarea>
                   <small class="form-text text-muted">Enter Course Name.</small>
                 </div>
                 <div className="row">
@@ -128,20 +174,41 @@ export default function EditTopic() {
                 <div className="row">
                   <div className="col-4">
                     <div class="form-group">
-                      <label class="form-label mb-0" for="active">
-                        Active
-                      </label>
-                      <div class="custom-control custom-checkbox-toggle ml-8pt mt-3">
+                      <label class="form-label d-flex">Course Image</label>
+                      {fields
+                        ? fields.map((image) => (
+                            <img
+                              src={image.facultyImage}
+                              className="rounded m-2"
+                              style={{
+                                width: "100px",
+                                objectFit: "cover",
+                              }}
+                              alt=".."
+                            />
+                          ))
+                        : null}
+                      <div class="custom-file">
                         <input
-                          type="checkbox"
-                          id="active"
-                          class="custom-control-input"
+                          type="file"
+                          class="custom-file-input"
+                          onChange={facultyImageUpload}
+                          id="inputGroupFile01"
                         />
-                        <label class="custom-control-label" for="active">
-                          Active
+                        <label class="custom-file-label" for="inputGroupFile01">
+                          Choose file
                         </label>
                       </div>
+                      <small class="form-text text-muted">
+                        Select a Course.
+                      </small>
                     </div>
+                    <button
+                      onClick={handleClick}
+                      className="btn btn-success my-4 d-block mx-auto"
+                    >
+                      Add Image
+                    </button>
                   </div>
                 </div>
                 {loading ? (

@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Player from "video-react/lib/components/Player";
 import { authAxios, userId } from "../../App";
 
 export default function StudentCourseContent() {
@@ -10,6 +11,8 @@ export default function StudentCourseContent() {
   useEffect(() => {
     GetCourseById();
   }, []);
+
+  const src = data.videoName;
 
   const GetCourseById = () => {
     axios
@@ -65,14 +68,15 @@ export default function StudentCourseContent() {
                 informed about the Evolution of Clinical Research
               </p> */}
               <div class="d-flex flex-column flex-sm-row align-items-center justify-content-start">
-                <a
-                  href="student-lesson.html"
+                <button
+                  data-bs-toggle="collapse"
+                  data-bs-target="#course-toc-1"
                   class="btn btn-outline-white mb-16pt mb-sm-0 mr-sm-16pt"
                 >
                   Watch trailer{" "}
                   <i class="material-icons icon--right">play_circle_outline</i>
-                </a>
-                <a href="pricing.html" class="btn btn-white">
+                </button>
+                <a href="/signup" class="btn btn-white">
                   Enroll Now
                 </a>
               </div>
@@ -94,48 +98,44 @@ export default function StudentCourseContent() {
                 data-domfactory-upgraded="accordion"
               >
                 <div class="accordion__item">
-                  <a
-                    href="/#"
-                    class="accordion__toggle collapsed"
-                    data-toggle="collapse"
-                    data-target="#course-toc-1"
+                  <button
+                    class="accordion__toggle accordion-button collapsed"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#course-toc-1"
                     data-parent="#parent"
                   >
                     <span class="flex">Course Overview</span>
-                    <span class="accordion__toggle-icon material-icons">
-                      keyboard_arrow_down
-                    </span>
-                  </a>
-                  <div class="accordion__menu collapse" id="course-toc-1">
-                    <div class="accordion__menu-link">
-                      <span class="icon-holder icon-holder--small icon-holder--dark rounded-circle d-inline-flex icon--left">
-                        <i class="material-icons icon-16pt">
-                          play_circle_outline
-                        </i>
-                      </span>
-                      <a class="flex" href="student-lesson.html">
-                        Watch Trailer
-                      </a>
-                      <span class="text-muted">1m 10s</span>
+                  </button>
+                  <div class="accordion__menu collapse show" id="course-toc-1">
+                    <div class="accordion__menu-link d-block">
+                      <div className="mb-2">
+                        <span class="icon-holder icon-holder--small icon-holder--dark rounded-circle d-inline-flex icon--left">
+                          <i class="material-icons icon-16pt">
+                            play_circle_outline
+                          </i>
+                        </span>
+                        <span class="flex">Watch Trailer</span>
+                      </div>
+                      {src ? (
+                        <Player>
+                          <source src={data.videoName} />
+                        </Player>
+                      ) : null}
                     </div>
                   </div>
                 </div>
                 <div class="accordion__item open">
-                  <a
-                    href="/#"
-                    class="accordion__toggle"
-                    data-toggle="collapse"
-                    data-target="#course-toc-2"
+                  <button
+                    class="accordion__toggle accordion-button collapsed"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#course-toc-2"
                     data-parent="#parent"
                   >
                     <span class="flex">
                       Clear the basics of Clinical Trials
                     </span>
-                    <span class="accordion__toggle-icon material-icons">
-                      keyboard_arrow_down
-                    </span>
-                  </a>
-                  <div class="accordion__menu collapse show" id="course-toc-2">
+                  </button>
+                  <div class="accordion__menu collapse" id="course-toc-2">
                     <div class="accordion__menu-link">
                       <span class="icon-holder icon-holder--small icon-holder--dark rounded-circle d-inline-flex icon--left">
                         <i class="material-icons icon-16pt">check_circle</i>
@@ -175,47 +175,6 @@ export default function StudentCourseContent() {
                     </div>
                   </div>
                 </div>
-                <div class="accordion__item">
-                  <a
-                    href="/#"
-                    class="accordion__toggle collapsed"
-                    data-toggle="collapse"
-                    data-target="#course-toc-3"
-                    data-parent="#parent"
-                  >
-                    <span class="flex">
-                      Understand the phases of a Clinical Trial.
-                    </span>
-                    <span class="accordion__toggle-icon material-icons">
-                      keyboard_arrow_down
-                    </span>
-                  </a>
-                  <div class="accordion__menu collapse" id="course-toc-3">
-                    <div class="accordion__menu-link">
-                      <span class="icon-holder icon-holder--small icon-holder--light rounded-circle d-inline-flex icon--left">
-                        <i class="material-icons icon-16pt">lock</i>
-                      </span>
-                      <a class="flex" href="student-lesson.html">
-                        Phases
-                      </a>
-                      <span class="text-muted">04:23</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion__item">
-                  <a
-                    href="/#"
-                    class="accordion__toggle collapsed"
-                    data-toggle="collapse"
-                    data-target="#course-toc-4"
-                    data-parent="#parent"
-                  >
-                    <span class="flex">Exploring</span>
-                    <span class="accordion__toggle-icon material-icons">
-                      keyboard_arrow_down
-                    </span>
-                  </a>
-                </div>
               </div>
             </div>
             <div class="col-lg-5 justify-content-center">
@@ -227,26 +186,27 @@ export default function StudentCourseContent() {
                   <h4 class="card-title">
                     <strong>Unlock Library</strong>
                   </h4>
-                  <p class="card-subtitle text-70 mb-24pt">
+                  <p class="card-subtitle text-70 mb-3">
                     Get access to all videos in the library
                   </p>
                   {userId ? (
                     <>
-                      <a
-                        href="#enroll"
+                      <div className="mb-2">Only ₹{data.price}</div>
+                      <button
                         onClick={enrollModule}
                         class="btn btn-accent mb-8pt"
                       >
-                        Enroll - Only ₹{data.price}
-                      </a>
+                        Enroll
+                      </button>
                     </>
                   ) : (
                     <>
-                      <a href="pricing.html" class="btn btn-accent mb-8pt">
-                        Enroll - Only ₹{data.price}
+                      <div className="mb-2">Only ₹{data.price}</div>
+                      <a href="/login" class="btn btn-accent mb-8pt">
+                        Purchase
                       </a>
                       <p class="mb-0">
-                        Have an account? <a href="login.html">Login</a>
+                        Already have an account? <a href="/login">Login</a>
                       </p>
                     </>
                   )}
@@ -264,18 +224,7 @@ export default function StudentCourseContent() {
               <div class="page-separator">
                 <div class="page-separator__text">About this course</div>
               </div>
-              <p class="text-70">
-                This course will teach you the fundamentals o*f working with
-                Angular 2. You *will learn everything you need to know to create
-                complete applications including: components, services,
-                directives, pipes, routing, HTTP, and even testing.
-              </p>
-              <p class="text-70 mb-0">
-                This course will teach you the fundamentals o*f working with
-                Angular 2. You *will learn everything you need to know to create
-                complete applications including: components, services,
-                directives, pipes, routing, HTTP, and even testing.
-              </p>
+              <p class="text-70">{data.description}</p>
             </div>
             <div class="col-md-5">
               <div class="page-separator">

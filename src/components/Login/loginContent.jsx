@@ -67,14 +67,16 @@ export default function LoginContent() {
                 class="form-control"
                 placeholder="Your first and last name ..."
               />
-              <p class="text-right">
+              {/* <p class="text-right">
                 <a href="reset-password.html" class="small">
                   Forgot your password?
                 </a>
-              </p>
+              </p> */}
             </div>
             <div class="text-center">
               <button class="btn btn-primary">Login</button>
+              <br />
+              Don't have an account? <a href="/signup">Signup Here</a>
             </div>
           </form>
         </div>

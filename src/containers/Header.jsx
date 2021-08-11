@@ -45,7 +45,7 @@ export default function Header() {
               src="images/logo-black@2x.png"
               alt="logo"
               className="img-fluid"
-              style={{ width: 200 }}
+              style={{ width: 250 }}
             />
           </a>
 
